@@ -734,12 +734,12 @@ button,
 }
 
 .header__btn--sponsor {
-  background-color: #EDEDED;
+  background-color: #ededed;
   margin-right: 19px;
 }
 
 .header__btn--buy {
-  background-color: #FCCD03;
+  background-color: #fccd03;
 }
 
 .intro {
@@ -971,7 +971,7 @@ button,
   font-size: 30px;
   line-height: 1;
   color: #fccd03;
-  color: #FCCD03;
+  color: #fccd03;
 }
 
 .info__item p {
@@ -1128,7 +1128,7 @@ button,
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-align: center;
-  background-color: #FCCD03;
+  background-color: #fccd03;
   border-radius: 250px;
 }
 
@@ -1228,7 +1228,7 @@ button,
   justify-content: space-between;
   margin: 0 10px 30px 10px;
   padding-top: 38px;
-  border: 1px solid #2C2C2A;
+  border: 1px solid #2c2c2a;
   border-radius: 30px;
 }
 
@@ -1283,7 +1283,7 @@ button,
   min-height: 52px;
   border: none;
   border-radius: 0 0 30px 30px;
-  background-color: #FCCD03;
+  background-color: #fccd03;
   opacity: 0.9;
 }
 
@@ -1402,8 +1402,7 @@ button,
   position: relative;
 }
 
-#btn-prev,
-#btn-next {
+.photos__btn {
   position: absolute;
   left: -100px;
   top: 0;
@@ -1413,7 +1412,7 @@ button,
   cursor: pointer;
 }
 
-#btn-next {
+.photos__btn--next {
   left: auto;
   right: -100px;
   -webkit-transform: scale(-1, 1);
@@ -1456,7 +1455,7 @@ button,
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #d9d9d9;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -1650,7 +1649,7 @@ button,
   align-content: space-between;
   margin: 0 10px 20px 10px;
   padding: 37px;
-  border: 1px solid #5B5952;
+  border: 1px solid #5b5952;
   border-radius: 30px;
 }
 
@@ -1901,7 +1900,7 @@ button,
 }
 
 .footer__socials-item:hover {
-  background-color: #231E0A;
+  background-color: #231e0a;
 }
 
 /* @mixin hover-focus {
