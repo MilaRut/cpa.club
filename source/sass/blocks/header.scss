@@ -53,11 +53,11 @@
   cursor: pointer;
 
   &--sponsor {
-    background-color: #EDEDED;
+    background-color: #ededed;
     margin-right: 19px;
   }
 
   &--buy {
-    background-color: #FCCD03;
+    background-color: $color-accent;
   }
 }

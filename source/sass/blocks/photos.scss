@@ -13,7 +13,7 @@
   position: relative;
 }
 
-#btn-prev, #btn-next {
+.photos__btn {
   position: absolute;
   left: -100px;
   top: 0;
@@ -21,12 +21,12 @@
   width: 50px;
   background: url("../../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
-}
 
-#btn-next {
-  left: auto;
-  right: -100px;
-  transform: scale(-1, 1);
+  &--next {
+    left: auto;
+    right: -100px;
+    transform: scale(-1, 1);
+  }
 }
 
 .slide {
@@ -60,10 +60,11 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #d9d9d9;
   margin-right: 10px;
   cursor: pointer;
-}
-.dot:last-child{
-  margin-right: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
