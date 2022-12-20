@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular..woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"), url("../../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 800;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../../fonts/Montserrat-ExtraBold.woff") format("woff");
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
 @font-face {
@@ -421,7 +421,7 @@ template {
   font-weight: 700;
   font-family: "TTTravelsNext";
   font-display: swap;
-  src: url("../../fonts/TTTravelsNextBold.woff2") format("woff2"), url("../../fonts/TTTravelsNextBold.woff") format("woff");
+  src: url("../fonts/TTTravelsNextBold.woff2") format("woff2"), url("../fonts/TTTravelsNextBold.woff") format("woff");
 }
 
 @font-face {
@@ -429,7 +429,7 @@ template {
   font-weight: 800;
   font-family: "TTTravelsNext";
   font-display: swap;
-  src: url("../../fonts/TTTravelsNextExtraBold.woff2") format("woff2"), url("../../fonts/TTTravelsNextExtraBold.woff") format("woff");
+  src: url("../fonts/TTTravelsNextExtraBold.woff2") format("woff2"), url("../fonts/TTTravelsNextExtraBold.woff") format("woff");
 }
 
 @font-face {
@@ -437,7 +437,7 @@ template {
   font-weight: 900;
   font-family: "TTTravelsNext";
   font-display: swap;
-  src: url("../../fonts/TTTravelsNextBlack.woff2") format("woff2"), url("../../fonts/TTTravelsNextBlack.woff") format("woff");
+  src: url("../fonts/TTTravelsNextBlack.woff2") format("woff2"), url("../fonts/TTTravelsNextBlack.woff") format("woff");
 }
 
 *,
