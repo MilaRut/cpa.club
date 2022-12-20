@@ -1,11 +1,11 @@
 .auditory {
   position: relative;
-  background: url("../../img/auditory2.png") 100% 146% no-repeat,
-    url("../../img/auditory1.png") 72% 218% no-repeat;
+  background: url("../img/auditory2.png") 100% 146% no-repeat,
+    url("../img/auditory1.png") 72% 218% no-repeat;
 
   &::before {
     position: absolute;
-    content: url("../../img/auditory-h-filter.png");
+    content: url("../img/auditory-h-filter.png");
     top: -614px;
     left: 0;
     width: 772px;
@@ -14,7 +14,7 @@
 
   // &::after {
   //   position: absolute;
-  //   content: url("../../img/auditory2-fiter.png");
+  //   content: url("../img/auditory2-fiter.png");
   //   top: 127px;
   //   right: 0;
   //   width: 592px;
