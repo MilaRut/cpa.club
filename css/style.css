@@ -748,7 +748,7 @@ button,
 }
 
 .intro .container {
-  background: url("../../img/header-bg.png") 0 0 no-repeat, url("../../img/header-bg-filter.png") 0 0 no-repeat;
+  background: url("../img/header-bg.png") 0 0 no-repeat, url("../img/header-bg-filter.png") 0 0 no-repeat;
   padding-top: 50px;
   padding-bottom: 100px;
   display: -webkit-box;
@@ -832,7 +832,7 @@ button,
 }
 
 .concept {
-  background: url("../../img/concept1.png") 0 0 no-repeat, url("../../img/concept1-filter.png") 0 0 no-repeat, url("../../img/concept2.png") 100% 0 no-repeat, url("../../img/concept3.png") 100% 40% no-repeat, url("../../img/concept3-filter.png") 100% 40% no-repeat, url("../../img/concept4.png") 0 100% no-repeat, url("../../img/concept4-filter.png") 0 100% no-repeat;
+  background: url("../img/concept1.png") 0 0 no-repeat, url("../img/concept1-filter.png") 0 0 no-repeat, url("../img/concept2.png") 100% 0 no-repeat, url("../img/concept3.png") 100% 40% no-repeat, url("../img/concept3-filter.png") 100% 40% no-repeat, url("../img/concept4.png") 0 100% no-repeat, url("../img/concept4-filter.png") 0 100% no-repeat;
 }
 
 .concept .container {
@@ -985,12 +985,12 @@ button,
 
 .auditory {
   position: relative;
-  background: url("../../img/auditory2.png") 100% 146% no-repeat, url("../../img/auditory1.png") 72% 218% no-repeat;
+  background: url("../img/auditory2.png") 100% 146% no-repeat, url("../img/auditory1.png") 72% 218% no-repeat;
 }
 
 .auditory::before {
   position: absolute;
-  content: url("../../img/auditory-h-filter.png");
+  content: url("../img/auditory-h-filter.png");
   top: -614px;
   left: 0;
   width: 772px;
@@ -1190,7 +1190,7 @@ button,
 
 .package-meetup h3::after {
   position: absolute;
-  content: url("../../img/package-meetup.png");
+  content: url("../img/package-meetup.png");
   width: 273px;
   height: 68px;
   bottom: -29px;
@@ -1288,7 +1288,7 @@ button,
 }
 
 .sky {
-  background: url("../../img/sky-bg.png") 0 0 no-repeat;
+  background: url("../img/sky-bg.png") 0 0 no-repeat;
   padding: 194px 0;
   background-size: cover;
 }
@@ -1408,7 +1408,7 @@ button,
   top: 0;
   height: 100%;
   width: 50px;
-  background: url("../../img/svg/slider-arrow.svg") center no-repeat;
+  background: url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
 }
 
@@ -1494,7 +1494,7 @@ button,
 
 .package-afterparty h3::after {
   position: absolute;
-  content: url("../../img/package-afterparty.png");
+  content: url("../img/package-afterparty.png");
   width: 273px;
   height: 68px;
   bottom: -29px;
@@ -1592,7 +1592,7 @@ button,
   height: 50px;
   top: 100px;
   right: 100px;
-  background: url("../../img/svg/slider-arrow.svg") center no-repeat;
+  background: url("../img/svg/slider-arrow.svg") center no-repeat;
 }
 
 .program__btn--next {
