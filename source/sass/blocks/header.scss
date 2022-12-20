@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+}
+
+.header .container {
+  padding: 14px 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.header__item {
+  margin-right: 27px;
+}
+
+.header__link {
+  @include font-settings ($ff-mont, 500, 14px, 1.1, $color-default-white);
+
+  &:hover {
+    color: $color-accent;
+    text-decoration: underline $color-accent;
+  }
+}
+
+.header__lang-switcher {
+  @include font-settings ($ff-mont, 500, 14px, 1.1, $color-default-white);
+  min-width: 65px;
+  text-transform: uppercase;
+  margin-right: 22px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__btn {
+  @include font-settings ($ff-mont, 500, 14px, 1, $color-default-black);
+  min-width: 129px;
+  min-height: 34px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &--sponsor {
+    background-color: #EDEDED;
+    margin-right: 19px;
+  }
+
+  &--buy {
+    background-color: #FCCD03;
+  }
+}

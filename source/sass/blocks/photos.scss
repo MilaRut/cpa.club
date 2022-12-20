@@ -1,0 +1,69 @@
+.photos .container {
+  position: relative;
+  padding: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  max-width: 1031px;
+  width: 100%;
+  height: 652px;
+  position: relative;
+}
+
+#btn-prev, #btn-next {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: url("../../img/svg/slider-arrow.svg") center no-repeat;
+  cursor: pointer;
+}
+
+#btn-next {
+  left: auto;
+  right: -100px;
+  transform: scale(-1, 1);
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide__img {
+  width: 100%;
+  height: 100%;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot.active {
+  background-color: #ffffff;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.dot:last-child{
+  margin-right: 0;
+}

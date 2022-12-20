@@ -1,0 +1,46 @@
+.package {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px 30px 10px;
+  padding-top: 38px;
+  border: 1px solid #2C2C2A;
+  border-radius: 30px;
+}
+
+.package h5 {
+  @include font-settings ($ff-mont, 700, 14px, 1.2, $color-default-white);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.package h4 {
+  @include font-settings ($ff-ttt, 800, 40px, 1.1, $color-default-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.package b {
+  @include font-settings ($ff-ttt, 800, 30px, 1.2, $color-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.package__btn {
+  @include font-settings ($ff-mont, 800, 18px, 1, $color-default-black);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  border-radius: 0 0 30px 30px;
+  background-color: #FCCD03;
+  opacity: 0.9;
+}

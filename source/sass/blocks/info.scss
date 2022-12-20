@@ -1,0 +1,42 @@
+.info {
+  margin-bottom: 200px;
+}
+
+.info .container {
+  padding: 0 100px;
+}
+
+.info h2 {
+  @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-accent);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info h3 {
+  @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-default-white);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.info__item {
+  max-width: 400px;
+  margin-right: -50px;
+}
+
+.info__item h4 {
+  @include font-settings ($ff-ttt, 900, 30px, 1, $color-accent);
+  color: #FCCD03;
+}
+
+.info__item p {
+  @include font-settings ($ff-mont, 500, 22px, 1, $color-default-white);
+}

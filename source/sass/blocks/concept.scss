@@ -1,0 +1,55 @@
+.concept {
+  background: url("../../img/concept1.png") 0 0 no-repeat,
+  url("../../img/concept1-filter.png") 0 0 no-repeat,
+  url("../../img/concept2.png") 100% 0 no-repeat,
+  url("../../img/concept3.png") 100% 40% no-repeat,
+  url("../../img/concept3-filter.png") 100% 40% no-repeat,
+  url("../../img/concept4.png") 0 100% no-repeat,
+  url("../../img/concept4-filter.png") 0 100% no-repeat;
+}
+
+.concept .container {
+  padding: 200px 100px;
+}
+
+.concept__first-screen {
+  display: flex;
+  margin-bottom: 400px;
+}
+
+.concept h2 {
+  @include font-settings ($ff-ttt, 800, 38px, 1, $color-default-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  margin-right: 400px;
+}
+
+.concept p {
+  @include font-settings ($ff-mont, 500, 16px, 1.5, $color-default-white);
+  margin: 0;
+  max-width: 40%;
+}
+
+.concept__content p {
+  @include font-settings ($ff-mont, 500, 16px, 1.5, $color-default-white);
+  max-width: 100%;
+}
+
+.concept__content b {
+  @include font-settings ($ff-mont, 700, 16px, 1.5, $color-default-white);
+}
+
+.concept__second-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 400px;
+}
+
+.concept__third-screen {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  align-items: flex-end;
+}

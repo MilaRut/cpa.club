@@ -1,0 +1,62 @@
+.program .container {
+  padding: 100px;
+  position: relative;
+  padding-right: 0;
+  margin-right: 0;
+  overflow-x: hidden;
+}
+
+.program h3 {
+  @include font-settings ($ff-ttt, 800, 80px, 1, $color-default-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  position: relative;
+  margin: 0;
+  margin-bottom: 103px;
+}
+
+.program__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.program__item {
+  width: 415px;
+  margin-right: 30px;
+}
+
+.program__item h4 {
+  @include font-settings ($ff-ttt, 800, 24px, 1.2, $color-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.program__item p {
+  @include font-settings ($ff-ttt, 800, 24px, 1.2, $color-default-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  width: 340px;
+}
+
+.program__item span {
+  @include font-settings ($ff-ttt, 700, 18px, 1.2, $color-default-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  width: 340px;
+}
+
+.program__btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  right: 100px;
+  background: url("../../img/svg/slider-arrow.svg") center no-repeat;
+
+  &--next {
+    transform: scale(-1, 1);
+    right: 20px;
+  }
+}

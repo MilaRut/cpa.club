@@ -1,0 +1,62 @@
+.auditory {
+  position: relative;
+  background: url("../../img/auditory2.png") 100% 146% no-repeat,
+  url("../../img/auditory1.png") 72% 218% no-repeat;
+
+  &::before {
+    position: absolute;
+    content: url("../../img/auditory-h-filter.png");
+    top: -614px;
+    left: 0;
+    width: 772px;
+    height: 858px;
+  }
+
+  // &::after {
+  //   position: absolute;
+  //   content: url("../../img/auditory2-fiter.png");
+  //   top: 127px;
+  //   right: 0;
+  //   width: 592px;
+  //   height: 657px;
+  // }
+}
+
+.auditory .container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 100px;
+}
+
+.auditory__headings {
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+}
+
+.auditory__headings h2 {
+  @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-accent);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.auditory__headings h3 {
+  @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-default-white);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.auditory__list {
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.auditory__item {
+  @include font-settings ($ff-mont, 400, 24px, 1.3, $color-default-white);
+}
+
+.auditory p {
+  @include font-settings ($ff-mont, 400, 20px, 1.3, $color-default-white);
+  max-width: 42%;
+}

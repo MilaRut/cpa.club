@@ -1,0 +1,45 @@
+.video-section h3 {
+  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-default-white);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 70px 100px;
+  z-index: 100;
+}
+
+.video__wrapper {
+  width: 100%;
+  min-height: 700px;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+}
+
+.video__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video__btn {
+  position: absolute;
+  top: 37.2%;
+  left: 45.4%;
+  width: 233px;
+  height: 233px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  display: none;
+}
+
+.is-active .video__btn {
+  display: block;
+}

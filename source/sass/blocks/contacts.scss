@@ -1,0 +1,65 @@
+.contacts .container {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts__headings {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts h2 {
+  @include font-settings ($ff-ttt, 900, 55px, 1.2, $color-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.contacts h3 {
+  @include font-settings ($ff-ttt, 800, 55px, 1.2, $color-default-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  margin-bottom: 103px;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 63px 135px;
+}
+
+.contacts__item h4 {
+  @include font-settings ($ff-ttt, 700, 23px, 1, $color-default-white);
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.contacts__item h5 {
+  @include font-settings ($ff-ttt, 800, 17px, 1, $color-default-white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.contacts__item p {
+  @include font-settings ($ff-mont, 400, 18px, 1.6, $color-default-white);
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.contacts__item a {
+  @include font-settings ($ff-mont, 400, 19px, 1.6, $color-default-white);
+  text-decoration: underline;
+  display: block;
+}

@@ -1,0 +1,35 @@
+.package-afterparty .container {
+  padding: 100px;
+}
+
+.package-afterparty h2 {
+  @include font-settings ($ff-ttt, 800, 80px, 1, $color-accent);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.package-afterparty h3 {
+  @include font-settings ($ff-ttt, 800, 80px, 1, $color-default-white);
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  margin-bottom: 103px;
+
+  &::after {
+    position: absolute;
+    content: url("../../img/package-afterparty.png");
+    width: 273px;
+    height: 68px;
+    bottom: -29px;
+    left: 277px;
+  }
+}
+
+.package-afterparty__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
