@@ -1,10 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {setupVideo} from './modules/video';
 import {initPhotoSlider} from './modules/photo-slider';
+import {initSwiper} from './modules/program-slider';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  const swiper = document.querySelector('.swiper');
 
   // Utils
   // ---------------------------------
@@ -19,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     setupVideo();
     initPhotoSlider();
+    initSwiper(swiper);
   });
 });
 
