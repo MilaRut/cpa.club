@@ -3,7 +3,15 @@
 }
 
 .info .container {
+  position: relative;
   padding: 0 100px;
+
+  &::after {
+    position: absolute;
+    content: url("../../img/info-blur.png");
+    top: -630px;
+    right: 0;
+  }
 }
 
 .info h2 {

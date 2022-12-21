@@ -1,15 +1,9 @@
-.concept {
-  background: url("../img/concept1.png") 0 0 no-repeat,
-    url("../img/concept1-filter.png") 0 0 no-repeat,
-    url("../img/concept2.png") 100% 0 no-repeat,
-    url("../img/concept3.png") 100% 40% no-repeat,
-    url("../img/concept3-filter.png") 100% 40% no-repeat,
-    url("../img/concept4.png") 0 100% no-repeat,
-    url("../img/concept4-filter.png") 0 100% no-repeat;
-}
-
 .concept .container {
   padding: 200px 100px;
+  background: url("../img/concept-1.png") 0 -130% no-repeat,
+  url("../img/concept-2.png") 100% 0 no-repeat,
+  url("../img/concept-3.png") 100% 40% no-repeat,
+  url("../img/concept-4.png") 0 100% no-repeat;
 }
 
 .concept__first-screen {

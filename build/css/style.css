@@ -748,7 +748,7 @@ button,
 }
 
 .intro .container {
-  background: url("../img/header-bg.png") 0 0 no-repeat, url("../img/header-bg-filter.png") 0 0 no-repeat;
+  background: url("../img/intro-bg.png") 0 0 no-repeat;
   padding-top: 50px;
   padding-bottom: 100px;
   display: -webkit-box;
@@ -831,12 +831,9 @@ button,
   margin-right: 20px;
 }
 
-.concept {
-  background: url("../img/concept1.png") 0 0 no-repeat, url("../img/concept1-filter.png") 0 0 no-repeat, url("../img/concept2.png") 100% 0 no-repeat, url("../img/concept3.png") 100% 40% no-repeat, url("../img/concept3-filter.png") 100% 40% no-repeat, url("../img/concept4.png") 0 100% no-repeat, url("../img/concept4-filter.png") 0 100% no-repeat;
-}
-
 .concept .container {
   padding: 200px 100px;
+  background: url("../img/concept-1.png") 0 -130% no-repeat, url("../img/concept-2.png") 100% 0 no-repeat, url("../img/concept-3.png") 100% 40% no-repeat, url("../img/concept-4.png") 0 100% no-repeat;
 }
 
 .concept__first-screen {
@@ -922,7 +919,15 @@ button,
 }
 
 .info .container {
+  position: relative;
   padding: 0 100px;
+}
+
+.info .container::after {
+  position: absolute;
+  content: url("../../img/info-blur.png");
+  top: -630px;
+  right: 0;
 }
 
 .info h2 {
@@ -983,27 +988,22 @@ button,
   color: #ffffff;
 }
 
-.auditory {
-  position: relative;
-  background: url("../img/auditory2.png") 100% 146% no-repeat, url("../img/auditory1.png") 72% 218% no-repeat;
-}
-
-.auditory::before {
-  position: absolute;
-  content: url("../img/auditory-h-filter.png");
-  top: -614px;
-  left: 0;
-  width: 772px;
-  height: 858px;
-}
-
 .auditory .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 100px 100px;
+}
+
+.auditory .container::after {
+  position: absolute;
+  content: url("../../img/auditory-bg.png");
+  top: -20px;
+  right: 0;
+  z-index: -10;
 }
 
 .auditory__headings {
@@ -1077,15 +1077,35 @@ button,
   color: #ffffff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-top: -150px;
   margin-bottom: 150px;
 }
 
 .speaker__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 100px;
+}
+
+.speaker__wrapper::before,
+.speaker__wrapper::after {
+  position: absolute;
+  z-index: -1;
+}
+
+.speaker__wrapper::before {
+  content: url("../../img/speaker-bg.png");
+  top: -291px;
+  left: 330px;
+  width: 243px;
+  height: 367px;
+}
+
+.speaker__wrapper::after {
+  content: url("../../img/speaker-bg-2.png");
+  top: 249px;
+  right: -10px;
 }
 
 .speaker__photo {
@@ -1093,6 +1113,7 @@ button,
 }
 
 .speaker__info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,6 +1121,14 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.speaker__info::after {
+  position: absolute;
+  z-index: -1;
+  content: url("../../img/speaker-blur.png");
+  top: -410px;
+  right: 760px;
 }
 
 .speaker__info h4 {
@@ -1189,12 +1218,28 @@ button,
 }
 
 .package-meetup h3::after {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.2;
+  color: #000000;
   position: absolute;
-  content: url("../img/package-meetup.png");
+  content: "Meet-up";
+  padding-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   width: 273px;
   height: 68px;
   bottom: -29px;
   left: 277px;
+  background-color: #fccd03;
+  border: 1px solid #000000;
+  border-radius: 250px;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
 .package-meetup__list {
@@ -1227,9 +1272,41 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 10px 30px 10px;
-  padding-top: 38px;
-  border: 1px solid #2c2c2a;
+  border: 1px solid #505050;
   border-radius: 30px;
+}
+
+.package:hover {
+  border: 1px solid #554a08;
+  background-color: rgba(255, 207, 0, 0.1);
+}
+
+.package__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.package__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .package h5 {
@@ -1242,6 +1319,7 @@ button,
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 15px;
+  padding-top: 38px;
 }
 
 .package h4 {
@@ -1285,6 +1363,7 @@ button,
   border-radius: 0 0 30px 30px;
   background-color: #fccd03;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .sky {
@@ -1395,6 +1474,13 @@ button,
   justify-content: center;
 }
 
+.photos .container::after {
+  position: absolute;
+  content: url("../../img/photos-blur.png");
+  top: -500px;
+  right: 0;
+}
+
 .slider-wrapper {
   max-width: 1031px;
   width: 100%;
@@ -1410,6 +1496,7 @@ button,
   width: 50px;
   background: url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
+  z-index: 100;
 }
 
 .photos__btn--next {
@@ -1433,6 +1520,8 @@ button,
 .slide__img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .dots-wrapper {
@@ -1445,6 +1534,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 15px;
+  z-index: 100;
 }
 
 .dot.active {
@@ -1495,12 +1585,28 @@ button,
 }
 
 .package-afterparty h3::after {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.2;
+  color: #000000;
   position: absolute;
-  content: url("../img/package-afterparty.png");
+  content: "Afterparty";
+  padding-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   width: 273px;
   height: 68px;
   bottom: -29px;
   left: 277px;
+  background-color: #fccd03;
+  border: 1px solid #000000;
+  border-radius: 250px;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
 .package-afterparty__list {
@@ -1515,6 +1621,16 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.package-afterparty__item .package__img {
+  opacity: 0.5;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.package-afterparty__item .package__img:hover {
+  opacity: 0.7;
 }
 
 .program .container {
@@ -1548,8 +1664,32 @@ button,
 }
 
 .program__item {
+  position: relative;
   width: 415px;
-  margin-right: 30px;
+  padding-right: 30px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.program__item::before {
+  position: absolute;
+  content: "";
+  top: -9px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fccd03;
+}
+
+.program__item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 430px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .program__item h4 {
@@ -1614,6 +1754,57 @@ button,
 
 .tickets .container {
   padding: 0 80px;
+  position: relative;
+}
+
+.tickets .container::after {
+  position: absolute;
+  content: url("../../img/tickets-blur.png");
+  top: -500px;
+  right: 0;
+  z-index: -10;
+}
+
+.tickets__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 103px;
+}
+
+.tickets__timer {
+  position: relative;
+  width: 498px;
+  height: 135px;
+  background-color: #fccd03;
+}
+
+.tickets__timer::before {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #000000;
+  position: absolute;
+  content: "Early birds";
+  padding-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  width: 273px;
+  height: 68px;
+  top: -30px;
+  left: -110px;
+  background-color: #fccd03;
+  border: 1px solid #000000;
+  border-radius: 250px;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
 .tickets h3 {
@@ -1627,7 +1818,7 @@ button,
   letter-spacing: 0.02em;
   position: relative;
   margin: 0;
-  margin-bottom: 103px;
+  margin-right: auto;
   padding-left: 20px;
 }
 
@@ -1716,6 +1907,7 @@ button,
   height: 52px;
   border: none;
   border-radius: 55px;
+  cursor: pointer;
 }
 
 .contacts .container {
@@ -1730,6 +1922,15 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
+}
+
+.contacts .container::after {
+  position: absolute;
+  content: url("../../img/contacts-bg.png");
+  top: -319px;
+  right: 0;
+  z-index: -10;
 }
 
 .contacts__headings {
@@ -1741,7 +1942,7 @@ button,
   justify-content: center;
 }
 
-.contacts h2 {
+.contacts h3 {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -1751,10 +1952,9 @@ button,
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0;
-  margin-right: 10px;
 }
 
-.contacts h3 {
+.contacts h2 {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1766,6 +1966,7 @@ button,
   position: relative;
   margin: 0;
   margin-bottom: 103px;
+  margin-right: 10px;
 }
 
 .contacts__list {

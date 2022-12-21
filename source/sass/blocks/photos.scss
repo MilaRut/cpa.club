@@ -4,6 +4,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  &::after {
+    position: absolute;
+    content: url("../../img/photos-blur.png");
+    top: -500px;
+    right: 0;
+  }
 }
 
 .slider-wrapper {
@@ -21,6 +28,7 @@
   width: 50px;
   background: url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
+  z-index: 100;
 
   &--next {
     left: auto;
@@ -42,6 +50,7 @@
 .slide__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .dots-wrapper {
@@ -50,6 +59,7 @@
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  z-index: 100;
 }
 
 .dot.active {

@@ -1,31 +1,16 @@
-.auditory {
-  position: relative;
-  background: url("../img/auditory2.png") 100% 146% no-repeat,
-    url("../img/auditory1.png") 72% 218% no-repeat;
-
-  &::before {
-    position: absolute;
-    content: url("../img/auditory-h-filter.png");
-    top: -614px;
-    left: 0;
-    width: 772px;
-    height: 858px;
-  }
-
-  // &::after {
-  //   position: absolute;
-  //   content: url("../img/auditory2-fiter.png");
-  //   top: 127px;
-  //   right: 0;
-  //   width: 592px;
-  //   height: 657px;
-  // }
-}
-
 .auditory .container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   padding: 100px 100px;
+
+  &::after {
+    position: absolute;
+    content: url("../../img/auditory-bg.png");
+    top: -20px;
+    right: 0;
+    z-index: -10;
+  }
 }
 
 .auditory__headings {

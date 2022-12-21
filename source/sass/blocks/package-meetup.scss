@@ -16,12 +16,21 @@
   margin-bottom: 103px;
 
   &::after {
+    @include font-settings ($ff-ttt, 800, 38px, 1.2, $color-default-black);
     position: absolute;
-    content: url("../img/package-meetup.png");
+    content: "Meet-up";
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
     width: 273px;
     height: 68px;
     bottom: -29px;
     left: 277px;
+    background-color: $color-accent;
+    border: 1px solid $color-default-black;
+    border-radius: 250px;
+    transform: rotate(-10deg);
   }
 }
 

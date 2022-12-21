@@ -6,13 +6,33 @@
   @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-top: -150px;
   margin-bottom: 150px;
 }
 
 .speaker__wrapper {
+  position: relative;
   display: flex;
   margin-bottom: 100px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::before {
+    content: url("../../img/speaker-bg.png");
+    top: -291px;
+    left: 330px;
+    width: 243px;
+    height: 367px;
+  }
+
+  &::after {
+    content: url("../../img/speaker-bg-2.png");
+    top: 249px;
+    right: -10px;
+  }
 }
 
 .speaker__photo {
@@ -20,8 +40,17 @@
 }
 
 .speaker__info {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: url("../../img/speaker-blur.png");
+    top: -410px;
+    right: 760px;
+  }
 }
 
 .speaker__info h4 {

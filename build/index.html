@@ -50,14 +50,16 @@
       <section class="intro">
         <div class="container">
           <div class="intro__heading">
-            <img class="intro__img" src="./img/svg/logo.svg" alt="Лого CPA Club Connect">
+            <svg class="intro__img" width="451" height="69" fill="currentColor">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
             <p>12 марта 2023<br>Sky 2.0</p>
           </div>
           <h1>Connect</h1>
           <h2>Meetup Dubai</h2>
           <div class="intro__sub">
             <span>При поддержке:</span>
-            <img class="intro__img" src="./img/svg/sigma-logo.svg" alt="Лого Sigma">
+            <img class="intro__img" src="./img/sigma-logo.png" alt="Лого Sigma">
           </div>
         </div>
       </section>
@@ -169,8 +171,7 @@
               <p>Зная, как эволюционировала технология продаж, и умело используя классические и современные методы,
                 Джордан
                 может <b>продать что угодно</b> и умело обучает этому людей по всему миру.</p>
-              <cite>«Без действия самые лучшие намерения
-                в мире — не что иное, как намерения».</cite>
+              <cite>«Без действия самые лучшие намерения<br>в мире — не что иное, как намерения».</cite>
             </div>
           </div>
         </div>
@@ -182,10 +183,13 @@
           <h3>Пакеты</h3>
           <ul class="package-meetup__list">
             <li class="package-meetup__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>MeetUp Diamond Sponsor</h4>
-              <b>€40 000</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-1.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>MeetUp Diamond Sponsor</h4>
+                <b>€40 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">30 проходок на митап</li>
                 <li class="package__item">20 проходок на афтепати</li>
@@ -203,10 +207,13 @@
               </ul> -->
             </li>
             <li class="package-meetup__item package">
-              <h5>2 спонсорских пакета</h5>
-              <h4>MeetUp Golden Sponsor</h4>
-              <b>€20 000</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-2.png" alt="">
+                <h5>2 спонсорских пакета</h5>
+                <h4>MeetUp Golden Sponsor</h4>
+                <b>€20 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">15 проходок на митап</li>
                 <li class="package__item">Доп. проходки со скидкой 15%</li>
@@ -221,10 +228,13 @@
               </ul> -->
             </li>
             <li class="package-meetup__item package">
-              <h5>5 спонсорских пакетов</h5>
-              <h4>MeetUp Silver Sponsor</h4>
-              <b>€10 000</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-3.png" alt="">
+                <h5>5 спонсорских пакетов</h5>
+                <h4>MeetUp Silver Sponsor</h4>
+                <b>€10 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">10 проходок на митап</li>
                 <li class="package__item">1 баннер на митапе</li>
@@ -235,10 +245,13 @@
               </ul> -->
             </li>
             <li class="package-meetup__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Coffee Break Sponsor</h4>
-              <b>€5 000</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-4.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Coffee Break Sponsor</h4>
+                <b>€5 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">10 проходок на митап</li>
                 <li class="package__item">1 баннер возле зоны кофе-брейка</li>
@@ -247,10 +260,13 @@
               </ul> -->
             </li>
             <li class="package-meetup__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Wi-Fi Sponsor</h4>
-              <b>€3 500</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-5.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Wi-Fi Sponsor</h4>
+                <b>€3 500</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">5 проходок на митап</li>
                 <li class="package__item">Право быть эксклюзивным Wi-Fi спонсором мероприятия</li>
@@ -262,10 +278,13 @@
               </ul> -->
             </li>
             <li class="package-meetup__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Charging Sponsor</h4>
-              <b>€2 500</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/meetup-card-6.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Charging Sponsor</h4>
+                <b>€2 500</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">5 проходок на митап</li>
                 <li class="package__item">Брендированная станция fast charge</li>
@@ -302,7 +321,7 @@
                     alt="Видео о клубе.">
                 </picture>
               </a>
-              <button class="video__btn" type="button">
+              <button class="video__btn" type="button" aria-label="Запустить видео">
                 <img src="./img/video-button.png" width="233" height="233" alt="Запустить видео.">
               </button>
             </div>
@@ -354,10 +373,13 @@
           <h3>Пакеты</h3>
           <ul class="package-afterparty__list">
             <li class="package-afterparty__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Afterparty Diamond Sponsor</h4>
-              <b>€40 000</b>
-              <button class="package__btn">Стать спонсором </button>
+              <div class="package__content">
+                <img class="package__img" src="./img/aft-card-1.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Afterparty Diamond Sponsor</h4>
+                <b>€40 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">20х проходок на афтепати</li>
                 <li class="package__item">10х проходок на митап</li>
@@ -374,11 +396,14 @@
                 <li class="package__item">Модели с логотипом спонсора на одежде</li>
               </ul> -->
             </li>
-            <li class="afterparty__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Entertain-ment Sponsor</h4>
-              <b>€25 000</b>
-              <button class="package__btn">Стать спонсором </button>
+            <li class="package-afterparty__item package">
+              <div class="package__content">
+                <img class="package__img" src="./img/aft-card-2.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Entertain-ment Sponsor</h4>
+                <b>€25 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">20х проходок на афтепати</li>
                 <li class="package__item">2x Golden столов</li>
@@ -388,11 +413,15 @@
                 <li class="package__item">Брендированные конфети (листовки)</li>
               </ul> -->
             </li>
-            <li class="afterparty__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>DJ Sponsor</h4>
-              <b>€15 000</b>
-              <button class="package__btn">Стать спонсором </button>
+
+            <li class="package-afterparty__item package">
+              <div class="package__content">
+                <img class="package__img" src="./img/aft-card-3.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>DJ<br>Sponsor</h4>
+                <b>€15 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">20 проходок на афтепати</li>
                 <li class="package__item">2х Silver столов</li>
@@ -401,11 +430,14 @@
                 <li class="package__item">Возможность заказа музыки (2 трека)</li>
               </ul> -->
             </li>
-            <li class="afterparty__item package">
-              <h5>1 спонсорский пакет</h5>
-              <h4>Bar Sponsor</h4>
-              <b>€10 000</b>
-              <button class="package__btn">Стать спонсором </button>
+            <li class="package-afterparty__item package">
+              <div class="package__content">
+                <img class="package__img" src="./img/aft-card-4.png" alt="">
+                <h5>1 спонсорский пакет</h5>
+                <h4>Bar Sponsor</h4>
+                <b>€10 000</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
               <!-- <ul class="package__list">
                 <li class="package__item">20 проходок на афтепати</li>
                 <li class="package__item">2х Classic столов</li>
@@ -415,11 +447,14 @@
                 <li class="package__item">Брендированные зонтики для коктейлей</li>
               </ul> -->
             </li>
-            <li class="afterparty__item package">
-              <h5>3 спонсорских пакета</h5>
-              <h4>Tables Sponsor</h4>
-              <b>€2 500 - €6 500</b>
-              <button class="package__btn">Стать спонсором </button>
+            <li class="package-afterparty__item package">
+              <div class="package__content">
+                <img class="package__img" src="./img/aft-card-5.png" alt="">
+                <h5>3 спонсорских пакета</h5>
+                <h4>Tables Sponsor</h4>
+                <b>€2 500 - €6 500</b>
+              </div>
+              <button class="package__btn" type="button">Стать спонсором </button>
             </li>
 
 
@@ -487,10 +522,6 @@
               <p>Открытие бара</p>
             </li>
             <li class="program__item swiper-slide">
-              <h4>17:15</h4>
-              <p>Выступление тайного гостя</p>
-            </li>
-            <li class="program__item swiper-slide">
               <h4>18:45</h4>
               <p>Перерыв</p>
             </li>
@@ -507,50 +538,55 @@
               <p>Афтепати</p>
             </li>
           </ul>
-          <button class="program__btn program__btn--prev swiper-button-prev" type="button" id="program-btn-prev"></button>
-          <button class="program__btn program__btn--next swiper-button-next" type="button" id="program-btn-next"></button>
+          <button class="program__btn program__btn--prev swiper-button-prev" type="button"
+            id="program-btn-prev" aria-label="Предыдущий слайд"></button>
+          <button class="program__btn program__btn--next swiper-button-next" type="button"
+            id="program-btn-next" aria-label="Следующий слайд"></button>
         </div>
       </section>
 
       <section class="tickets" id="tickets">
         <div class="container">
-          <h3>Билеты</h3>
+          <div class="tickets__wrapper">
+            <h3>Билеты</h3>
+            <div class="tickets__timer"></div>
+          </div>
           <ul class="tickets__list">
             <li class="tickets__item">
               <h4>Meetup</h4>
               <b>€150</b>
               <p>посещение митапа+ кофе-брейк</p>
-              <button class="tickets__btn">Купить билет</button>
+              <button class="tickets__btn" type="button">Купить билет</button>
             </li>
             <li class="tickets__item">
               <h4>VIP ticket</h4>
               <b>€450</b>
               <p>Митап+афтерпати+vip стол+бар</p>
-              <button class="tickets__btn">Купить билет</button>
+              <button class="tickets__btn" type="button">Купить билет</button>
             </li>
             <li class="tickets__item">
               <h4>Golden ticket</h4>
               <b>€300</b>
               <p>Митап+афтерпати+golden стол+ бар</p>
-              <button class="tickets__btn">Купить билет</button>
+              <button class="tickets__btn" type="button">Купить билет</button>
             </li>
             <li class="tickets__item">
               <h4>Silver ticket</h4>
               <b>€200</b>
               <p>Митап+афтерпати+silver стол+бар</p>
-              <button class="tickets__btn">Купить билет</button>
+              <button class="tickets__btn" type="button">Купить билет</button>
             </li>
             <li class="tickets__item">
               <h4>Classic ticket</h4>
               <b>€100</b>
               <p>афтерпати+Classic стол+бар</p>
-              <button class="tickets__btn">Купить билет</button>
+              <button class="tickets__btn" type="button">Купить билет</button>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__headings">
             <h2>Остались</h2>
@@ -592,10 +628,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__logos">
-          <img class="footer__img" width="227" height="35" src="./img/svg/logo.svg" alt="Лого CPA Club Connect">
+          <svg class="intro__img" width="227" height="35" fill="currentColor">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg>
           <p>Connect</p>
           <span>При поддержке:</span>
-          <img class="footer__img--sigma" width="83" height="18" src="./img/svg/sigma-logo.svg" alt="Лого Sigma">
+          <img class="footer__img--sigma" width="83" height="18" src="./img/sigma-logo.png" alt="Лого Sigma">
         </div>
         <span>© 2022</span>
 
@@ -603,7 +641,7 @@
           <ul class="footer__socials-list">
 
             <li class="footer__socials-item">
-              <a href="instagram.com/cpa_club/" class="footer__socials-link">
+              <a href="https://instagram.com/cpa_club/" class="footer__socials-link">
                 <svg class="footer__socials-icon" width="27" height="27" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-inst"></use>
                 </svg>
@@ -612,7 +650,7 @@
             </li>
 
             <li class="footer__socials-item">
-              <a href="youtube.com/@cpaclub6284" class="footer__socials-link">
+              <a href="https://youtube.com/@cpaclub6284" class="footer__socials-link">
                 <svg class="footer__socials-icon" width="18" height="14" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-yout"></use>
                 </svg>
@@ -621,7 +659,7 @@
             </li>
 
             <li class="footer__socials-item">
-              <a href="linkedin.com/company/cpa-club" class="footer__socials-link">
+              <a href="https://linkedin.com/company/cpa-club" class="footer__socials-link">
                 <svg class="footer__socials-icon" width="22" height="22" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-lkdn"></use>
                 </svg>
@@ -630,7 +668,7 @@
             </li>
 
             <li class="footer__socials-item">
-              <a href="facebook.com/cpaclub1" class="footer__socials-link">
+              <a href="https://facebook.com/cpaclub1" class="footer__socials-link">
                 <svg class="footer__socials-icon" width="10" height="17" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-fsbk"></use>
                 </svg>
