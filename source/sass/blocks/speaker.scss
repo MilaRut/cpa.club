@@ -21,7 +21,7 @@
   }
 
   &::before {
-    content: url("../../img/speaker-bg.png");
+    content: url("../img/speaker-bg.png");
     top: -291px;
     left: 330px;
     width: 243px;
@@ -29,7 +29,7 @@
   }
 
   &::after {
-    content: url("../../img/speaker-bg-2.png");
+    content: url("../img/speaker-bg-2.png");
     top: 249px;
     right: -10px;
   }
@@ -47,7 +47,7 @@
   &::after {
     position: absolute;
     z-index: -1;
-    content: url("../../img/speaker-blur.png");
+    content: url("../img/speaker-blur.png");
     top: -410px;
     right: 760px;
   }
