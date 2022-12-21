@@ -1521,7 +1521,6 @@ button,
   padding: 100px;
   position: relative;
   padding-right: 0;
-  margin-right: 0;
   overflow-x: hidden;
 }
 
@@ -1594,7 +1593,11 @@ button,
   height: 50px;
   top: 100px;
   right: 100px;
+  border: none;
+  background-color: transparent;
   background: url("../img/svg/slider-arrow.svg") center no-repeat;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .program__btn--next {
@@ -1602,6 +1605,11 @@ button,
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
   right: 20px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
 .tickets .container {
