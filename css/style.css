@@ -925,7 +925,7 @@ button,
 
 .info .container::after {
   position: absolute;
-  content: url("../../img/info-blur.png");
+  content: url("../img/info-blur.png");
   top: -630px;
   right: 0;
 }
@@ -1000,7 +1000,7 @@ button,
 
 .auditory .container::after {
   position: absolute;
-  content: url("../../img/auditory-bg.png");
+  content: url("../img/auditory-bg.png");
   top: -20px;
   right: 0;
   z-index: -10;
@@ -1095,7 +1095,7 @@ button,
 }
 
 .speaker__wrapper::before {
-  content: url("../../img/speaker-bg.png");
+  content: url("../img/speaker-bg.png");
   top: -291px;
   left: 330px;
   width: 243px;
@@ -1103,7 +1103,7 @@ button,
 }
 
 .speaker__wrapper::after {
-  content: url("../../img/speaker-bg-2.png");
+  content: url("../img/speaker-bg-2.png");
   top: 249px;
   right: -10px;
 }
@@ -1126,7 +1126,7 @@ button,
 .speaker__info::after {
   position: absolute;
   z-index: -1;
-  content: url("../../img/speaker-blur.png");
+  content: url("../img/speaker-blur.png");
   top: -410px;
   right: 760px;
 }
@@ -1476,7 +1476,7 @@ button,
 
 .photos .container::after {
   position: absolute;
-  content: url("../../img/photos-blur.png");
+  content: url("../img/photos-blur.png");
   top: -500px;
   right: 0;
 }
@@ -1759,7 +1759,7 @@ button,
 
 .tickets .container::after {
   position: absolute;
-  content: url("../../img/tickets-blur.png");
+  content: url("../img/tickets-blur.png");
   top: -500px;
   right: 0;
   z-index: -10;
@@ -1927,7 +1927,7 @@ button,
 
 .contacts .container::after {
   position: absolute;
-  content: url("../../img/contacts-bg.png");
+  content: url("../img/contacts-bg.png");
   top: -319px;
   right: 0;
   z-index: -10;
