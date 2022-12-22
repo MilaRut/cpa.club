@@ -19,9 +19,6 @@
 
 .tickets__timer {
   position: relative;
-  width: 498px;
-  height: 135px;
-  background-color: $color-accent;
 
   &::before {
     @include font-settings ($ff-ttt, 800, 28px, 1.2, $color-default-black);

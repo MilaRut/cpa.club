@@ -1065,7 +1065,16 @@ button,
 }
 
 .speaker .container {
+  position: relative;
   padding: 100px 100px;
+}
+
+.speaker .container::after {
+  position: absolute;
+  z-index: -1;
+  content: url("../img/speaker-blur.png");
+  top: -160px;
+  left: 0;
 }
 
 .speaker h3 {
@@ -1113,7 +1122,6 @@ button,
 }
 
 .speaker__info {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1121,14 +1129,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-.speaker__info::after {
-  position: absolute;
-  z-index: -1;
-  content: url("../img/speaker-blur.png");
-  top: -410px;
-  right: 760px;
 }
 
 .speaker__info h4 {
@@ -1366,10 +1366,10 @@ button,
   cursor: pointer;
 }
 
-.sky {
+.sky .container {
   background: url("../img/sky-bg.png") 0 0 no-repeat;
-  padding: 194px 0;
   background-size: cover;
+  padding: 194px 0;
 }
 
 .sky h2 {
@@ -1780,9 +1780,6 @@ button,
 
 .tickets__timer {
   position: relative;
-  width: 498px;
-  height: 135px;
-  background-color: #fccd03;
 }
 
 .tickets__timer::before {
@@ -1911,6 +1908,68 @@ button,
   border: none;
   border-radius: 55px;
   cursor: pointer;
+}
+
+.timer {
+  width: 498px;
+  height: 135px;
+  background-color: #fccd03;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 21px 29px 14px;
+}
+
+.timer p {
+  width: 80px;
+  font: 16px Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  padding-top: 20px;
+}
+
+.timer__list {
+  color: #000;
+  display: block;
+  margin: 0 auto;
+}
+
+.timer__item {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-top: 14px;
+  padding-bottom: 23px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  border-radius: 18px;
+}
+
+.timer__item span {
+  width: 77px;
+  height: 77px;
+  background: rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: roboto_condensedlight, Arial, san-serif;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.timer__item p {
+  margin: 0;
 }
 
 .contacts .container {

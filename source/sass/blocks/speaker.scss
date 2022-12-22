@@ -1,5 +1,14 @@
 .speaker .container {
+  position: relative;
   padding: 100px 100px;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: url("../img/speaker-blur.png");
+    top: -160px;
+    left: 0;
+  }
 }
 
 .speaker h3 {
@@ -40,17 +49,8 @@
 }
 
 .speaker__info {
-  position: relative;
   display: flex;
   flex-direction: column;
-
-  &::after {
-    position: absolute;
-    z-index: -1;
-    content: url("../img/speaker-blur.png");
-    top: -410px;
-    right: 760px;
-  }
 }
 
 .speaker__info h4 {

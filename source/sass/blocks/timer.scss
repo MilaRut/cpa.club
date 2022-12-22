@@ -1,0 +1,54 @@
+.timer {
+  width: 498px;
+  height: 135px;
+  background-color: $color-accent;
+  border-radius: 50px;
+  display: flex;
+  padding: 21px 29px 14px;
+}
+
+.timer p {
+  width: 80px;
+  font: 16px Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  padding-top: 20px;
+}
+
+.timer__list {
+  color: #000;
+  display: block;
+  margin: 0 auto;
+}
+
+.timer__item {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 1.20;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-top: 14px;
+  padding-bottom: 23px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  border-radius: 18px;
+}
+
+.timer__item span {
+  width: 77px;
+  height: 77px;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: roboto_condensedlight, Arial, san-serif;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.timer__item p {
+  margin: 0;
+}

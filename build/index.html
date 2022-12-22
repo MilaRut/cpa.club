@@ -429,7 +429,23 @@
         <div class="container">
           <div class="tickets__wrapper">
             <h3>Билеты</h3>
-            <div class="tickets__timer"></div>
+            <div class="tickets__timer timer">
+              <p>Повышение цен<br><b>с 20.01.23</b></p>
+              <ul class="timer__list">
+                <li class="timer__item">
+                  <span class="days-num" id="d">0</span>
+                  <p class="days-txt">дн.</p>
+                </li>
+                <li class="timer__item">
+                  <span class="hours-num" id="h">0</span>
+                  <p class="hours-txt">ч.</p>
+                </li>
+                <li class="timer__item">
+                  <span class="minutes-num" id="m">0</span>
+                  <p class="minutes-txt">м.</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <ul class="tickets__list">
             <li class="tickets__item">
@@ -454,7 +470,7 @@
               <h4>Silver ticket</h4>
               <b>€200</b>
               <p>Митап+афтерпати+silver стол+бар</p>
-              <button class="tickets__btn open-popup active" type="button" data-value="#silver">Купить билет</button>
+              <button class="tickets__btn open-popup" type="button" data-value="#silver">Купить билет</button>
             </li>
             <li class="tickets__item">
               <h4>Classic ticket</h4>
@@ -586,7 +602,8 @@
                 <li class="popup__text-item">Реклама в соцсетях</li>
                 <li class="popup__text-item">Возможность сделать свой розыгрыш</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -605,7 +622,8 @@
                 <li class="popup__text-item">Официанты с логотипом партнера на форме</li>
                 <li class="popup__text-item">Возможность поставить свою зону с активностью</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -620,7 +638,8 @@
                 <li class="popup__text-item">Реклама на сайте</li>
                 <li class="popup__text-item">Реклама в соцсетях</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -633,7 +652,8 @@
                 <li class="popup__text-item">Брендированная зона кофе-брейка</li>
                 <li class="popup__text-item">Буклеты спонсора в зоне кофе-брейка</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -649,7 +669,8 @@
                 <li class="popup__text-item">Полностью брендированная страница входа в Wi-Fi</li>
                 <li class="popup__text-item">Брендинг спота на протяжении всего мероприятия</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -660,7 +681,8 @@
                 <li class="popup__text-item">5 проходок на митап</li>
                 <li class="popup__text-item">Брендированная станция fast charge</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -682,7 +704,8 @@
                 <li class="popup__text-list">Официанты с логотипом компании на форме</li>
                 <li class="popup__text-list">Модели с логотипом спонсора на одежде</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -697,7 +720,8 @@
                 <li class="popup__text-list">Брендированные шары</li>
                 <li class="popup__text-list">Брендированные конфети (листовки)</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -711,7 +735,8 @@
                 <li class="popup__text-list">Экран над диджеем для видеороликов компании</li>
                 <li class="popup__text-list">Возможность заказа музыки (2 трека)</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -726,7 +751,8 @@
                 <li class="popup__text-list">Брендированное меню</li>
                 <li class="popup__text-list">Брендированные зонтики для коктейлей</li>
               </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
+                спонсором</button>
             </div>
           </li>
 
@@ -742,7 +768,9 @@
                     <li class="popup__text-item">1х Golden стол</li>
                     <li class="popup__text-item">Брендирование Golden столов (12 шт.)</li>
                   </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                    data-value="#sponsor-form-item">Стать
+                    спонсором</button>
                 </li>
                 <li class="popup__tables-item">
                   <h5>1 спонсорский пакет</h5>
@@ -753,7 +781,9 @@
                     <li class="popup__text-item">1х Silver стол</li>
                     <li class="popup__text-item">Брендирование Silver столов (14 шт.)</li>
                   </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                    data-value="#sponsor-form-item">Стать
+                    спонсором</button>
                 </li>
                 <li class="popup__tables-item">
                   <h5>1 спонсорский пакет</h5>
@@ -764,7 +794,9 @@
                     <li class="popup__text-item">1х Classic стол</li>
                     <li class="popup__text-item">Брендирование всех Classic столов (14 шт.)</li>
                   </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form">Стать спонсором</button>
+                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                    data-value="#sponsor-form-item">Стать
+                    спонсором</button>
                 </li>
               </ul>
             </div>
@@ -780,7 +812,8 @@
                 <p>Open Super Premium Bar</p>
               </div>
               <b>€150</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form">Купить билет</button>
+              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                билет</button>
             </div>
           </li>
 
@@ -794,7 +827,8 @@
                 <p>Open Super Premium Bar</p>
               </div>
               <b>€450</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form">Купить билет</button>
+              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                билет</button>
             </div>
           </li>
 
@@ -808,7 +842,8 @@
                 <p>Open Super Premium Bar</p>
               </div>
               <b>€300</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form">Купить билет</button>
+              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                билет</button>
             </div>
           </li>
 
@@ -822,7 +857,8 @@
                 <p>Open Super Premium Bar</p>
               </div>
               <b>€200</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form">Купить билет</button>
+              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                билет</button>
             </div>
 
           <li class="popup__item" id="classic">
@@ -834,7 +870,8 @@
                 <p>Open Super Premium Bar</p>
               </div>
               <b>€100</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form">Купить билет</button>
+              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                билет</button>
             </div>
           </li>
         </ul>
@@ -848,24 +885,24 @@
       <div class="form-popup__wrapper">
 
         <ul class="form-popup__list">
-          <li class="form-popup__item" id="sponsor-form">
+          <li class="form-popup__item" id="sponsor-form-item">
             <div class="form-popup__content">
-              <!-- TODO --- Заменить атрибуты в форме, указанные - только для теста! -->
+              <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
               <form id="sponsor-form" action="https://echo.htmlacademy.ru/" method="get">
                 <h2>Оставить заявку</h2>
                 <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
                 <fieldset>
-                  <input type="text" name="username" placeholder="как вас зовут?" id="username" required>
-                  <label for="username"></label>
+                  <input type="text" name="username" placeholder="как вас зовут?" id="sponsor-username" required>
+                  <label for="sponsor-username"></label>
 
-                  <input type="email" name="email" placeholder="ваш e-mail" id="email"
+                  <input type="email" name="email" placeholder="ваш e-mail" id="sponsor-email"
                     pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
                     required>
-                  <label for="email"></label>
+                  <label for="sponsor-email"></label>
 
-                  <input type="tel" name="tel" placeholder="номер телефона" id="tel" pattern="^[1-9]+[0-9]*$"
+                  <input type="tel" name="tel" placeholder="номер телефона" id="sponsor-tel" pattern="^[1-9]+[0-9]*$"
                     title="Только цифры" required>
-                  <label for="tel"></label>
+                  <label for="sponsor-tel"></label>
 
                   <input type="text" name="company" placeholder="название компании" id="company" required>
                   <label for="company"></label>
@@ -876,30 +913,32 @@
             </div>
           </li>
 
-          <li class="form-popup__item" id="ticket-form">
+          <li class="form-popup__item" id="ticket-form-item">
             <div class="form-popup__content">
-              <!-- TODO --- Заменить атрибуты в форме, указанные - только для теста! -->
+              <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
               <form id="ticket-form" action="https://echo.htmlacademy.ru/" method="get">
                 <h2>Купить билет </h2>
                 <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
                 <fieldset>
-                  <input type="text" name="username" placeholder="как вас зовут?" id="username" required>
-                  <label for="username"></label>
+                  <input type="text" name="username" placeholder="как вас зовут?" id="ticket-username" required>
+                  <label for="ticket-username"></label>
 
-                  <input type="email" name="email" placeholder="ваш e-mail" id="email"
+                  <input type="email" name="email" placeholder="ваш e-mail" id="ticket-email"
                     pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
                     required>
-                  <label for="email"></label>
+                  <label for="ticket-email"></label>
 
-                  <input type="tel" name="tel" placeholder="номер телефона" id="tel" pattern="^[1-9]+[0-9]*$"
-                    title="Только цифры" required>
-                  <label for="tel"></label>
+                  <input type="tel" name="tel" placeholder="номер телефона" id="ticket-tel"
+                    pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" title="Только цифры"
+                    required>
+                  <label for="ticket-tel"></label>
                 </fieldset>
                 <button class="form__submit-btn" type="submit">Отправить</button>
               </form>
             </div>
           </li>
         </ul>
+
       </div>
     </div>
   </div>
