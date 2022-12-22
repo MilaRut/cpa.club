@@ -8,8 +8,10 @@
   &::after {
     position: absolute;
     content: url("../img/photos-blur.png");
-    top: -500px;
-    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60%;
+    right: 20%;
   }
 }
 

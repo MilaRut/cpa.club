@@ -1,6 +1,6 @@
 // popup on/off
 
-.popup__bg {
+.form-popup__bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,13 +13,13 @@
   z-index: 1000;
 }
 
-.popup__bg.active {
+.form-popup__bg.active {
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
 }
 
-.popup {
+.form-popup {
   position: absolute;
   min-width: 1241px;
   min-height: 743px;
@@ -37,14 +37,14 @@
   z-index: 200;
 }
 
-.popup.active {
+.form-popup.active {
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s all;
 }
 
 // styles
 
-.popup__close-btn {
+.form-popup__close-btn {
   position: relative;
   width: 38px;
   height: 38px;
@@ -72,39 +72,35 @@
   }
 }
 
-.popup__list {
+.form-popup__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.popup__tickets {
-  text-align: center;
-}
-
-.popup__item {
+.form-popup__item {
   display: none;
 }
 
-.popup__item.active {
+.form-popup__item.active {
   display: block;
 }
 
-.popup__content {
+.form-popup__content {
   min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.popup h2 {
+.form-popup h2 {
   @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0;
 }
 
-.popup__tickets p {
+.form-popup  p {
   @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
   letter-spacing: 0.02em;
   opacity: 0.9;
@@ -112,53 +108,7 @@
   margin: 0;
 }
 
-.popup__tickets b {
-  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.popup__tables-list {
-  margin: 0;
-  padding: 0 50px;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.popup__tables-item {
-  max-width: 360px;
-  min-height: 410px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.popup__tables-item h5 {
-  @include font-settings ($ff-mont, 700, 14px, 1.2, $color-default-white);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.popup__tables-item h2 {
-  @include font-settings ($ff-ttt, 800, 38px, 1.2, $color-default-white);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.popup__tables-item b {
-  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.popup__text-item {
-  @include font-settings ($ff-mont, 400, 14px, 1.5, $color-default-white);
-}
-
-.popup__buy-btn,
-.popup__get-sponsor-btn {
+.form__submit-btn {
   @include font-settings ($ff-mont, 700, 22px, 1, $color-default-black);
   width: 334px;
   height: 67px;
@@ -172,12 +122,5 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: 0.5s all;
-}
-
-.popup__buy-btn {
   margin: 0 auto;
 }
-
-.popup__tables-list .popup__get-sponsor-btn {
-  width: 278px;
- }

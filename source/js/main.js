@@ -3,6 +3,7 @@ import {setupVideo} from './modules/video';
 import {initPhotoSlider} from './modules/photo-slider';
 import {initSwiper} from './modules/program-slider';
 import {initPopup} from './modules/popup';
+import {initFormPopup} from './modules/form-popup';
 
 // ---------------------------------
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhotoSlider();
     initSwiper(swiper);
     initPopup();
+    initFormPopup();
   });
 });
 

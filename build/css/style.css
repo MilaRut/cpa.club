@@ -1477,8 +1477,10 @@ button,
 .photos .container::after {
   position: absolute;
   content: url("../img/photos-blur.png");
-  top: -500px;
-  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60%;
+  right: 20%;
 }
 
 .slider-wrapper {
@@ -2140,7 +2142,7 @@ button,
 
 .popup {
   position: absolute;
-  min-width: 86.1805555556%;
+  min-width: 1241px;
   min-height: 743px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
@@ -2385,6 +2387,183 @@ button,
 
 .popup__tables-list .popup__get-sponsor-btn {
   width: 278px;
+}
+
+.form-popup__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.form-popup__bg.active {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.form-popup {
+  position: absolute;
+  min-width: 1241px;
+  min-height: 743px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(52px);
+  backdrop-filter: blur(52px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 200;
+}
+
+.form-popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.form-popup__close-btn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 60px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.form-popup__close-btn::after,
+.form-popup__close-btn:before {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 8px;
+  width: 21px;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-popup__close-btn::after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.form-popup__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form-popup__item {
+  display: none;
+}
+
+.form-popup__item.active {
+  display: block;
+}
+
+.form-popup__content {
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.form-popup h2 {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.form-popup p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0;
+}
+
+.form__submit-btn {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  color: #000000;
+  width: 334px;
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fccd03;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  margin: 0 auto;
 }
 
 /* @mixin hover-focus {
