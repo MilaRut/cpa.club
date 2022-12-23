@@ -15,28 +15,28 @@ const initSwiper = (swiper) => {
           slidesPerView: 1,
           slidesPerGroup: 1,
           spaceBetween: 22,
-          initialSlide: 2,
+          initialSlide: 0,
         },
 
         320: {
           slidesPerView: 1,
           slidesPerGroup: 1,
           spaceBetween: 22,
-          initialSlide: 2,
+          initialSlide: 0,
         },
 
         768: {
           slidesPerView: 2,
           slidesPerGroup: 1,
           spaceBetween: 30,
-          initialSlide: 2,
+          initialSlide: 0,
         },
 
         1440: {
           slidesPerView: 3,
           slidesPerGroup: 1,
           spaceBetween: 60,
-          initialSlide: 1,
+          initialSlide: 0,
         },
       },
     });
