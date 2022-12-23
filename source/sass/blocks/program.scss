@@ -1,8 +1,20 @@
 .program .container {
-  padding: 100px;
+  padding: 7px 0 87px 100px;
   position: relative;
   padding-right: 0;
   overflow-x: hidden;
+}
+
+.program__blur {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url("../img/program-blur.png");
+    top: 189px;
+    right: 0;
+    z-index: 10;
+  }
 }
 
 .program h3 {
@@ -11,7 +23,7 @@
   letter-spacing: 0.02em;
   position: relative;
   margin: 0;
-  margin-bottom: 103px;
+  margin-bottom: 190px;
 }
 
 .program__list {
@@ -24,13 +36,13 @@
 .program__item {
   position: relative;
   width: 415px;
-  padding-right: 30px;
+  padding-right: 14px;
   cursor: grab;
 
   &::before {
     position: absolute;
     content: "";
-    top: -9px;
+    top: -49px;
     left: 0;
     width: 22px;
     height: 22px;
@@ -42,7 +54,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: -39px;
     left: 0;
     width: 430px;
     height: 4px;
@@ -54,28 +66,32 @@
   @include font-settings ($ff-ttt, 800, 24px, 1.2, $color-accent);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 2px;
 }
 
 .program__item p {
-  @include font-settings ($ff-ttt, 800, 24px, 1.2, $color-default-white);
+  @include font-settings ($ff-ttt, 800, 28px, 1.2, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   width: 340px;
+  margin: 0;
 }
 
 .program__item span {
   @include font-settings ($ff-ttt, 700, 18px, 1.2, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  width: 340px;
+  margin-top: 1px;
+  display: block;
 }
 
 .program__btn {
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 100px;
-  right: 100px;
+  top: 45px;
+  right: 172px;
   border: none;
   background-color: transparent;
   background: url("../img/svg/slider-arrow.svg") center no-repeat;
@@ -84,7 +100,7 @@
 
   &--next {
     transform: scale(-1, 1);
-    right: 20px;
+    right: 100px;
   }
 }
 

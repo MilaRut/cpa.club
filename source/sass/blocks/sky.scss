@@ -1,7 +1,8 @@
 .sky .container {
   background: url("../img/sky-bg.png") 0 0 no-repeat;
   background-size: cover;
-  padding: 194px 0;
+  padding-top: 186px;
+  padding-bottom: 171px;
 }
 
 .sky h2 {
@@ -15,15 +16,17 @@
 .sky h3 {
   @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-default-white);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   text-align: center;
   margin: 0;
-  margin-bottom: 58px;
+  margin-bottom: 50px;
 }
 
 .sky p {
   @include font-settings ($ff-mont, 500, 16px, 1.4, $color-default-white);
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 20px;
   max-width: 959px;
   opacity: 0.9;
 }

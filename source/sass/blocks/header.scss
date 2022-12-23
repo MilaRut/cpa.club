@@ -1,11 +1,16 @@
 .header {
-  width: 100%;
+  background: url("../img/intro-bg.png") 0 0 no-repeat;
+  background-size: 100%;
 }
 
 .header .container {
   padding: 14px 100px;
   display: flex;
   align-items: center;
+}
+
+.header__container {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header__nav {
@@ -20,7 +25,7 @@
 }
 
 .header__item {
-  margin-right: 27px;
+  margin-right: 29px;
 }
 
 .header__link {
@@ -32,11 +37,15 @@
   }
 }
 
+.header__lang {
+  margin-right: 19px;
+}
+
 .header__lang-switcher {
   @include font-settings ($ff-mont, 500, 14px, 1.1, $color-default-white);
   min-width: 65px;
   text-transform: uppercase;
-  margin-right: 22px;
+  margin-right: 6px;
 
   &:hover {
     text-decoration: underline;

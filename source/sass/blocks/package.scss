@@ -1,10 +1,8 @@
 .package {
-  width: 390px;
+  width: 401px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 10px 30px 10px;
   border: 1px solid #505050;
   border-radius: 30px;
 
@@ -35,25 +33,19 @@
 .package h5 {
   @include font-settings ($ff-mont, 700, 14px, 1.2, $color-default-white);
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 15px;
-  padding-top: 38px;
-}
-
-.package h4 {
-  @include font-settings ($ff-ttt, 800, 40px, 1.1, $color-default-white);
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding-top: 38px;
+  padding-left: 10px;
 }
 
 .package b {
   @include font-settings ($ff-ttt, 800, 30px, 1.2, $color-accent);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .package__btn {

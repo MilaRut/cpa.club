@@ -1,44 +1,63 @@
 .package-meetup .container {
-  padding: 100px;
+  padding: 41px 93px 116px;
 }
 
 .package-meetup h2 {
   @include font-settings ($ff-ttt, 800, 80px, 1, $color-accent);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0;
 }
 
 .package-meetup h3 {
   @include font-settings ($ff-ttt, 800, 80px, 1, $color-default-white);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   position: relative;
   margin: 0;
-  margin-bottom: 103px;
+  margin-bottom: 83px;
 
   &::after {
     @include font-settings ($ff-ttt, 800, 38px, 1.2, $color-default-black);
     position: absolute;
     content: "Meet-up";
-    padding-top: 10px;
+    padding-top: 14px;
+    padding-left: 5px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.02em;
     width: 273px;
     height: 68px;
-    bottom: -29px;
-    left: 277px;
+    bottom: -36px;
+    left: 365px;
     background-color: $color-accent;
     border: 1px solid $color-default-black;
     border-radius: 250px;
-    transform: rotate(-10deg);
+    transform: rotate(-3deg);
   }
 }
 
 .package-meetup__list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 7px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.package-meetup__item {
+  margin-bottom: 20px;
+}
+
+.package-meetup__item:not(:nth-child(3n)) {
+  margin-right: 18px;
+}
+
+.package-meetup__item h4 {
+  @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  margin-bottom: 20px;
 }

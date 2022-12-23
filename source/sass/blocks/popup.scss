@@ -22,7 +22,7 @@
 .popup {
   position: absolute;
   min-width: 1241px;
-  min-height: 743px;
+  max-height: min(80vh, 743px);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(52px);
   border-radius: 30px;
@@ -51,7 +51,7 @@
   border: none;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
-  margin-bottom: 60px;
+  margin-bottom: 13px;
   margin-left: auto;
   cursor: pointer;
 
@@ -94,7 +94,8 @@
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  padding-left: 50px;
 }
 
 .popup h2 {
@@ -102,6 +103,9 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 67px;
+  max-width: 60%;
+  padding-left: 10px;
 }
 
 .popup__tickets p {
@@ -120,7 +124,7 @@
 
 .popup__tables-list {
   margin: 0;
-  padding: 0 50px;
+  padding: 108px 54px 0 4px;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -139,22 +143,48 @@
   @include font-settings ($ff-mont, 700, 14px, 1.2, $color-default-white);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  margin: 0 0 5px;
+  padding-left: 8px;
 }
 
 .popup__tables-item h2 {
   @include font-settings ($ff-ttt, 800, 38px, 1.2, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .popup__tables-item b {
-  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
+  @include font-settings ($ff-ttt, 800, 24px, 1.2, $color-accent);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  padding-left: 7px;
+  margin-bottom: 25px;
+}
+
+.popup__text-list {
+  margin: 0;
+  padding: 0 114px 0 36px;
+  max-height: 170px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: auto;
+}
+
+.popup__tables-item .popup__text-list {
+  padding: 0;
+  padding-left: 20px;
+  margin-bottom: 55px;
 }
 
 .popup__text-item {
-  @include font-settings ($ff-mont, 400, 14px, 1.5, $color-default-white);
+  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
+}
+
+.popup__tables-list .popup__text-item {
+  font-size: 14px;
 }
 
 .popup__buy-btn,
@@ -172,12 +202,16 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: 0.5s all;
+  margin-bottom: 30px;
 }
 
 .popup__buy-btn {
   margin: 0 auto;
 }
 
-.popup__tables-list .popup__get-sponsor-btn {
+.popup__tables-item .popup__get-sponsor-btn {
+  padding-left: 10px;
   width: 278px;
- }
+  font-size: 18px;
+  margin-bottom: 110px;
+}

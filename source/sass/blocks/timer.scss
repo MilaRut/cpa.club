@@ -2,44 +2,49 @@
   width: 498px;
   height: 135px;
   background-color: $color-accent;
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   padding: 21px 29px 14px;
 }
 
-.timer p {
-  width: 80px;
-  font: 16px Arial, sans-serif;
+.timer__title {
+  @include font-settings ($ff-mont, 500, 14px, 1.2, $color-default-black);
   text-transform: uppercase;
-  color: #000;
-  padding-top: 20px;
+  letter-spacing: 0.06em;
+  padding-top: 12px;
+  margin-right: auto;
 }
 
 .timer__list {
-  color: #000;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .timer__item {
-  display: inline-block;
+  display: block;
   font-weight: 800;
   font-size: 35px;
   line-height: 1.20;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  padding-top: 14px;
-  padding-bottom: 23px;
-  margin-right: 8px;
+  margin-right: 13px;
   margin-bottom: 0;
-  border-radius: 18px;
+  border-radius: 20px;
+}
+
+.timer__item:last-child {
+  margin-right: 0;
 }
 
 .timer__item span {
+  @include font-settings ($ff-ttt, 800, 35px, 1.2, $color-default-black);
   width: 77px;
   height: 77px;
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,5 +55,7 @@
 }
 
 .timer__item p {
+  @include font-settings ($ff-mont, 500, 14px, 1.2, $color-default-black);
+  letter-spacing: 0.06em;
   margin: 0;
 }

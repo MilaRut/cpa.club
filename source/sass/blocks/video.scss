@@ -1,8 +1,9 @@
 .video-section h3 {
   @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-default-white);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0;
-  padding: 70px 100px;
+  padding: 96px 100px;
   z-index: 100;
 }
 
@@ -28,8 +29,8 @@
 
 .video__btn {
   position: absolute;
-  top: 37.2%;
-  left: 45.4%;
+  top: 40.1%;
+  left: 41.9%;
   width: 233px;
   height: 233px;
   border: none;

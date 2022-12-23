@@ -14,28 +14,30 @@
 .tickets__wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 103px;
+  margin-bottom: 35px;
 }
 
 .tickets__timer {
   position: relative;
+  margin-right: 76px;
 
   &::before {
     @include font-settings ($ff-ttt, 800, 28px, 1.2, $color-default-black);
     position: absolute;
     content: "Early birds";
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-right: 5px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    width: 273px;
-    height: 68px;
-    top: -30px;
-    left: -110px;
+    width: 298px;
+    height: 63px;
+    top: -36px;
+    left: -112px;
     background-color: $color-accent;
     border: 1px solid $color-default-black;
     border-radius: 250px;
-    transform: rotate(-10deg);
+    transform: rotate(-3deg);
   }
 }
 
@@ -47,6 +49,7 @@
   margin: 0;
   margin-right: auto;
   padding-left: 20px;
+  padding-top: 30px;
 }
 
 .tickets__list {
@@ -59,9 +62,9 @@
 }
 
 .tickets__item {
-  width: 48%;
+  width: 47.7%;
+  max-height: 187px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
   margin: 0 10px 20px 10px;
@@ -70,27 +73,35 @@
   border-radius: 30px;
 }
 
+.tickets__left-col,
+.tickets__right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
 .tickets__item h4 {
   @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-default-white);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  width: 40%;
   margin: 0;
+  margin-bottom: auto;
 }
 
 .tickets__item p {
   @include font-settings ($ff-mont, 500, 14px, 1.2, $color-default-white);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 40%;
   margin: 0;
 }
 
 .tickets__item b {
-  @include font-settings ($ff-ttt, 800, 30px, 1.1, $color-accent);
+  @include font-settings ($ff-ttt, 800, 40px, 1.1, $color-accent);
+  width: 150px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  width: 40%;
+align-self: flex-end;
+  width: 150px;
   margin: 0;
 }
 

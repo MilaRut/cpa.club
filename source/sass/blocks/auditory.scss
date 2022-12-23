@@ -17,28 +17,31 @@
   display: flex;
   flex-direction: column;
   max-width: 48%;
+  margin-bottom: 10px;
 }
 
 .auditory__headings h2 {
   @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-accent);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0;
 }
 
 .auditory__headings h3 {
   @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-default-white);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0;
 }
 
 .auditory__list {
-  max-width: 50%;
+  max-width: 52%;
   margin: 0;
   padding: 0;
 }
 
 .auditory__item {
-  @include font-settings ($ff-mont, 400, 24px, 1.3, $color-default-white);
+  @include font-settings ($ff-mont, 400, 24px, 1.25, $color-default-white);
 }
 
 .auditory p {

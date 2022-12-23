@@ -1,12 +1,6 @@
-.intro {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .intro .container {
-  background: url("../img/intro-bg.png") 0 0 no-repeat;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 121px;
+  padding-bottom: 81px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +8,8 @@
 }
 
 .intro__heading {
-  max-width: 50%;
   display: flex;
+  margin-bottom: 18px;
 }
 
 .intro__heading .intro__img {
@@ -26,6 +20,8 @@
   @include font-settings ($ff-mont, 700, 20px, 1.1, $color-default-white);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin: 0;
+  padding-top: 15px;
 }
 
 .intro h1 {
@@ -33,13 +29,14 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 4px;
 }
 
 .intro h2 {
   @include font-settings ($ff-ttt, 800, 49px, 1, $color-default-white);
   letter-spacing: 0.02em;
   margin: 0;
-  margin-bottom: 200px;
+  margin-bottom: 115px;
 }
 
 .intro__sub {
@@ -49,5 +46,5 @@
 
 .intro__sub span {
   @include font-settings ($ff-mont, 400, 18px, 1.2, $color-default-white);
-  margin-right: 20px;
+  margin-right: 12px;
 }
