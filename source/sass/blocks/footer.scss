@@ -52,8 +52,12 @@ span.footer__copyright {
   border-radius: 18.5px;
   background-color: #232323;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding-top: 6px;
+
+  &--inst {
+    padding-top: 3px;
+  }
 
   &:hover {
     background-color: #231e0a;
@@ -63,7 +67,3 @@ span.footer__copyright {
 .footer__socials-link {
   padding: 10px;
 }
-
-// .footer__socials-icon {
-//   padding-top: 5px;
-// }
