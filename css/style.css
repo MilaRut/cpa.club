@@ -1214,7 +1214,7 @@ button,
 }
 
 .package-meetup .container {
-  padding: 41px 93px 116px;
+  padding: 41px 93px 138px;
 }
 
 .package-meetup h2 {
@@ -1271,21 +1271,13 @@ button,
 
 .package-meetup__list {
   margin: 0;
-  padding: 0 0 0 7px;
+  padding: 0 0 0 6px;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.package-meetup__item {
-  margin-bottom: 20px;
-}
-
-.package-meetup__item:not(:nth-child(3n)) {
-  margin-right: 18px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
+  gap: 19px 9px;
 }
 
 .package-meetup__item h4 {
@@ -2274,7 +2266,7 @@ button,
   margin-right: 7px;
 }
 
-.footer__img span.footer__copyright {
+span.footer__copyright {
   padding-right: 15px;
 }
 
@@ -2309,6 +2301,10 @@ button,
 
 .footer__socials-item:hover {
   background-color: #231e0a;
+}
+
+.footer__socials-link {
+  padding: 10px;
 }
 
 .popup__bg {
