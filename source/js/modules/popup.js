@@ -30,7 +30,6 @@ function initPopup() {
       currentItem.classList.add('active');
       overlay.classList.add('active');
       popup.classList.add('active');
-
     });
   });
 

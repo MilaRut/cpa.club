@@ -47,7 +47,8 @@
   text-transform: uppercase;
   margin-right: 6px;
 
-  &:hover {
+  &:hover,
+  &--active {
     text-decoration: underline;
   }
 }

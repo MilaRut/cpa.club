@@ -32,9 +32,9 @@
   margin-bottom: 16px;
 }
 
-// .concept__content b {
-//   @include font-settings ($ff-mont, 700, 16px, 1.3, $color-default-white);
-// }
+.concept__content b {
+  @include font-settings ($ff-mont, 700, 16px, 1.3, $color-default-white);
+}
 
 .concept__second-screen {
   display: flex;

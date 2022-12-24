@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
@@ -43,7 +43,7 @@
             </ul>
           </nav>
           <div class="header__lang">
-            <a href="#" class="header__lang-switcher">Ru</a>
+            <a href="#" class="header__lang-switcher header__lang-switcher--active">Ru</a>
             <a href="#" class="header__lang-switcher">Eng</a>
           </div>
           <a href="#package-meetup" class="header__btn header__btn--sponsor">Стать спонсором</a>
@@ -183,14 +183,14 @@
                 оратор, автор двух мемуаров и&nbsp;бывший брокер.</p>
               <p>Человек, о&nbsp;котором в&nbsp;90-х говорили самые влиятельные финансовые круги Нью-Йорка.
                 Он&nbsp;основал компанию
-                Stratton Oakmont, которая занималась продажей дешевых акций по&nbsp;телефону. Оборот финансовых операций
+                Stratton Oakmont, которая занималась продажей дешевых акций по&nbsp;телефону.&nbsp;Оборот&nbsp;финансовых операций
                 достигал
                 <b>более миллиарда долларов</b>.
               </p>
               <p>Зная, как эволюционировала технология продаж, и&nbsp;умело используя классические и&nbsp;современные
                 методы,
                 Джордан
-                может <b>продать что угодно</b> и&nbsp;умело обучает этому людей по&nbsp;всему миру.</p>
+                <b>может продать что угодно</b> и&nbsp;умело обучает этому людей по&nbsp;всему миру.</p>
               <cite>«Без действия самые лучшие намерения<br>в&nbsp;мире&nbsp;&mdash; не&nbsp;что иное, как
                 намерения».</cite>
             </div>
@@ -617,368 +617,383 @@
   </div>
 
   <div class="popup__bg">
-    <div class="popup">
-      <button class="popup__close-btn" type="button" aria-label="Закрыть окно"></button>
-      <div class="popup__wrapper">
+    <div class="popup__container">
+      <div class="popup">
+        <button class="popup__close-btn" type="button" aria-label="Закрыть окно"></button>
+        <div class="popup__wrapper">
 
-        <ul class="popup__list popup__meetup">
-          <li class="popup__item" id="mu-diamond">
-            <div class="popup__content">
-              <h2>MeetUp Diamond Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">30 проходок на митап</li>
-                <li class="popup__text-item">20 проходок на афтепати</li>
-                <li class="popup__text-item">Доп. проходки со скидкой 25%</li>
-                <li class="popup__text-item">4 баннера на митапе</li>
-                <li class="popup__text-item">Брендированная фотозона</li>
-                <li class="popup__text-item">Брендированный фотоотчет</li>
-                <li class="popup__text-item">Брендированные подарочные пакеты</li>
-                <li class="popup__text-item">Брендированные браслеты</li>
-                <li class="popup__text-item">Мерч 5 единиц в пакетах для участников</li>
-                <li class="popup__text-item">Реклама бренда на сцене</li>
-                <li class="popup__text-item">Реклама на сайте</li>
-                <li class="popup__text-item">Реклама в соцсетях</li>
-                <li class="popup__text-item">Возможность сделать свой розыгрыш</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="mu-golden">
-            <div class="popup__content">
-              <h2>MeetUp Golden Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">15 проходок на митап</li>
-                <li class="popup__text-item">Доп. проходки со скидкой 15%</li>
-                <li class="popup__text-item">2 баннера на митапе</li>
-                <li class="popup__text-item">Брендированный видеоотчет</li>
-                <li class="popup__text-item">Мерч 4 единицы в пакетах для участников</li>
-                <li class="popup__text-item">Реклама бренда на сцене</li>
-                <li class="popup__text-item">Реклама на сайте</li>
-                <li class="popup__text-item">Реклама в соцсетях</li>
-                <li class="popup__text-item">Официанты с логотипом партнера на форме</li>
-                <li class="popup__text-item">Возможность поставить свою зону с активностью</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="mu-silver">
-            <div class="popup__content">
-              <h2>MeetUp Silver Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">10 проходок на митап</li>
-                <li class="popup__text-item">1 баннер на митапе</li>
-                <li class="popup__text-item">Мерч 3 единицы в пакетах для участников</li>
-                <li class="popup__text-item">Реклама бренда на сцене</li>
-                <li class="popup__text-item">Реклама на сайте</li>
-                <li class="popup__text-item">Реклама в соцсетях</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="mu-coffee">
-            <div class="popup__content">
-              <h2>Coffee Break Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">10 проходок на митап</li>
-                <li class="popup__text-item">1 баннер возле зоны кофе-брейка</li>
-                <li class="popup__text-item">Брендированная зона кофе-брейка</li>
-                <li class="popup__text-item">Буклеты спонсора в зоне кофе-брейка</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="mu-wifi">
-            <div class="popup__content">
-              <h2>Wi-Fi Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">5 проходок на митап</li>
-                <li class="popup__text-item">Право быть эксклюзивным Wi-Fi спонсором мероприятия</li>
-                <li class="popup__text-item">Название компании будет отображаться как имя Wi-Fi. Формат: «AW WIFI от
-                  &lt;название вашей компании&gt;»</li>
-                <li class="popup__text-item">Выбор пользовательского пароля (до 10 символов)</li>
-                <li class="popup__text-item">Полностью брендированная страница входа в Wi-Fi</li>
-                <li class="popup__text-item">Брендинг спота на протяжении всего мероприятия</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="mu-charge">
-            <div class="popup__content">
-              <h2>Charging Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-item">5 проходок на митап</li>
-                <li class="popup__text-item">Брендированная станция fast charge</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="ap-diamond">
-            <div class="popup__content">
-              <h2>Afterparty Diamond Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-list">20х проходок на афтепати</li>
-                <li class="popup__text-list">10х проходок на митап</li>
-                <li class="popup__text-list">2x VIP столов</li>
-                <li class="popup__text-list">4 баннера</li>
-                <li class="popup__text-list">Объявление информации о компании ведущим</li>
-                <li class="popup__text-list">Видеоролик от спонсора на экране в полной тишине</li>
-                <li class="popup__text-list">Брендирование VIP столов</li>
-                <li class="popup__text-list">Брендированная фотозона</li>
-                <li class="popup__text-list">Брендированные браслеты</li>
-                <li class="popup__text-list">Реклама на сайте</li>
-                <li class="popup__text-list">Реклама в соцсетях</li>
-                <li class="popup__text-list">Официанты с логотипом компании на форме</li>
-                <li class="popup__text-list">Модели с логотипом спонсора на одежде</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="ap-enter">
-            <div class="popup__content">
-              <h2>Entertainment Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-list">20х проходок на афтепати</li>
-                <li class="popup__text-list">2x Golden столов</li>
-                <li class="popup__text-list">Объявление информации о компании ведущим</li>
-                <li class="popup__text-list">Танцовщицы с логотипом компании на одежде</li>
-                <li class="popup__text-list">Брендированные шары</li>
-                <li class="popup__text-list">Брендированные конфети (листовки)</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="ap-dj">
-            <div class="popup__content">
-              <h2>DJ Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-list">20 проходок на афтепати</li>
-                <li class="popup__text-list">2х Silver столов</li>
-                <li class="popup__text-list">DJ с логотипом компании</li>
-                <li class="popup__text-list">Экран над диджеем для видеороликов компании</li>
-                <li class="popup__text-list">Возможность заказа музыки (2 трека)</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="ap-bar">
-            <div class="popup__content">
-              <h2>Bar Sponsor</h2>
-              <ul class="popup__text-list">
-                <li class="popup__text-list">20 проходок на афтепати</li>
-                <li class="popup__text-list">2х Classic столов</li>
-                <li class="popup__text-list">Бармены с логотипом спонсора на форме</li>
-                <li class="popup__text-list">Персонализованные названия напитков</li>
-                <li class="popup__text-list">Брендированное меню</li>
-                <li class="popup__text-list">Брендированные зонтики для коктейлей</li>
-              </ul>
-              <button class="popup__get-sponsor-btn open-form-popup" type="button" data-value="#sponsor-form-item">Стать
-                спонсором</button>
-            </div>
-          </li>
-
-          <li class="popup__item" id="ap-tables">
-            <div class="popup__content">
-              <ul class="popup__tables-list">
-                <li class="popup__tables-item">
-                  <h5>1 спонсорский пакет</h5>
-                  <h2>Golden Tables Sponsor</h2>
-                  <b>€6 500</b>
-                  <ul class="popup__text-list">
-                    <li class="popup__text-item">10 проходок на афтепати</li>
-                    <li class="popup__text-item">1х Golden стол</li>
-                    <li class="popup__text-item">Брендирование Golden столов (12 шт.)</li>
-                  </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
-                    data-value="#sponsor-form-item">Стать
-                    спонсором</button>
-                </li>
-                <li class="popup__tables-item">
-                  <h5>1 спонсорский пакет</h5>
-                  <h2>Silver Tables Sponsor</h2>
-                  <b>€4 000</b>
-                  <ul class="popup__text-list">
-                    <li class="popup__text-item">10 проходок на афтепати</li>
-                    <li class="popup__text-item">1х Silver стол</li>
-                    <li class="popup__text-item">Брендирование Silver столов (14 шт.)</li>
-                  </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
-                    data-value="#sponsor-form-item">Стать
-                    спонсором</button>
-                </li>
-                <li class="popup__tables-item">
-                  <h5>1 спонсорский пакет</h5>
-                  <h2>Classic Tables Sponsor</h2>
-                  <b>€2 500</b>
-                  <ul class="popup__text-list">
-                    <li class="popup__text-item">5 проходок на афтепати</li>
-                    <li class="popup__text-item">1х Classic стол</li>
-                    <li class="popup__text-item">Брендирование всех Classic столов (14 шт.)</li>
-                  </ul>
-                  <button class="popup__get-sponsor-btn open-form-popup" type="button"
-                    data-value="#sponsor-form-item">Стать
-                    спонсором</button>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <ul class="popup__list popup__tickets">
-          <li class="popup__item" id="meetup">
-            <div class="popup__content">
-              <h2>Meetup</h2>
-              <div class="popup__text">
-                <p>Проходка на митап</p>
-                <p>Open Super Premium Bar</p>
+          <ul class="popup__list popup__meetup">
+            <li class="popup__item" id="mu-diamond">
+              <div class="popup__content">
+                <h2>MeetUp Diamond Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">30 проходок на митап</li>
+                  <li class="popup__text-item">20 проходок на афтепати</li>
+                  <li class="popup__text-item">Доп. проходки со скидкой 25%</li>
+                  <li class="popup__text-item">4 баннера на митапе</li>
+                  <li class="popup__text-item">Брендированная фотозона</li>
+                  <li class="popup__text-item">Брендированный фотоотчет</li>
+                  <li class="popup__text-item">Брендированные подарочные пакеты</li>
+                  <li class="popup__text-item">Брендированные браслеты</li>
+                  <li class="popup__text-item">Мерч 5 единиц в пакетах для участников</li>
+                  <li class="popup__text-item">Реклама бренда на сцене</li>
+                  <li class="popup__text-item">Реклама на сайте</li>
+                  <li class="popup__text-item">Реклама в соцсетях</li>
+                  <li class="popup__text-item">Возможность сделать свой розыгрыш</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
               </div>
-              <b>€150</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
-                билет</button>
-            </div>
-          </li>
+            </li>
 
-          <li class="popup__item" id="vip">
-            <div class="popup__content">
-              <h2>VIP Ticket</h2>
-              <div class="popup__text">
-                <p>Проходка на митап</p>
-                <p>Проходка на афтепати</p>
-                <p>VIP стол на афтепати (4 этаж Venue)</p>
-                <p>Open Super Premium Bar</p>
+            <li class="popup__item" id="mu-golden">
+              <div class="popup__content">
+                <h2>MeetUp Golden Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">15 проходок на митап</li>
+                  <li class="popup__text-item">Доп. проходки со скидкой 15%</li>
+                  <li class="popup__text-item">2 баннера на митапе</li>
+                  <li class="popup__text-item">Брендированный видеоотчет</li>
+                  <li class="popup__text-item">Мерч 4 единицы в пакетах для участников</li>
+                  <li class="popup__text-item">Реклама бренда на сцене</li>
+                  <li class="popup__text-item">Реклама на сайте</li>
+                  <li class="popup__text-item">Реклама в соцсетях</li>
+                  <li class="popup__text-item">Официанты с логотипом партнера на форме</li>
+                  <li class="popup__text-item">Возможность поставить свою зону с активностью</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
               </div>
-              <b>€450</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
-                билет</button>
-            </div>
-          </li>
+            </li>
 
-          <li class="popup__item" id="golden">
-            <div class="popup__content">
-              <h2>Golden Ticket</h2>
-              <div class="popup__text">
-                <p>Проходка на митап</p>
-                <p>Проходка на афтепати</p>
-                <p>Golden стол на афтепати (4 этаж Venue)</p>
-                <p>Open Super Premium Bar</p>
+            <li class="popup__item" id="mu-silver">
+              <div class="popup__content">
+                <h2>MeetUp Silver Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">10 проходок на митап</li>
+                  <li class="popup__text-item">1 баннер на митапе</li>
+                  <li class="popup__text-item">Мерч 3 единицы в пакетах для участников</li>
+                  <li class="popup__text-item">Реклама бренда на сцене</li>
+                  <li class="popup__text-item">Реклама на сайте</li>
+                  <li class="popup__text-item">Реклама в соцсетях</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
               </div>
-              <b>€300</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
-                билет</button>
-            </div>
-          </li>
+            </li>
 
-          <li class="popup__item" id="silver">
-            <div class="popup__content">
-              <h2>Silver Ticket</h2>
-              <div class="popup__text">
-                <p>Проходка на митап</p>
-                <p>Проходка на афтепати</p>
-                <p>Silver стол на афтепати (4 этаж Venue)</p>
-                <p>Open Super Premium Bar</p>
+            <li class="popup__item" id="mu-coffee">
+              <div class="popup__content">
+                <h2>Coffee Break Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">10 проходок на митап</li>
+                  <li class="popup__text-item">1 баннер возле зоны кофе-брейка</li>
+                  <li class="popup__text-item">Брендированная зона кофе-брейка</li>
+                  <li class="popup__text-item">Буклеты спонсора в зоне кофе-брейка</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
               </div>
-              <b>€200</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
-                билет</button>
-            </div>
+            </li>
 
-          <li class="popup__item" id="classic">
-            <div class="popup__content">
-              <h2>Classic Ticket</h2>
-              <div class="popup__text">
-                <p>Проходка на афтепати</p>
-                <p>Classic стол на афтепати (4 этаж Venue)</p>
-                <p>Open Super Premium Bar</p>
+            <li class="popup__item" id="mu-wifi">
+              <div class="popup__content">
+                <h2>Wi-Fi Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">5 проходок на митап</li>
+                  <li class="popup__text-item">Право быть эксклюзивным Wi-Fi спонсором мероприятия</li>
+                  <li class="popup__text-item">Название компании будет отображаться как имя Wi-Fi. Формат: «AW WIFI от
+                    &lt;название вашей компании&gt;»</li>
+                  <li class="popup__text-item">Выбор пользовательского пароля (до 10 символов)</li>
+                  <li class="popup__text-item">Полностью брендированная страница входа в Wi-Fi</li>
+                  <li class="popup__text-item">Брендинг спота на протяжении всего мероприятия</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
               </div>
-              <b>€100</b>
-              <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
-                билет</button>
-            </div>
-          </li>
-        </ul>
+            </li>
+
+            <li class="popup__item" id="mu-charge">
+              <div class="popup__content">
+                <h2>Charging Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-item">5 проходок на митап</li>
+                  <li class="popup__text-item">Брендированная станция fast charge</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="ap-diamond">
+              <div class="popup__content">
+                <h2>Afterparty Diamond Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-list">20х проходок на афтепати</li>
+                  <li class="popup__text-list">10х проходок на митап</li>
+                  <li class="popup__text-list">2x VIP столов</li>
+                  <li class="popup__text-list">4 баннера</li>
+                  <li class="popup__text-list">Объявление информации о компании ведущим</li>
+                  <li class="popup__text-list">Видеоролик от спонсора на экране в полной тишине</li>
+                  <li class="popup__text-list">Брендирование VIP столов</li>
+                  <li class="popup__text-list">Брендированная фотозона</li>
+                  <li class="popup__text-list">Брендированные браслеты</li>
+                  <li class="popup__text-list">Реклама на сайте</li>
+                  <li class="popup__text-list">Реклама в соцсетях</li>
+                  <li class="popup__text-list">Официанты с логотипом компании на форме</li>
+                  <li class="popup__text-list">Модели с логотипом спонсора на одежде</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="ap-enter">
+              <div class="popup__content">
+                <h2>Entertainment Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-list">20х проходок на афтепати</li>
+                  <li class="popup__text-list">2x Golden столов</li>
+                  <li class="popup__text-list">Объявление информации о компании ведущим</li>
+                  <li class="popup__text-list">Танцовщицы с логотипом компании на одежде</li>
+                  <li class="popup__text-list">Брендированные шары</li>
+                  <li class="popup__text-list">Брендированные конфети (листовки)</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="ap-dj">
+              <div class="popup__content">
+                <h2>DJ Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-list">20 проходок на афтепати</li>
+                  <li class="popup__text-list">2х Silver столов</li>
+                  <li class="popup__text-list">DJ с логотипом компании</li>
+                  <li class="popup__text-list">Экран над диджеем для видеороликов компании</li>
+                  <li class="popup__text-list">Возможность заказа музыки (2 трека)</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="ap-bar">
+              <div class="popup__content">
+                <h2>Bar Sponsor</h2>
+                <ul class="popup__text-list">
+                  <li class="popup__text-list">20 проходок на афтепати</li>
+                  <li class="popup__text-list">2х Classic столов</li>
+                  <li class="popup__text-list">Бармены с логотипом спонсора на форме</li>
+                  <li class="popup__text-list">Персонализованные названия напитков</li>
+                  <li class="popup__text-list">Брендированное меню</li>
+                  <li class="popup__text-list">Брендированные зонтики для коктейлей</li>
+                </ul>
+                <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                  data-value="#sponsor-form-item">Стать
+                  спонсором</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="ap-tables">
+              <div class="popup__content">
+                <ul class="popup__tables-list">
+                  <li class="popup__tables-item">
+                    <h5>1 спонсорский пакет</h5>
+                    <h2>Golden Tables Sponsor</h2>
+                    <b>€6 500</b>
+                    <ul class="popup__text-list">
+                      <li class="popup__text-item">10 проходок на афтепати</li>
+                      <li class="popup__text-item">1х Golden стол</li>
+                      <li class="popup__text-item">Брендирование Golden столов (12 шт.)</li>
+                    </ul>
+                    <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                      data-value="#sponsor-form-item">Стать
+                      спонсором</button>
+                  </li>
+                  <li class="popup__tables-item">
+                    <h5>1 спонсорский пакет</h5>
+                    <h2>Silver Tables Sponsor</h2>
+                    <b>€4 000</b>
+                    <ul class="popup__text-list">
+                      <li class="popup__text-item">10 проходок на афтепати</li>
+                      <li class="popup__text-item">1х Silver стол</li>
+                      <li class="popup__text-item">Брендирование Silver столов (14 шт.)</li>
+                    </ul>
+                    <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                      data-value="#sponsor-form-item">Стать
+                      спонсором</button>
+                  </li>
+                  <li class="popup__tables-item">
+                    <h5>1 спонсорский пакет</h5>
+                    <h2>Classic Tables Sponsor</h2>
+                    <b>€2 500</b>
+                    <ul class="popup__text-list">
+                      <li class="popup__text-item">5 проходок на афтепати</li>
+                      <li class="popup__text-item">1х Classic стол</li>
+                      <li class="popup__text-item">Брендирование всех Classic столов (14 шт.)</li>
+                    </ul>
+                    <button class="popup__get-sponsor-btn open-form-popup" type="button"
+                      data-value="#sponsor-form-item">Стать
+                      спонсором</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="popup__list popup__tickets">
+            <li class="popup__item" id="meetup">
+              <div class="popup__content">
+                <h2>Meetup</h2>
+                <div class="popup__text">
+                  <p>Проходка на митап</p>
+                  <p>Open Super Premium Bar</p>
+                </div>
+                <b>€150</b>
+                <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                  билет</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="vip">
+              <div class="popup__content">
+                <h2>VIP Ticket</h2>
+                <div class="popup__text">
+                  <p>Проходка на митап</p>
+                  <p>Проходка на афтепати</p>
+                  <p>VIP стол на афтепати (4 этаж Venue)</p>
+                  <p>Open Super Premium Bar</p>
+                </div>
+                <b>€450</b>
+                <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                  билет</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="golden">
+              <div class="popup__content">
+                <h2>Golden Ticket</h2>
+                <div class="popup__text">
+                  <p>Проходка на митап</p>
+                  <p>Проходка на афтепати</p>
+                  <p>Golden стол на афтепати (4 этаж Venue)</p>
+                  <p>Open Super Premium Bar</p>
+                </div>
+                <b>€300</b>
+                <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                  билет</button>
+              </div>
+            </li>
+
+            <li class="popup__item" id="silver">
+              <div class="popup__content">
+                <h2>Silver Ticket</h2>
+                <div class="popup__text">
+                  <p>Проходка на митап</p>
+                  <p>Проходка на афтепати</p>
+                  <p>Silver стол на афтепати (4 этаж Venue)</p>
+                  <p>Open Super Premium Bar</p>
+                </div>
+                <b>€200</b>
+                <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                  билет</button>
+              </div>
+
+            <li class="popup__item" id="classic">
+              <div class="popup__content">
+                <h2>Classic Ticket</h2>
+                <div class="popup__text">
+                  <p>Проходка на афтепати</p>
+                  <p>Classic стол на афтепати (4 этаж Venue)</p>
+                  <p>Open Super Premium Bar</p>
+                </div>
+                <b>€100</b>
+                <button class="popup__buy-btn open-form-popup" type="button" data-value="#ticket-form-item">Купить
+                  билет</button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="form-popup__bg">
-    <div class="form-popup">
-      <button class="form-popup__close-btn" type="button" aria-label="Закрыть окно"></button>
-      <div class="form-popup__wrapper">
+    <div class="form-popup__container">
+      <div class="form-popup">
+        <button class="form-popup__close-btn" type="button" aria-label="Закрыть окно"></button>
+        <div class="form-popup__wrapper">
 
-        <ul class="form-popup__list">
-          <li class="form-popup__item" id="sponsor-form-item">
-            <div class="form-popup__content">
-              <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
-              <h2>Оставить заявку</h2>
-              <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
-              <form id="sponsor-form" action="https://echo.htmlacademy.ru/" method="get">
-                <fieldset class="form-popup__fieldset">
-                  <input type="text" name="username" placeholder="как вас зовут?" id="sponsor-username" required>
-                  <label for="sponsor-username"></label>
+          <ul class="form-popup__list">
+            <li class="form-popup__item" id="sponsor-form-item">
+              <div class="form-popup__content">
+                <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
+                <h2>Оставить заявку</h2>
+                <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
+                <form id="sponsor-form" action="https://echo.htmlacademy.ru/" method="get">
+                  <fieldset class="form-popup__fieldset">
+                    <input type="text" name="username" placeholder="как вас зовут?" id="sponsor-username" required>
+                    <label for="sponsor-username"></label>
 
-                  <input type="email" name="email" placeholder="ваш e-mail" id="sponsor-email"
-                    pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
-                    required>
-                  <label for="sponsor-email"></label>
+                    <input type="email" name="email" placeholder="ваш e-mail" id="sponsor-email"
+                      pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
+                      required>
+                    <label for="sponsor-email"></label>
 
-                  <input type="tel" name="tel" placeholder="номер телефона" id="sponsor-tel" pattern="^[1-9]+[0-9]*$"
-                    title="Только цифры" required>
-                  <label for="sponsor-tel"></label>
+                    <input type="tel" name="tel" placeholder="номер телефона" id="sponsor-tel" pattern="^[1-9]+[0-9]*$"
+                      title="Только цифры" required>
+                    <label for="sponsor-tel"></label>
 
-                  <input type="text" name="company" placeholder="название компании" id="company" required>
-                  <label for="company"></label>
+                    <input type="text" name="company" placeholder="название компании" id="company" required>
+                    <label for="company"></label>
 
-                </fieldset>
-                <button class="form__submit-btn" type="submit">Отправить</button>
-              </form>
-            </div>
-          </li>
+                  </fieldset>
+                  <button class="form__submit-btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            </li>
 
-          <li class="form-popup__item" id="ticket-form-item">
-            <div class="form-popup__content">
-              <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
-              <h2>Купить билет</h2>
-              <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
-              <form id="ticket-form" action="https://echo.htmlacademy.ru/" method="get">
-                <fieldset class="form-popup__fieldset">
-                  <input type="text" name="username" placeholder="как вас зовут?" id="ticket-username" required>
-                  <label for="ticket-username"></label>
+            <li class="form-popup__item" id="ticket-form-item">
+              <div class="form-popup__content">
+                <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
+                <h2>Купить билет</h2>
+                <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
+                <form id="ticket-form" action="https://echo.htmlacademy.ru/" method="get">
+                  <fieldset class="form-popup__fieldset">
+                    <input type="text" name="username" placeholder="как вас зовут?" id="ticket-username" required>
+                    <label for="ticket-username"></label>
 
-                  <input type="email" name="email" placeholder="ваш e-mail" id="ticket-email"
-                    pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
-                    required>
-                  <label for="ticket-email"></label>
+                    <input type="email" name="email" placeholder="ваш e-mail" id="ticket-email"
+                      pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите email в формате xxxx@xx.xx"
+                      required>
+                    <label for="ticket-email"></label>
 
-                  <input type="tel" name="tel" placeholder="номер телефона" id="ticket-tel"
-                    pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" title="Только цифры"
-                    required>
-                  <label for="ticket-tel"></label>
-                </fieldset>
-                <button class="form__submit-btn" type="submit">Отправить</button>
-              </form>
-            </div>
-          </li>
-        </ul>
+                    <input type="tel" name="tel" placeholder="номер телефона" id="ticket-tel"
+                      pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" title="Только цифры"
+                      required>
+                    <label for="ticket-tel"></label>
+                  </fieldset>
+                  <button class="form__submit-btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            </li>
+          </ul>
 
+        </div>
       </div>
     </div>
+
   </div>
 
   <script src="js/vendor.min.js"></script>

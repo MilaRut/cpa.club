@@ -21,7 +21,7 @@
 
 .popup {
   position: absolute;
-  min-width: 1241px;
+  width: min(80vw, 1241px);
   max-height: min(80vh, 743px);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(52px);
@@ -34,7 +34,7 @@
   flex-direction: column;
   transform: translate(-50%, -50%) scale(0);
   transition: 0.5s all;
-  z-index: 200;
+  z-index: 1000;
 }
 
 .popup.active {
@@ -45,7 +45,9 @@
 // styles
 
 .popup__close-btn {
-  position: relative;
+  position: absolute;
+  top: 30px;
+  right: 30px;
   width: 38px;
   height: 38px;
   border: none;
