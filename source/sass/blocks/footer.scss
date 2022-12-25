@@ -1,5 +1,9 @@
 .footer {
-  min-height: 100px;
+  min-height: 114px;
+
+  @include vp-767 {
+    min-height: 206px;
+  }
 }
 
 .footer .container {

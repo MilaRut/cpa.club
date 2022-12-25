@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   background: url("../img/intro-bg.png") 0 0 no-repeat;
   background-size: 100%;
 
@@ -21,6 +20,7 @@
 }
 
 .header__container {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 
   @include vp-767 {
