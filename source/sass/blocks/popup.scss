@@ -21,13 +21,8 @@
 
 .popup {
   position: absolute;
-  width: min(80vw, 1241px);
-  max-height: min(80vh, 743px);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(52px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 30px;
   top: 50%;
   left: 50%;
   display: flex;
@@ -41,8 +36,6 @@
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s all;
 }
-
-// styles
 
 .popup__close-btn {
   position: absolute;
@@ -74,14 +67,26 @@
   }
 }
 
+// popup content
+
+.popup__wrapper {
+  width: min(86vw, 1241px);
+  height: max(70vh, 743px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  // align-items: center;
+}
+
 .popup__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.popup__tickets {
-  text-align: center;
+  &--tickets {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .popup__item {
@@ -93,40 +98,17 @@
 }
 
 .popup__content {
-  min-height: 500px;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
-  padding-left: 50px;
-}
 
-.popup h2 {
-  @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 67px;
-  max-width: 60%;
-  padding-left: 10px;
-}
-
-.popup__tickets p {
-  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
-  letter-spacing: 0.02em;
-  opacity: 0.9;
-  text-align: center;
-  margin: 0;
-}
-
-.popup__tickets b {
-  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  .popup__list--sponsors & {
+    padding: 85px 0 0 87px;
+  }
 }
 
 .popup__tables-list {
   margin: 0;
-  padding: 108px 54px 0 4px;
+  padding: 105px 54px 0 4px;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -139,6 +121,36 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.popup__text-list {
+  margin: 0 0 67px 0;
+  padding: 0 0 0 25px;
+  max-height: 170px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .popup__tables-item & {
+    padding: 0;
+    padding-left: 20px;
+    margin-bottom: 55px;
+  }
+}
+
+// font settings
+
+.popup h2 {
+  @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 62px;
+  max-width: 70%;
+}
+
+.popup__text-item {
+  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
 }
 
 .popup__tables-item h5 {
@@ -165,29 +177,37 @@
   margin-bottom: 25px;
 }
 
-.popup__text-list {
-  margin: 0;
-  padding: 0 114px 0 36px;
-  max-height: 170px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-bottom: auto;
-}
-
-.popup__tables-item .popup__text-list {
-  padding: 0;
-  padding-left: 20px;
-  margin-bottom: 55px;
-}
-
-.popup__text-item {
-  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
-}
-
 .popup__tables-list .popup__text-item {
   font-size: 14px;
 }
+
+.popup__list--tickets h2 {
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 135px;
+  margin-bottom: 94px;
+}
+
+.popup__list--tickets p {
+  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0;
+}
+
+.popup__list--tickets .popup__text {
+  margin-bottom: 61px;
+}
+
+.popup__list--tickets b {
+  @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 68px;
+}
+
+// buttons styles
 
 .popup__buy-btn,
 .popup__get-sponsor-btn {
@@ -204,7 +224,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: 0.5s all;
-  margin-bottom: 30px;
+  justify-self: flex-end;
 }
 
 .popup__buy-btn {

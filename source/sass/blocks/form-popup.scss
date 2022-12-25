@@ -21,13 +21,8 @@
 
 .form-popup {
   position: absolute;
-  width: min(80vw, 1241px);
-  max-height: min(80vh, 743px);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(52px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 30px;
   top: 50%;
   left: 50%;
   display: flex;
@@ -41,8 +36,6 @@
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s all;
 }
-
-// styles
 
 .form-popup__close-btn {
   position: absolute;
@@ -74,6 +67,16 @@
   }
 }
 
+.form-popup__wrapper {
+  width: min(86vw, 1241px);
+  height: max(70vh, 743px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+
 .form-popup__list {
   margin: 0;
   padding: 0;
@@ -89,34 +92,59 @@
 }
 
 .form-popup__content {
-  min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  &--sponsor {
+    padding-top: 87px;
+  }
+
+  &--ticket {
+    padding-top: 148px;
+  }
 }
 
-.form-popup h2 {
-  @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
+.form-popup__content {
+  h2 {
+    @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 28px;
+  }
+  p {
+    @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 17px;
+  }
 }
 
-.form-popup  p {
-  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
-  letter-spacing: 0.02em;
-  opacity: 0.9;
-  text-align: center;
-  margin: 0;
+.form-popup__content--sponsor {
+  h2 {
+    margin-bottom: 41px;
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
 }
+
 
 .form-popup__fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: none;
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 27px;
+
+  .form-popup__content--sponsor & {
+    margin-bottom: 40px;
+  }
 }
 
 .form-popup__fieldset input {
@@ -125,7 +153,8 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $color-default-white;
-  padding: 20px;
+  padding: 19px;
+  margin-bottom: 12px;
 }
 
 .form__submit-btn {
