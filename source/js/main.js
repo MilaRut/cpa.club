@@ -5,11 +5,14 @@ import {initSwiper} from './modules/program-slider';
 import {initPopup} from './modules/popup';
 import {initFormPopup} from './modules/form-popup';
 import {initTimer} from './modules/timer';
+import {validateForm} from './modules/form-validation';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   const swiper = document.querySelector('.swiper');
+  const ticketForm = document.querySelector('#ticket-form');
+  const sponsorForm = document.querySelector('#sponsor-form');
 
   // Utils
   // ---------------------------------
@@ -28,6 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopup();
     initFormPopup();
     initTimer();
+    validateForm(ticketForm);
+    validateForm(sponsorForm);
   });
 });
 

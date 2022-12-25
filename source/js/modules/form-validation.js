@@ -1,16 +1,15 @@
-const myform = document.getElementById('form');
-const username = document.getElementById('name');
-const tel = document.getElementById('tel');
-const email = document.getElementById('email');
+const validateForm = (form) => {
+  const myForm = document.querySelectorAll('form');
 
-function validateForm() {
-  myform.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (username.value && tel.value && email.value) {
-      myform.submit();
+  myForm.forEach(function (item) {
+    if (form) {
+      item.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        item.submit();
+      });
+      item.reset();
     }
-    myform.reset();
   });
-}
+};
 
 export {validateForm};
