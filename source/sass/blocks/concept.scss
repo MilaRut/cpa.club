@@ -19,7 +19,7 @@
 
   @include vp-767 {
     flex-direction: column;
-    margin-bottom: 300px;
+    margin-bottom: 315px;
   }
 }
 
@@ -32,8 +32,8 @@
   @include vp-767 {
     font-size: 18px;
     margin: 0 auto;
-    padding-top: 60px;
-    margin-bottom: 23px;
+    padding-top: 62px;
+    margin-bottom: 16px;
   }
 }
 
@@ -48,6 +48,7 @@
 
 .concept__content {
   padding-top: 5px;
+  padding-left: 7px;
 }
 
 .concept__content p {
@@ -56,7 +57,9 @@
 
   @include vp-767 {
     padding: 0;
+    line-height: 1.4;
     max-width: 100%;
+    margin-bottom: 17px;
   }
 }
 
@@ -75,7 +78,7 @@
   margin-bottom: 308px;
 
   @include vp-767 {
-    margin-bottom: 300px;
+    margin-bottom: 321px;
   }
 }
 
@@ -87,13 +90,14 @@
   @include vp-767 {
     padding: 0;
     max-width: 100%;
+    margin-bottom: 19px;
   }
 }
 
 .concept__third-screen {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 74px;
   align-items: flex-end;
 }
 
@@ -105,5 +109,6 @@
   @include vp-767 {
     padding: 0;
     max-width: 100%;
+    margin-bottom: 19px;
   }
 }
