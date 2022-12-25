@@ -1,18 +1,20 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {openMenu} from './modules/mobile-menu';
 import {setupVideo} from './modules/video';
 import {initPhotoSlider} from './modules/photo-slider';
 import {initSwiper} from './modules/program-slider';
 import {initPopup} from './modules/popup';
 import {initFormPopup} from './modules/form-popup';
 import {initTimer} from './modules/timer';
-import {validateForm} from './modules/form-validation';
+// import {validateForm} from './modules/form-validation';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  openMenu();
   const swiper = document.querySelector('.swiper');
-  const ticketForm = document.querySelector('#ticket-form');
-  const sponsorForm = document.querySelector('#sponsor-form');
+  // const ticketForm = document.querySelector('#ticket-form');
+  // const sponsorForm = document.querySelector('#sponsor-form');
 
   // Utils
   // ---------------------------------
@@ -31,8 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopup();
     initFormPopup();
     initTimer();
-    validateForm(ticketForm);
-    validateForm(sponsorForm);
+    // validateForm(ticketForm);
+    // validateForm(sponsorForm);
   });
 });
 

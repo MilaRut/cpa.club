@@ -5,15 +5,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .intro__heading {
   display: flex;
   margin-bottom: 18px;
+
+  @include vp-767 {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }
 
 .intro__heading .intro__img {
   margin-right: 20px;
+
+  @include vp-767 {
+    order: 1;
+    width: 203px;
+  }
 }
 
 .intro__heading p {
@@ -22,6 +37,12 @@
   letter-spacing: 0.06em;
   margin: 0;
   padding-top: 15px;
+
+  @include vp-767 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
 }
 
 .intro h1 {
@@ -30,6 +51,10 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 4px;
+
+  @include vp-767 {
+    font-size: 42px;
+  }
 }
 
 .intro h2 {
@@ -37,14 +62,34 @@
   letter-spacing: 0.02em;
   margin: 0;
   margin-bottom: 115px;
+
+  @include vp-767 {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
 }
 
 .intro__sub {
   display: flex;
   align-items: center;
+
+  @include vp-767 {
+    margin-bottom: 60px;
+  }
 }
 
 .intro__sub span {
   @include font-settings ($ff-mont, 400, 18px, 1.2, $color-default-white);
   margin-right: 12px;
+
+  @include vp-767 {
+    font-size: 12px;
+  }
+}
+
+.intro__img--sigma {
+  @include vp-767 {
+    width: 93px;
+    height: 19px;
+  }
 }

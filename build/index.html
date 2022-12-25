@@ -41,13 +41,57 @@
                 <a href="#contacts" class="header__link">Контакты</a>
               </li>
             </ul>
+            <div class="header__lang">
+              <a href="#" class="header__lang-switcher header__lang-switcher--active">Ru</a>
+              <a href="#" class="header__lang-switcher">Eng</a>
+            </div>
+            <a href="#package-meetup" class="header__btn header__btn--sponsor">Стать спонсором</a>
+            <a href="#tickets" class="header__btn header__btn--buy">Купить билет</a>
+
+            <div class="header__socials socials">
+              <ul class="socials__list">
+
+                <li class="socials__item socials__item--inst">
+                  <a href="https://instagram.com/cpa_club/" class="socials__link">
+                    <svg class="socials__icon" width="26" height="26" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#socials-inst"></use>
+                    </svg>
+                    <span class="visually-hidden">Instagram.</span>
+                  </a>
+                </li>
+
+                <li class="socials__item">
+                  <a href="https://facebook.com/cpaclub1" class="socials__link">
+                    <svg class="socials__icon" width="9" height="16" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#socials-fsbk"></use>
+                    </svg>
+                    <span class="visually-hidden">Facebook.</span>
+                  </a>
+                </li>
+
+                <li class="socials__item">
+                  <a href="https://linkedin.com/company/cpa-club" class="socials__link">
+                    <svg class="socials__icon" width="21" height="21" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#socials-lkdn"></use>
+                    </svg>
+                    <span class="visually-hidden">Linkedin.</span>
+                  </a>
+                </li>
+
+                <li class="socials__item">
+                  <a href="https://youtube.com/@cpaclub6284" class="socials__link">
+                    <svg class="socials__icon" width="21" height="21" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#socials-yout"></use>
+                    </svg>
+                    <span class="visually-hidden">Youtube.</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <img class="header__mobile-sub" src="./img/header-mobile-sub.png" width="206" height="45"
+              alt="CPA.Club Connect. При поддержке Sigma.">
           </nav>
-          <div class="header__lang">
-            <a href="#" class="header__lang-switcher header__lang-switcher--active">Ru</a>
-            <a href="#" class="header__lang-switcher">Eng</a>
-          </div>
-          <a href="#package-meetup" class="header__btn header__btn--sponsor">Стать спонсором</a>
-          <a href="#tickets" class="header__btn header__btn--buy">Купить билет</a>
+          <button class="header__menu-btn" type="button" aria-label="Открыть меню."></button>
         </div>
       </div>
 
@@ -63,7 +107,7 @@
           <h2>Meetup Dubai</h2>
           <div class="intro__sub">
             <span>При поддержке:</span>
-            <img class="intro__img" src="./img/sigma-logo.png" alt="Лого Sigma">
+            <img class="intro__img intro__img--sigma" src="./img/sigma-logo.png" alt="Лого Sigma">
           </div>
         </div>
       </section>
@@ -122,12 +166,11 @@
 
       <section class="info" id="info">
         <div class="container">
-          <h2>Что вас ждет</h2>
-          <h3>На cpa club<br>connect</h3>
+          <h2>Что вас ждет <span>На cpa club connect</span></h2>
           <ul class="info__list">
             <li class="info__item">
               <h4>более 1000</h4>
-              <p>единомышленников<br>affiliate-сферы</p>
+              <p>единомышленников affiliate-сферы</p>
             </li>
             <li class="info__item">
               <h4>мировой</h4>
@@ -138,12 +181,12 @@
               <p>в мировом бизнес-комьюнити</p>
             </li>
             <li class="info__item">
-              <h4>рок-звезды мира<br>продаж</h4>
-              <p>на расстоянии протянутой руки<br>только на нашем митапе</p>
+              <h4>рок звезды мира продаж</h4>
+              <p>на расстоянии протянутой руки только на нашем митапе</p>
             </li>
             <li class="info__item">
               <h4>афтепати</h4>
-              <p>в одном из топовых<br>заведений Дубая</p>
+              <p>в одном из топовых заведений Дубая</p>
             </li>
           </ul>
         </div>
@@ -152,8 +195,7 @@
       <section class="auditory" id="auditory">
         <div class="container">
           <div class="auditory__headings">
-            <h2>Целевая аудитория</h2>
-            <h3>Митапа</h3>
+            <h2>Целевая аудитория <span>Митапа</span></h2>
           </div>
           <ul class="auditory__list">
             <li class="auditory__item">Инвесторы и предприниматели сферы аффилейт-маркетинга</li>
@@ -173,7 +215,9 @@
         <div class="container">
           <h3>Наш<br>спикер</h3>
           <div class="speaker__wrapper">
-            <img class="speaker__photo" src="./img/belfort.png" width="511" height="526" alt="Джордан Белфорт">
+            <div class="speaker__image">
+              <img class="speaker__photo" src="./img/belfort.png" width="511" height="526" alt="Джордан Белфорт">
+            </div>
             <div class="speaker__info">
               <h4>Джордан Белфорт</h4>
               <h5>Волк с Уолл-стрит</h5>
@@ -193,7 +237,7 @@
                 Джордан
                 <b>может продать что угодно</b> и&nbsp;умело обучает этому людей по&nbsp;всему миру.
               </p>
-              <cite>«Без действия самые лучшие намерения<br>в&nbsp;мире&nbsp;&mdash; не&nbsp;что иное, как
+              <cite>«Без действия самые лучшие намерения в&nbsp;мире&nbsp;&mdash; не&nbsp;что иное, как
                 намерения».</cite>
             </div>
           </div>
@@ -202,8 +246,7 @@
 
       <section class="package-meetup" id="package-meetup">
         <div class="container">
-          <h2>Спонсорские</h2>
-          <h3>Пакеты</h3>
+          <h2>Спонсорские <span>Пакеты</span></h2>
           <ul class="package-meetup__list">
             <li class="package-meetup__item package">
               <div class="package__content">
@@ -293,7 +336,8 @@
                 </picture>
               </a>
               <button class="video__btn" type="button" aria-label="Запустить видео">
-                <img src="./img/video-button.png" width="233" height="233" alt="Запустить видео.">
+                <img class="video__btn-img" src="./img/video-button.png" width="233" height="233"
+                  alt="Запустить видео.">
               </button>
             </div>
           </div>
@@ -305,13 +349,13 @@
           <h2 class="visually-hidden">Фото клуба</h2>
 
           <div class="slider-wrapper">
-            <div class="slide active">
+            <div class="slide">
               <img class="slide__img" src="./img/photo-1.png" width="1031" height="652" alt="Фото клуба SKY2.0">
             </div>
             <div class="slide">
               <img class="slide__img" src="./img/photo-2.png" width="1031" height="652" alt="Фото клуба SKY2.0">
             </div>
-            <div class="slide">
+            <div class="slide active">
               <img class="slide__img" src="./img/photo-3.png" width="1031" height="652" alt="Фото клуба SKY2.0">
             </div>
             <div class="slide">
@@ -328,9 +372,9 @@
           </div>
 
           <div class="dots-wrapper">
+            <span class="dot"></span>
+            <span class="dot"></span>
             <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -340,8 +384,7 @@
 
       <section class="package-afterparty">
         <div class="container">
-          <h2>Спонсорские</h2>
-          <h3>Пакеты</h3>
+          <h2>Спонсорские <span>Пакеты</span></h2>
           <ul class="package-afterparty__list">
             <li class="package-afterparty__item package">
               <div class="package__content">
@@ -404,7 +447,7 @@
             </li>
             <li class="program__item swiper-slide">
               <h4>12:30</h4>
-              <p>Вступительная речь</p>
+              <p>Вступительная<br>речь</p>
             </li>
             <li class="program__item swiper-slide">
               <h4>12:45</h4>
@@ -428,7 +471,7 @@
             </li>
             <li class="program__item swiper-slide">
               <h4>19:00</h4>
-              <p>Сессия вопросов и ответов</p>
+              <p>Сессия<br>вопросов<br>и ответов</p>
             </li>
             <li class="program__item swiper-slide">
               <h4>20:30</h4>
@@ -526,8 +569,7 @@
       <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__headings">
-            <h2>Остались</h2>
-            <h3>вопросы?</h3>
+            <h2>Остались <span>вопросы?</span></h2>
           </div>
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -564,49 +606,53 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__logos">
-          <svg class="footer__img" width="227" height="35" fill="currentColor">
-            <use xlink:href="./img/sprite.svg#logo"></use>
-          </svg>
-          <p>Connect</p>
-          <span>При поддержке:</span>
-          <img class="footer__img footer__img--sigma" width="83" height="18" src="./img/sigma-logo.png"
-            alt="Лого Sigma">
+          <div class="footer__logos-wrapper footer__logos-wrapper--primary">
+            <svg class="footer__img" width="227" height="35" fill="currentColor">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+            <p>Connect</p>
+          </div>
+          <div class="footer__logos-wrapper footer__logos-wrapper--secondary">
+            <span>При поддержке:</span>
+            <img class="footer__img footer__img--sigma" width="83" height="18" src="./img/sigma-logo.png"
+              alt="Лого Sigma">
+            <span class="footer__copyright">© 2022</span>
+          </div>
         </div>
-        <span class="footer__copyright">© 2022</span>
 
-        <div class="footer__socials">
-          <ul class="footer__socials-list">
+        <div class="footer__socials socials">
+          <ul class="socials__list">
 
-            <li class="footer__socials-item footer__socials-item--inst">
-              <a href="https://instagram.com/cpa_club/" class="footer__socials-link">
-                <svg class="footer__socials-icon" width="26" height="26" fill="currentColor">
+            <li class="socials__item socials__item--inst">
+              <a href="https://instagram.com/cpa_club/" class="socials__link">
+                <svg class="socials__icon" width="26" height="26" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-inst"></use>
                 </svg>
                 <span class="visually-hidden">Instagram.</span>
               </a>
             </li>
 
-            <li class="footer__socials-item">
-              <a href="https://facebook.com/cpaclub1" class="footer__socials-link">
-                <svg class="footer__socials-icon" width="9" height="16" fill="currentColor">
+            <li class="socials__item">
+              <a href="https://facebook.com/cpaclub1" class="socials__link">
+                <svg class="socials__icon" width="9" height="16" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-fsbk"></use>
                 </svg>
                 <span class="visually-hidden">Facebook.</span>
               </a>
             </li>
 
-            <li class="footer__socials-item">
-              <a href="https://linkedin.com/company/cpa-club" class="footer__socials-link">
-                <svg class="footer__socials-icon" width="21" height="21" fill="currentColor">
+            <li class="socials__item">
+              <a href="https://linkedin.com/company/cpa-club" class="socials__link">
+                <svg class="socials__icon" width="21" height="21" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-lkdn"></use>
                 </svg>
                 <span class="visually-hidden">Linkedin.</span>
               </a>
             </li>
 
-            <li class="footer__socials-item">
-              <a href="https://youtube.com/@cpaclub6284" class="footer__socials-link">
-                <svg class="footer__socials-icon" width="21" height="21" fill="currentColor">
+            <li class="socials__item">
+              <a href="https://youtube.com/@cpaclub6284" class="socials__link">
+                <svg class="socials__icon" width="21" height="21" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#socials-yout"></use>
                 </svg>
                 <span class="visually-hidden">Youtube.</span>
@@ -981,6 +1027,23 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="success-popup__bg">
+    <div class="success-popup">
+      <button class="success-popup__close-btn" type="button" aria-label="Закрыть окно"></button>
+      <div class="success-popup__wrapper">
+        <div class="success-popup__item">
+          <div class="success-popup__content">
+            <svg class="success__check-icon" width="161" height="160" fill="currentColor">
+              <use xlink:href="./img/sprite.svg#check-icon"></use>
+            </svg>
+            <h2>Ваша заявка принята. Спасибо</h2>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>

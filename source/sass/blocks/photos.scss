@@ -13,6 +13,11 @@
     width: 60%;
     right: 20%;
   }
+
+  @include vp-767 {
+    padding: 0;
+    flex-direction: column;
+  }
 }
 
 .slider-wrapper {
@@ -24,7 +29,7 @@
 
 .photos__btn {
   position: absolute;
-  left: -89px;
+  left: -8%;
   top: 0;
   height: 100%;
   width: 50px;
@@ -33,9 +38,23 @@
   z-index: 100;
 
   &--next {
-    left: auto;
-    right: -89px;
+    left: 103%;
     transform: scale(-1, 1);
+  }
+
+  @include vp-767 {
+    width: 56px;
+    height: 56px;
+    top: 100%;
+
+    &--prev {
+      left: 30%;
+    }
+
+    &--next {
+      left: 50%;
+      transform: scale(-1, 1);
+    }
   }
 }
 

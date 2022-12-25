@@ -1,3 +1,4 @@
+import {showSuccessMsg} from './submit-success';
 const validateForm = (form) => {
   const myForm = document.querySelectorAll('form');
 
@@ -8,6 +9,7 @@ const validateForm = (form) => {
         item.submit();
       });
       item.reset();
+      showSuccessMsg();
     }
   });
 };

@@ -9,6 +9,10 @@
     top: -160px;
     left: 0;
   }
+
+  @include vp-767 {
+    padding: 0 20px;
+  }
 }
 
 .speaker h3 {
@@ -16,6 +20,10 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0 0 64px;
+
+  @include vp-767 {
+    font-size: 40px;
+  }
 }
 
 .speaker__wrapper {
@@ -42,10 +50,28 @@
     top: 213px;
     right: -100px;
   }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.speaker__image {
+  min-width: 511px;
+  height: 526px;
+  margin-right: 75px;
+
+  @include vp-767 {
+    min-width: 281px;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 .speaker__photo {
-  margin-right: 75px;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .speaker__info {
@@ -59,6 +85,10 @@
   text-transform: uppercase;
   margin: 0 0 31px;
   padding-top: 10px;
+
+  @include vp-767 {
+    font-size: 28px;
+  }
 }
 
 .speaker__info h5 {
@@ -72,6 +102,10 @@
   background-color: $color-accent;
   border-radius: 250px;
   margin-bottom: 36px;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
 }
 
 .speaker__info p {
@@ -79,10 +113,20 @@
   margin: 0 0 9px;
   padding-right: 40px;
   opacity: 0.9;
+
+  @include vp-767 {
+    font-size: 12px;
+    padding: 0;
+  }
 }
 
 .speaker__info b {
   @include font-settings ($ff-mont, 700, 16px, 1.3, $color-default-white);
+
+  @include vp-767 {
+    font-size: 12px;
+    min-width: 10%;
+  }
 }
 
 .speaker__info cite {
@@ -91,4 +135,8 @@
   letter-spacing: 0.02em;
   padding-top: 48px;
   opacity: 0.9;
+
+  @include vp-767 {
+    font-size: 16px;
+  }
 }

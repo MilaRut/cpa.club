@@ -12,6 +12,10 @@
     top: -630px;
     right: 0;
   }
+
+  @include vp-767 {
+    padding: 0 20px;
+  }
 }
 
 .info h2 {
@@ -19,14 +23,17 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   margin: 0;
+  margin-bottom: 71px;
+  max-width: 58%;
+
+  @include vp-767 {
+    font-size: 40px;
+    max-width: 100%;
+  }
 }
 
-.info h3 {
-  @include font-settings ($ff-ttt, 800, 60px, 1.2, $color-default-white);
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  margin: 0;
-  margin-bottom: 71px;
+.info h2 span {
+  color: $color-default-white;
 }
 
 .info__list {
@@ -35,15 +42,31 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  @include vp-767 {
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 .info__item {
   min-width: 360px;
   margin-bottom: 58px;
+
+  @include vp-767 {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .info__item:not(:nth-child(3n)) {
   margin-right: 50px;
+
+  @include vp-767 {
+    margin: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .info__item h4 {
@@ -51,9 +74,18 @@
   color: $color-accent;
   margin: 0;
   margin-bottom: 5px;
+
+  @include vp-767 {
+    font-size: 26px;
+  }
 }
 
 .info__item p {
   @include font-settings ($ff-mont, 500, 22px, 1, $color-default-white);
   margin: 0;
+
+  @include vp-767 {
+    font-size: 18px;
+    max-width: 95%;
+  }
 }

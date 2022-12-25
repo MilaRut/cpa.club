@@ -1,0 +1,33 @@
+.socials__list {
+  min-width: 254px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.socials__item {
+  width: 54px;
+  height: 54px;
+  border-radius: 18.5px;
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+
+  &--inst {
+    padding-top: 3px;
+  }
+
+  &:hover {
+    background-color: #231e0a;
+  }
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.socials__link {
+  padding: 10px;
+}

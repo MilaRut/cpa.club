@@ -5,6 +5,14 @@
   margin: 0;
   padding: 96px 100px;
   z-index: 100;
+
+  @include vp-767 {
+    font-size: 20px;
+    padding: 0;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .video__wrapper {
@@ -39,6 +47,13 @@
   padding: 0;
   z-index: 10;
   display: none;
+}
+
+.video__btn-img {
+  @include vp-767 {
+    width: 145px;
+    height: 145px;
+  }
 }
 
 .is-active .video__btn {

@@ -3,6 +3,10 @@
   position: relative;
   padding-right: 0;
   overflow-x: hidden;
+
+  @include vp-767 {
+    padding: 0 20px;
+  }
 }
 
 .program__blur {
@@ -14,6 +18,10 @@
     top: 189px;
     right: 0;
     z-index: 10;
+
+    @include vp-767 {
+      top: 110px;
+    }
   }
 }
 
@@ -24,6 +32,10 @@
   position: relative;
   margin: 0;
   margin-bottom: 190px;
+
+  @include vp-767 {
+    font-size: 31px;
+  }
 }
 
 .program__list {
@@ -36,7 +48,6 @@
 .program__item {
   position: relative;
   width: 415px;
-  padding-right: 14px;
   cursor: grab;
 
   &::before {
@@ -56,9 +67,17 @@
     content: "";
     top: -39px;
     left: 0;
-    width: 430px;
+    width: 415px;
     height: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #353533;
+  }
+
+  @include vp-767 {
+    width: 90%;
+
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -76,6 +95,10 @@
   text-transform: uppercase;
   width: 340px;
   margin: 0;
+
+  @include vp-767 {
+    font-size: 20px;
+  }
 }
 
 .program__item span {
@@ -93,8 +116,8 @@
   top: 45px;
   right: 172px;
   border: none;
-  background-color: transparent;
-  background: url("../img/svg/slider-arrow.svg") center no-repeat;
+  // background-color: transparent;
+  background: transparent, url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
   z-index: 100;
 

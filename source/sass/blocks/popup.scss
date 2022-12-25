@@ -51,14 +51,14 @@
   cursor: pointer;
 
   &::after,
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     top: 18px;
     left: 8px;
     width: 21px;
     height: 1px;
-    background-color: #fff;
+    background-color: $color-default-white;
     transform: rotate(45deg);
   }
 

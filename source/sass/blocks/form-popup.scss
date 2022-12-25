@@ -51,14 +51,14 @@
   cursor: pointer;
 
   &::after,
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     top: 18px;
     left: 8px;
     width: 21px;
     height: 1px;
-    background-color: #fff;
+    background-color: $color-default-white;
     transform: rotate(45deg);
   }
 
@@ -97,14 +97,20 @@
 
   &--sponsor {
     padding-top: 87px;
+
+    h2 {
+      margin-bottom: 41px;
+    }
+
+    p {
+      margin-bottom: 33px;
+    }
   }
 
   &--ticket {
     padding-top: 148px;
   }
-}
 
-.form-popup__content {
   h2 {
     @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
     letter-spacing: 0.02em;
@@ -113,6 +119,7 @@
     margin: 0;
     margin-bottom: 28px;
   }
+
   p {
     @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
     opacity: 0.9;
@@ -121,17 +128,6 @@
     margin-bottom: 17px;
   }
 }
-
-.form-popup__content--sponsor {
-  h2 {
-    margin-bottom: 41px;
-  }
-
-  p {
-    margin-bottom: 33px;
-  }
-}
-
 
 .form-popup__fieldset {
   display: flex;

@@ -1,20 +1,39 @@
 .header {
+  position: relative;
   background: url("../img/intro-bg.png") 0 0 no-repeat;
   background-size: 100%;
+
+  @include vp-767 {
+    background: url("../img/intro-bg-mob.png") center no-repeat;
+    background-size: cover;
+  }
 }
 
 .header .container {
   padding: 14px 100px;
   display: flex;
   align-items: center;
+
+  @include vp-767 {
+    padding: 10px;
+    align-items: flex-start;
+  }
 }
 
 .header__container {
   background-color: rgba(0, 0, 0, 0.5);
+
+  @include vp-767 {
+    background-color: transparent;
+  }
 }
 
 .header__nav {
-  margin-right: auto;
+  display: flex;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .header__list {
@@ -22,6 +41,11 @@
   padding: 0;
   list-style: none;
   display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 }
 
 .header__item {
@@ -39,6 +63,11 @@
 
 .header__lang {
   margin-right: 19px;
+
+  @include vp-767 {
+    order: -1;
+    margin-bottom: 20px;
+  }
 }
 
 .header__lang-switcher {
@@ -65,9 +94,98 @@
   &--sponsor {
     background-color: #ededed;
     margin-right: 19px;
+
+    @include vp-767 {
+      order: 1;
+      width: 229px;
+      margin-bottom: 20px;
+    }
   }
 
   &--buy {
     background-color: $color-accent;
+
+    @include vp-767 {
+      width: 190px;
+      margin-bottom: 14px;
+    }
   }
+}
+
+.header__socials {
+  display: none;
+
+  @include vp-767 {
+    order: 2;
+    margin-bottom: 20px;
+  }
+}
+
+.header__mobile-sub {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    order: 2;
+    margin-bottom: 30px;
+  }
+}
+
+// Mobile menu
+
+.header__menu-btn {
+  display: none;
+
+  @include vp-767 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 38px;
+    height: 38px;
+    background-color: $color-default-black;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 12px;
+      width: 15.5px;
+      height: 1.5px;
+      background-color: $color-default-white;
+      box-shadow: 0 6px 0 0 $color-default-white, 0 12px 0 0 $color-default-white;
+    }
+  }
+}
+
+.header__menu-btn.active {
+  &::before,
+  &::after {
+    top: 18px;
+    box-shadow: none;
+    transition: transform 0.2s ease-in;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header__nav.active {
+  position: absolute;
+  min-width: 90%;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-default-black;
+  padding: 23px 0 0 29px;
 }

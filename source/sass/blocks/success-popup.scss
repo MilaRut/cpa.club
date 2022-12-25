@@ -1,0 +1,108 @@
+// popup on/off
+
+.success-popup__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.success-popup__bg.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
+}
+
+.success-popup {
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(52px);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.success-popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s all;
+}
+
+.success-popup__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 13px;
+  margin-left: auto;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 8px;
+    width: 21px;
+    height: 1px;
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+// popup content
+
+.success-popup__wrapper {
+  width: min(86vw, 1241px);
+  height: max(70vh, 743px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-popup__content {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success__check-icon {
+  margin-bottom: 20px;
+}
+
+.success-popup__content h2 {
+  @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  max-width: 70%;
+  text-align: center;
+}
+
+.success-popup__content p {
+  @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
+  opacity: 0.9;
+  text-align: center;
+  margin: 0;
+}
