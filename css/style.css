@@ -598,9 +598,6 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-  overflow: hidden;
 }
 
 .wrapper .header,
@@ -609,7 +606,7 @@ button,
   flex-shrink: 0;
 }
 
-.wrapper main {
+.wrapper .main {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -629,31 +626,6 @@ button,
   clip-path: inset(100%);
 }
 
-.scroll-lock-ios {
-  position: fixed;
-  overflow: hidden;
-}
-
-.scroll-lock {
-  overflow: hidden;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
-
 .container {
   width: 100%;
   max-width: 1440px;
@@ -661,7 +633,6 @@ button,
 }
 
 .header {
-  position: relative;
   background: url("../img/intro-bg.png") 0 0 no-repeat;
   background-size: 100%;
 }
@@ -677,6 +648,7 @@ button,
 }
 
 .header__container {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -932,6 +904,7 @@ button,
 
 .concept__content {
   padding-top: 5px;
+  padding-left: 7px;
 }
 
 .concept__content p {
@@ -976,7 +949,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 74px;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
@@ -2248,7 +2221,7 @@ button,
 }
 
 .footer {
-  min-height: 100px;
+  min-height: 114px;
 }
 
 .footer .container {
@@ -3268,25 +3241,29 @@ button,
     -ms-flex-order: 1;
     order: 1;
     width: 203px;
+    margin-left: 20px;
   }
 
   .intro__heading p {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 86px;
+    padding-top: 20px;
   }
 
   .intro h1 {
     font-size: 42px;
+    margin-top: -5px;
+    margin-bottom: 16px;
   }
 
   .intro h2 {
-    font-size: 28px;
-    margin-bottom: 60px;
+    font-size: 20px;
+    margin-bottom: 125px;
   }
 
   .intro__sub {
-    margin-bottom: 60px;
+    margin-bottom: 68px;
   }
 
   .intro__sub span {
@@ -3315,14 +3292,14 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 300px;
+    margin-bottom: 315px;
   }
 
   .concept h2 {
     font-size: 18px;
     margin: 0 auto;
-    padding-top: 60px;
-    margin-bottom: 23px;
+    padding-top: 62px;
+    margin-bottom: 16px;
   }
 
   .concept p {
@@ -3331,7 +3308,9 @@ button,
 
   .concept__content p {
     padding: 0;
+    line-height: 1.4;
     max-width: 100%;
+    margin-bottom: 17px;
   }
 
   .concept__content b {
@@ -3339,17 +3318,19 @@ button,
   }
 
   .concept__second-screen {
-    margin-bottom: 300px;
+    margin-bottom: 321px;
   }
 
   .concept__second-screen p {
     padding: 0;
     max-width: 100%;
+    margin-bottom: 19px;
   }
 
   .concept__third-screen p {
     padding: 0;
     max-width: 100%;
+    margin-bottom: 19px;
   }
 
   .info .container {
@@ -3359,6 +3340,7 @@ button,
   .info h2 {
     font-size: 40px;
     max-width: 100%;
+    margin-bottom: 40px;
   }
 
   .info__list {
@@ -3372,21 +3354,22 @@ button,
   .info__item {
     min-width: 100%;
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 
   .info__item:not(:nth-child(3n)) {
-    margin: 0;
-    margin-bottom: 25px;
+    margin-right: 0;
   }
 
   .info__item h4 {
     font-size: 26px;
+    margin-bottom: 3px;
   }
 
   .info__item p {
     font-size: 18px;
     max-width: 95%;
+    line-height: 1.2;
   }
 
   .auditory .container {
@@ -3473,6 +3456,9 @@ button,
     font-size: 35px;
     max-width: 100%;
     word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
   .package-meetup h2::after {
@@ -3483,8 +3469,13 @@ button,
   }
 
   .package-meetup__list {
+    padding: 0;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .package-meetup__item {
+    margin: 0 auto;
   }
 
   .package-meetup__item h4 {
@@ -3717,6 +3708,10 @@ button,
 
   .contacts__item a {
     font-size: 15px;
+  }
+
+  .footer {
+    min-height: 206px;
   }
 
   .footer .container {
