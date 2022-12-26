@@ -27,12 +27,26 @@
     letter-spacing: 0.02em;
     width: 384px;
     height: 75px;
-    bottom: -44px;
-    left: 392px;
+    bottom: -36px;
+    left: 366px;
     background-color: $color-accent;
     border: 1px solid $color-default-black;
     border-radius: 250px;
     transform: rotate(-3deg);
+
+    @include vp-1279 {
+      bottom: -56px;
+      left: 172px;
+    }
+
+    @include vp-767 {
+      width: 188px;
+      height: 32px;
+      font-size: 20px;
+      padding-top: 4px;
+      bottom: -23px;
+      left: 69px;
+    }
   }
 
   @include vp-767 {
@@ -42,15 +56,6 @@
     hyphens: manual;
     padding-left: 8px;
     margin-bottom: 61px;
-
-    &::after {
-      width: 188px;
-      height: 32px;
-      font-size: 20px;
-      padding-top: 4px;
-      left: 15px;
-      top: 100px;
-    }
   }
 }
 

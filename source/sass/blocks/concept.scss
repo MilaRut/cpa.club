@@ -5,7 +5,7 @@
   //   url("../img/concept-3.png") 100% 56.4% no-repeat,
   //   url("../img/concept-4.png") 0 138.4% no-repeat;
 
-  @include vp-767 {
+  @include vp-1023 {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
@@ -17,8 +17,12 @@
   display: flex;
   margin-bottom: 425px;
 
-  @include vp-767 {
+  @include vp-1279 {
+    padding-top: 40px;
     flex-direction: column;
+  }
+
+  @include vp-767 {
     margin-bottom: 315px;
   }
 }
@@ -55,10 +59,10 @@
   width: 744px;
   margin-bottom: 16px;
 
-  @include vp-767 {
+  @include vp-1279 {
     padding: 0;
     line-height: 1.4;
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 17px;
   }
 }
@@ -87,7 +91,7 @@
   max-width: 520px;
   margin-bottom: 25px;
 
-  @include vp-767 {
+  @include vp-1279 {
     padding: 0;
     max-width: 100%;
     margin-bottom: 19px;
@@ -106,7 +110,7 @@
   max-width: 563px;
   margin-bottom: 22px;
 
-  @include vp-767 {
+  @include vp-1279 {
     padding: 0;
     max-width: 100%;
     margin-bottom: 19px;
