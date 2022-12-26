@@ -15,6 +15,7 @@
 }
 
 .form-popup__bg.active {
+  display: block;
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
@@ -98,14 +99,6 @@
 
   &--sponsor {
     padding-top: 87px;
-
-    h2 {
-      margin-bottom: 41px;
-    }
-
-    p {
-      margin-bottom: 33px;
-    }
   }
 
   &--ticket {
@@ -121,12 +114,20 @@
     margin-bottom: 28px;
   }
 
+  h2.form-popup__title {
+    margin-bottom: 41px;
+  }
+
   p {
     @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
     opacity: 0.9;
     text-align: center;
     margin: 0;
     margin-bottom: 17px;
+  }
+
+  p.form-popup__text {
+    margin-bottom: 33px;
   }
 }
 

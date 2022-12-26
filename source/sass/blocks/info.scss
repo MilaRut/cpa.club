@@ -45,30 +45,23 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  column-gap: 65px;
 
   @include vp-767 {
+    display: flex;
     flex-direction: column;
     max-width: 100%;
   }
 }
 
 .info__item {
-  min-width: 263px;
+  min-width: 397px;
   margin-bottom: 58px;
 
   @include vp-767 {
     min-width: 100%;
     max-width: 100%;
     margin-bottom: 28px;
-  }
-}
-
-.info__item:not(:nth-child(3n)) {
-  margin-right: 50px;
-
-  @include vp-767 {
-    margin-right: 0;
   }
 }
 

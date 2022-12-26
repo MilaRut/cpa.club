@@ -51,6 +51,7 @@
 .program__item {
   position: relative;
   width: 415px;
+  padding-right: 14px;
   cursor: grab;
 
   &::before {
@@ -76,7 +77,8 @@
   }
 
   @include vp-767 {
-    width: 88%;
+    width: min(88%, 252px);
+    padding: 0;
 
     &::before {
       top: -35px;

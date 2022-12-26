@@ -15,6 +15,7 @@
 }
 
 .success-popup__bg.active {
+  display: block;
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;

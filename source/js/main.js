@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {openMenu} from './modules/mobile-menu';
+import {closeMenu} from './modules/mobile-menu';
 import {setupVideo} from './modules/video';
 import {initPhotoSlider} from './modules/photo-slider';
 import {initSwiper} from './modules/program-slider';
@@ -13,6 +14,7 @@ import {showSuccessMsg} from './modules/submit-success';
 
 window.addEventListener('DOMContentLoaded', () => {
   openMenu();
+  closeMenu();
   const swiper = document.querySelector('.swiper');
   // const ticketForm = document.querySelector('#ticket-form');
   // const sponsorForm = document.querySelector('#sponsor-form');

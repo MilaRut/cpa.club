@@ -27,6 +27,7 @@
 
 .sky h3 {
   @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-accent);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
