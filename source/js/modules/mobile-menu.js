@@ -18,6 +18,7 @@ function closeMenu() {
   headerLinks.forEach((link) => {
     link.addEventListener('click', function () {
       headerNav.classList.remove('active');
+      menuOpenBtn.classList.remove('active');
     });
   });
 
