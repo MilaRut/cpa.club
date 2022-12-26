@@ -1030,9 +1030,9 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 65px;
-  -moz-column-gap: 65px;
-  column-gap: 65px;
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
 }
 
 .info__item {
@@ -1433,6 +1433,10 @@ button,
   gap: 19px 9px;
 }
 
+.package-meetup__item {
+  min-height: 365px;
+}
+
 .package-meetup__item h4 {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
@@ -1749,7 +1753,7 @@ h4.package__title-l {
   padding: 7px 0 87px 100px;
   position: relative;
   padding-right: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .program__blur {
@@ -2314,7 +2318,6 @@ h4.tickets__title-s {
   font-size: 12px;
   line-height: 1.2;
   color: #ffffff;
-  display: block;
   padding-right: 3px;
   padding-top: 9px;
   margin-right: 7px;
@@ -2362,30 +2365,42 @@ h4.tickets__title-s {
 
 .popup__bg {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
 }
 
 .popup__bg.active {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  left: 0;
-  background-color: rgba(3, 16, 27, 0.7);
-  overflow: scroll;
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
-.popup.active {
-  position: relative;
+.popup__bg {
+  display: none;
+}
+
+.popup {
+  position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  margin: auto;
+  top: 50%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2393,7 +2408,22 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 2000;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .popup__close-btn {
@@ -2671,30 +2701,38 @@ h4.tickets__title-s {
 
 .form-popup__bg {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
 }
 
 .form-popup__bg.active {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  left: 0;
-  background-color: rgba(3, 16, 27, 0.7);
-  overflow: scroll;
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
-.form-popup.active {
-  position: relative;
+.form-popup {
+  position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  margin: auto;
+  top: 50%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2702,7 +2740,22 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 2000;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.form-popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .form-popup__close-btn {
@@ -2887,30 +2940,38 @@ h4.tickets__title-s {
 
 .success-popup__bg {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
 }
 
 .success-popup__bg.active {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  left: 0;
-  background-color: rgba(3, 16, 27, 0.7);
-  overflow: scroll;
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
-.success-popup.active {
-  position: relative;
+.success-popup {
+  position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  margin: auto;
+  top: 50%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2918,7 +2979,22 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 2000;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.success-popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .success-popup__close-btn {
@@ -3085,6 +3161,26 @@ h4.tickets__title-s {
   }
 }
 
+@media (max-width: 1365px) {
+  .info__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .package-meetup__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+    justify-items: center;
+  }
+}
+
 @media (max-width: 1279px) {
   .header__container {
     background-color: transparent;
@@ -3241,17 +3337,148 @@ h4.tickets__title-s {
     margin-bottom: 19px;
   }
 
+  .info h2 {
+    max-width: 100%;
+    font-size: 54px;
+  }
+
+  .auditory .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .auditory__headings {
+    margin-bottom: 20px;
+    padding-top: 43px;
+  }
+
+  .auditory__list {
+    max-width: 100%;
+    margin-bottom: 299px;
+  }
+
+  .auditory p {
+    max-width: 100%;
+  }
+
+  .speaker__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 65px;
+  }
+
+  .speaker__image {
+    min-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  .photos__btn {
+    width: 56px;
+    height: 56px;
+    top: 102.2%;
+    -webkit-transform: scale(0.89);
+    -ms-transform: scale(0.89);
+    transform: scale(0.89);
+  }
+
+  .photos__btn--prev {
+    left: 50%;
+    -webkit-transform: translate(-106%) scale(0.89);
+    -ms-transform: translate(-106%) scale(0.89);
+    transform: translate(-106%) scale(0.89);
+  }
+
+  .photos__btn--next {
+    left: 51%;
+    -webkit-transform: scale(-0.89, 0.89);
+    -ms-transform: scale(-0.89, 0.89);
+    transform: scale(-0.89, 0.89);
+  }
+
+  .dots-wrapper {
+    display: none;
+  }
+
   .package-afterparty h2::after {
     bottom: -56px;
     left: 172px;
+  }
+
+  .program h3 {
+    font-size: 65px;
+  }
+
+  .program__btn {
+    top: 91px;
+    -webkit-transform: scale(0.89);
+    -ms-transform: scale(0.89);
+    transform: scale(0.89);
+  }
+
+  .program__btn--prev {
+    left: 50%;
+    -webkit-transform: translate(-113%) scale(0.89);
+    -ms-transform: translate(-113%) scale(0.89);
+    transform: translate(-113%) scale(0.89);
+  }
+
+  .program__btn--next {
+    left: 52%;
+    -webkit-transform: scale(-0.89, 0.89);
+    -ms-transform: scale(-0.89, 0.89);
+    transform: scale(-0.89, 0.89);
+  }
+
+  .tickets__wrapper {
+    margin-bottom: 94px;
   }
 
   .tickets__timer {
     display: none;
   }
 
+  .tickets h3 {
+    position: relative;
+  }
+
+  .tickets h3::before {
+    font-family: "TTTravelsNext", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #000000;
+    position: absolute;
+    content: "Early birds";
+    padding-top: 15px;
+    padding-right: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    width: 298px;
+    height: 63px;
+    top: 83px;
+    left: 377px;
+    background-color: #fccd03;
+    border: 1px solid #000000;
+    border-radius: 250px;
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+
   .timer {
     display: none;
+  }
+
+  .contacts__list {
+    gap: 34px 14px;
   }
 }
 
@@ -3266,6 +3493,12 @@ h4.tickets__title-s {
     flex-direction: column;
     padding: 0 20px;
     width: 100%;
+  }
+
+  .package-meetup__list {
+    padding: 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3364,17 +3597,6 @@ h4.tickets__title-s {
     padding: 0;
   }
 
-  .info__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 100%;
-  }
-
   .info__item {
     min-width: 100%;
     max-width: 100%;
@@ -3394,15 +3616,6 @@ h4.tickets__title-s {
 
   .auditory .container {
     padding: 0 14px 72px 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .auditory__headings {
-    margin-bottom: 20px;
-    padding-top: 43px;
   }
 
   .auditory__headings h2 {
@@ -3411,9 +3624,7 @@ h4.tickets__title-s {
   }
 
   .auditory__list {
-    max-width: 100%;
     padding-left: 10px;
-    margin-bottom: 299px;
   }
 
   .auditory__item {
@@ -3423,7 +3634,6 @@ h4.tickets__title-s {
 
   .auditory p {
     font-size: 14px;
-    max-width: 100%;
   }
 
   .speaker .container {
@@ -3435,27 +3645,13 @@ h4.tickets__title-s {
     margin-bottom: 38px;
   }
 
-  .speaker__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 65px;
-  }
-
-  .speaker__image {
-    min-width: 281px;
-    height: 100%;
-    margin: 0 auto;
-    margin-bottom: 16px;
-  }
-
   .speaker__info h4 {
     font-size: 28px;
     margin-bottom: 7px;
   }
 
   .speaker__info h5 {
+    max-width: 281px;
     font-size: 18px;
     padding: 9px 0 4px;
     margin-bottom: 26px;
@@ -3528,13 +3724,8 @@ h4.tickets__title-s {
     margin-bottom: 64px;
   }
 
-  .package-meetup__list {
-    padding: 0;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
   .package-meetup__item {
+    min-height: 254px;
     margin: 0 auto;
   }
 
@@ -3618,30 +3809,6 @@ h4.tickets__title-s {
     max-height: 397px;
   }
 
-  .photos__btn {
-    width: 56px;
-    height: 56px;
-    top: 102.2%;
-    -webkit-transform: scale(0.89);
-    -ms-transform: scale(0.89);
-    transform: scale(0.89);
-  }
-
-  .photos__btn--prev {
-    left: 31.1%;
-  }
-
-  .photos__btn--next {
-    left: 51.1%;
-    -webkit-transform: scale(-0.89, 0.89);
-    -ms-transform: scale(-0.89, 0.89);
-    transform: scale(-0.89, 0.89);
-  }
-
-  .dots-wrapper {
-    display: none;
-  }
-
   .package-afterparty .container {
     padding: 116px 11px 0;
   }
@@ -3718,21 +3885,6 @@ h4.tickets__title-s {
     font-size: 20px;
   }
 
-  .program__btn {
-    top: 95px;
-    -webkit-transform: scale(0.89);
-    -ms-transform: scale(0.89);
-    transform: scale(0.89);
-    right: 167px;
-  }
-
-  .program__btn--next {
-    -webkit-transform: scale(-0.89, 0.89);
-    -ms-transform: scale(-0.89, 0.89);
-    transform: scale(-0.89, 0.89);
-    right: 103px;
-  }
-
   .tickets .container {
     padding: 0 18px;
   }
@@ -3742,36 +3894,19 @@ h4.tickets__title-s {
   }
 
   .tickets h3 {
-    position: relative;
     font-size: 35px;
     padding-left: 0px;
     padding-top: 40px;
   }
 
   .tickets h3::before {
-    font-family: "TTTravelsNext", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #000000;
-    position: absolute;
-    content: "Early birds";
-    padding-top: 10px;
-    padding-right: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    width: 207px;
-    height: 42px;
     top: 67px;
     left: 77px;
-    background-color: #fccd03;
-    border: 1px solid #000000;
-    border-radius: 250px;
-    -webkit-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    transform: rotate(-3deg);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-right: 1px;
+    width: 207px;
+    height: 42px;
   }
 
   .tickets__list {
@@ -3838,7 +3973,6 @@ h4.tickets__title-s {
     grid-template-columns: 1fr;
     -ms-grid-rows: (auto)[4];
     grid-template-rows: repeat(4, auto);
-    gap: 24px;
     padding: 0;
   }
 
@@ -3895,7 +4029,7 @@ h4.tickets__title-s {
   .footer__img--sigma {
     width: 83px;
     height: 17px;
-    margin: 10px 39px 0 5px;
+    margin: 10px 25px 0 5px;
   }
 
   .footer p {
@@ -3911,6 +4045,10 @@ h4.tickets__title-s {
 
   span.footer__copyright {
     margin: 0;
+  }
+
+  .popup__wrapper {
+    max-height: 498px;
   }
 
   .popup__list--sponsors .popup__content {
