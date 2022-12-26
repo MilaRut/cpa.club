@@ -20,6 +20,10 @@
   align-items: center;
   margin-bottom: 35px;
 
+  @include vp-1279 {
+    margin-bottom: 94px;
+  }
+
   @include vp-767 {
     margin-bottom: 74px;
   }
@@ -63,29 +67,42 @@
   padding-left: 20px;
   padding-top: 30px;
 
-  @include vp-767 {
+  @include vp-1279 {
     position: relative;
+
+    &::before {
+      @include font-settings ($ff-ttt, 800, 28px, 1.2, $color-default-black);
+      position: absolute;
+      content: "Early birds";
+      padding-top: 15px;
+      padding-right: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      width: 298px;
+      height: 63px;
+      top: 83px;
+      left: 377px;
+      background-color: $color-accent;
+      border: 1px solid $color-default-black;
+      border-radius: 250px;
+      transform: rotate(-3deg);
+    }
+  }
+
+  @include vp-767 {
     font-size: 35px;
     padding-left: 0px;
     padding-top: 40px;
 
     &::before {
-      @include font-settings ($ff-ttt, 800, 20px, 1.2, $color-default-black);
-      position: absolute;
-      content: "Early birds";
-      padding-top: 10px;
-      padding-right: 1px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      width: 207px;
-      height: 42px;
       top: 67px;
       left: 77px;
-      background-color: $color-accent;
-      border: 1px solid $color-default-black;
-      border-radius: 250px;
-      transform: rotate(-3deg);
+      font-size: 20px;
+      padding-top: 10px;
+      padding-right: 1px;
+      width: 207px;
+      height: 42px;
     }
   }
 }

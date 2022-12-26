@@ -63,14 +63,23 @@
   grid-template-columns: repeat(3, auto);
   gap: 19px 9px;
 
-  @include vp-767 {
+  @include vp-1365 {
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+    justify-items: center;
+  }
+
+  @include vp-1023 {
     padding: 0;
     grid-template-columns: 1fr;
   }
 }
 
 .package-meetup__item {
+  min-height: 365px;
+
   @include vp-767 {
+    min-height: 254px;
     margin: 0 auto;
   }
 }

@@ -46,18 +46,19 @@
     transform: scale(-1, 1);
   }
 
-  @include vp-767 {
+  @include vp-1279 {
     width: 56px;
     height: 56px;
     top: 102.2%;
     transform: scale(0.89);
 
     &--prev {
-      left: 31.1%;
+      left: 50%;
+      transform: translate(-106%) scale(0.89);
     }
 
     &--next {
-      left: 51.1%;
+      left: 51%;
       transform: scale(-0.89, 0.89);
     }
   }
@@ -87,7 +88,7 @@
   margin-top: 15px;
   z-index: 100;
 
-  @include vp-767 {
+  @include vp-1279 {
     display: none;
   }
 }
