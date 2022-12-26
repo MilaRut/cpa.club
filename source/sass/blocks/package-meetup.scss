@@ -14,7 +14,7 @@
   letter-spacing: 0.02em;
   margin: 0;
   margin-bottom: 83px;
-  max-width: 58%;
+  max-width: 70%;
 
   &::after {
     @include font-settings ($ff-ttt, 800, 38px, 1.2, $color-default-black);
@@ -39,7 +39,8 @@
     font-size: 35px;
     max-width: 100%;
     word-wrap: break-word;
-    hyphens: auto;
+    hyphens: manual;
+    padding-left: 16px;
 
     &::after {
       width: 160px;

@@ -1,21 +1,18 @@
-const overlay = document.querySelector('.form-popup__bg');
-const popup = document.querySelector('.form-popup');
+const formOverlay = document.querySelector('.form-popup__bg');
+const formPopup = document.querySelector('.form-popup');
 const openBtns = document.querySelectorAll('.open-form-popup');
 const closeBtn = document.querySelector('.form-popup__close-btn');
-const popupItems = document.querySelectorAll('.form-popup__item');
+const formPopupItems = document.querySelectorAll('.form-popup__item');
 
 function resetClasses() {
-  openBtns.forEach(function (item) {
-    item.classList.remove('active');
-  });
-  popupItems.forEach(function (item) {
+  formPopupItems.forEach(function (item) {
     item.classList.remove('active');
   });
 }
 
 function prepareClosingPopup() {
-  overlay.classList.remove('active');
-  popup.classList.remove('active');
+  formOverlay.classList.remove('active');
+  formPopup.classList.remove('active');
   resetClasses();
 }
 
@@ -23,18 +20,17 @@ function initFormPopup() {
   openBtns.forEach((button) => {
     let currentBtn = button;
     let itemId = currentBtn.getAttribute('data-value');
-    let currentItem = popup.querySelector(itemId);
+    let currentItem = formPopup.querySelector(itemId);
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      currentBtn.classList.add('active');
       currentItem.classList.add('active');
-      overlay.classList.add('active');
-      popup.classList.add('active');
+      formOverlay.classList.add('active');
+      formPopup.classList.add('active');
     });
   });
 
   document.addEventListener('click', (e) => {
-    if (e.target === overlay || e.target === closeBtn) {
+    if (e.target === formOverlay || e.target === closeBtn) {
       prepareClosingPopup();
     }
   });

@@ -6,6 +6,7 @@ import {initSwiper} from './modules/program-slider';
 import {initPopup} from './modules/popup';
 import {initFormPopup} from './modules/form-popup';
 import {initTimer} from './modules/timer';
+import {showSuccessMsg} from './modules/submit-success';
 // import {validateForm} from './modules/form-validation';
 
 // ---------------------------------
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopup();
     initFormPopup();
     initTimer();
+    showSuccessMsg();
     // validateForm(ticketForm);
     // validateForm(sponsorForm);
   });

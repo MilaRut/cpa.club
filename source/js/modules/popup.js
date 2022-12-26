@@ -5,9 +5,6 @@ const closeBtn = document.querySelector('.popup__close-btn');
 const popupItems = document.querySelectorAll('.popup__item');
 
 function resetClasses() {
-  openBtns.forEach(function (item) {
-    item.classList.remove('active');
-  });
   popupItems.forEach(function (item) {
     item.classList.remove('active');
   });
@@ -26,7 +23,6 @@ function initPopup() {
     let currentItem = popup.querySelector(itemId);
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      currentBtn.classList.add('active');
       currentItem.classList.add('active');
       overlay.classList.add('active');
       popup.classList.add('active');

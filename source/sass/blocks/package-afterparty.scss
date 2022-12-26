@@ -40,6 +40,8 @@
     font-size: 35px;
     max-width: 100%;
     word-wrap: break-word;
+    hyphens: manual;
+    padding-left: 16px;
 
     &::after {
       width: 200px;
