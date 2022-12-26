@@ -8,8 +8,7 @@
 
   @include vp-767 {
     font-size: 20px;
-    padding: 0;
-    padding-top: 20px;
+    padding: 63px 0 0;
     margin: 0 auto;
     text-align: center;
   }
@@ -18,12 +17,20 @@
 .video__wrapper {
   width: 100%;
   min-height: 700px;
+
+  @include vp-767 {
+    max-height: 469px;
+  }
 }
 
 .video {
   position: relative;
   width: 100%;
   min-height: 700px;
+
+  @include vp-767 {
+    min-height: 469px;
+  }
 }
 
 .video__poster {
@@ -33,6 +40,10 @@
   width: 100%;
   height: 100%;
   border: none;
+
+  @include vp-767 {
+    max-height: 469px;
+  }
 }
 
 .video__btn {
@@ -47,6 +58,12 @@
   padding: 0;
   z-index: 10;
   display: none;
+
+  @include vp-767 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-30.8%,-49.8%);
+  }
 }
 
 .video__btn-img {

@@ -5,7 +5,7 @@
   overflow-x: hidden;
 
   @include vp-767 {
-    padding: 0 20px;
+    padding: 0 17px;
   }
 }
 
@@ -35,6 +35,9 @@
 
   @include vp-767 {
     font-size: 31px;
+    padding-top: 41px;
+    margin-bottom: 131px;
+    padding-left: 3px;
   }
 }
 
@@ -73,9 +76,16 @@
   }
 
   @include vp-767 {
-    width: 90%;
+    width: 88%;
+
+    &::before {
+      top: -35px;
+      left: 3px;
+    }
 
     &::after {
+      top: -25px;
+      left: 3px;
       width: 100%;
     }
   }
@@ -87,6 +97,10 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 2px;
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
 }
 
 .program__item p {
@@ -124,6 +138,17 @@
   &--next {
     transform: scale(-1, 1);
     right: 100px;
+  }
+
+  @include vp-767 {
+    top: 95px;
+    transform: scale(0.89);
+    right: 167px;
+
+    &--next {
+      transform: scale(-0.89, 0.89);
+      right: 103px;
+    }
   }
 }
 

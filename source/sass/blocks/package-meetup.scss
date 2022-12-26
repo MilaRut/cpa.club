@@ -40,13 +40,15 @@
     max-width: 100%;
     word-wrap: break-word;
     hyphens: manual;
-    padding-left: 16px;
+    margin-bottom: 64px;
 
     &::after {
-      width: 160px;
-      height: 35px;
+      width: 140px;
+      height: 32px;
       font-size: 20px;
-      padding-top: 7px;
+      padding-top: 4px;
+      bottom: -18px;
+      left: 152px;
     }
   }
 }
@@ -85,5 +87,24 @@
 
   @include vp-767 {
     font-size: 30px;
+    margin-bottom: 14px;
+  }
+}
+
+h4.package__title-m {
+  @include vp-767 {
+    margin-bottom: 34px;
+  }
+}
+
+h5.package__title-s {
+  @include vp-767 {
+    margin-bottom: 32px;
+  }
+}
+
+b.package__price {
+  @include vp-767 {
+    margin-bottom: 19px;
   }
 }

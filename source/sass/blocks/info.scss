@@ -25,11 +25,13 @@
   margin: 0;
   margin-bottom: 71px;
   max-width: 58%;
+  padding-top: 26px;
 
   @include vp-767 {
     font-size: 40px;
     max-width: 100%;
     margin-bottom: 40px;
+    padding: 0;
   }
 }
 
@@ -41,8 +43,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
 
   @include vp-767 {
     flex-direction: column;
@@ -51,7 +54,7 @@
 }
 
 .info__item {
-  min-width: 360px;
+  min-width: 263px;
   margin-bottom: 58px;
 
   @include vp-767 {

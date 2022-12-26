@@ -27,7 +27,7 @@
   @include font-settings ($ff-ttt, 800, 38px, 1, $color-default-white);
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  margin: 0 95px 0 0;
+  margin: 0 88px 0 0;
 
   @include vp-767 {
     font-size: 18px;
