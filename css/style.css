@@ -597,6 +597,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .wrapper .header,
@@ -732,6 +733,11 @@ button,
   background-color: #fccd03;
 }
 
+.header__btn:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
 .header__socials {
   display: none;
 }
@@ -786,8 +792,9 @@ button,
 }
 
 .header__nav.active {
-  position: absolute;
+  position: fixed;
   min-width: 94%;
+  height: 100vh;
   top: 0;
   right: 0;
   display: -webkit-box;
@@ -799,6 +806,7 @@ button,
   flex-direction: column;
   background-color: #000000;
   padding: 17px 0 0 28px;
+  z-index: 100;
 }
 
 .intro .container {
@@ -1382,7 +1390,6 @@ button,
   letter-spacing: 0.02em;
   margin: 0;
   margin-bottom: 83px;
-  max-width: 70%;
 }
 
 .package-meetup h2::after {
@@ -1674,8 +1681,8 @@ button,
   letter-spacing: 0.02em;
   width: 384px;
   height: 75px;
-  bottom: -44px;
-  left: 392px;
+  bottom: -36px;
+  left: 366px;
   background-color: #fccd03;
   border: 1px solid #000000;
   border-radius: 250px;
@@ -1958,7 +1965,7 @@ h4.package__title-l {
 }
 
 .tickets__item {
-  width: 47.7%;
+  width: 580px;
   max-height: 187px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2355,38 +2362,30 @@ h4.tickets__title-s {
 
 .popup__bg {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
 }
 
 .popup__bg.active {
-  display: block;
-  opacity: 1;
-  pointer-events: all;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 16, 27, 0.7);
+  overflow: scroll;
 }
 
-.popup {
-  position: absolute;
+.popup.active {
+  position: relative;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  top: 50%;
-  left: 50%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2394,22 +2393,7 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
-  transform: translate(-50%, -50%) scale(0);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
-}
-
-.popup.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  z-index: 2000;
 }
 
 .popup__close-btn {
@@ -2687,38 +2671,30 @@ h4.tickets__title-s {
 
 .form-popup__bg {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
 }
 
 .form-popup__bg.active {
-  display: block;
-  opacity: 1;
-  pointer-events: all;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 16, 27, 0.7);
+  overflow: scroll;
 }
 
-.form-popup {
-  position: absolute;
+.form-popup.active {
+  position: relative;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  top: 50%;
-  left: 50%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2726,22 +2702,7 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
-  transform: translate(-50%, -50%) scale(0);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
-}
-
-.form-popup.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  z-index: 2000;
 }
 
 .form-popup__close-btn {
@@ -2926,38 +2887,30 @@ h4.tickets__title-s {
 
 .success-popup__bg {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
 }
 
 .success-popup__bg.active {
-  display: block;
-  opacity: 1;
-  pointer-events: all;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 16, 27, 0.7);
+  overflow: scroll;
 }
 
-.success-popup {
-  position: absolute;
+.success-popup.active {
+  position: relative;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(52px);
   backdrop-filter: blur(52px);
-  top: 50%;
-  left: 50%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2965,22 +2918,7 @@ h4.tickets__title-s {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
-  transform: translate(-50%, -50%) scale(0);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 1000;
-}
-
-.success-popup.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  z-index: 2000;
 }
 
 .success-popup__close-btn {
@@ -3121,19 +3059,33 @@ h4.tickets__title-s {
   }
 */
 
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
   .header {
-    background: url("../img/intro-bg-mob.png") center no-repeat;
     background-size: cover;
   }
 
   .header .container {
-    padding: 10px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
+  .header__list {
+    margin-right: 15px;
+  }
+
+  .header__item {
+    margin-right: 15px;
+  }
+
+  .intro h2 {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1279px) {
   .header__container {
     background-color: transparent;
   }
@@ -3149,10 +3101,6 @@ h4.tickets__title-s {
     flex-direction: column;
     margin: 0 0 33px;
     padding-top: 5px;
-  }
-
-  .header__item {
-    padding-top: 7px;
   }
 
   .header__link {
@@ -3208,16 +3156,18 @@ h4.tickets__title-s {
   }
 
   .header__menu-btn {
-    position: relative;
+    position: fixed;
     display: block;
     margin-left: auto;
+    top: 10px;
+    right: 10px;
     width: 38px;
     height: 38px;
     background-color: #000000;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 200;
   }
 
   .header__menu-btn::before,
@@ -3231,6 +3181,109 @@ h4.tickets__title-s {
     background-color: #ffffff;
     -webkit-box-shadow: 0 6px 0 0 #ffffff, 0 12px 0 0 #ffffff;
     box-shadow: 0 6px 0 0 #ffffff, 0 12px 0 0 #ffffff;
+  }
+
+  .intro .container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .intro__heading .intro__img {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 203px;
+    margin-left: 20px;
+  }
+
+  .intro__heading p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .intro h1 {
+    font-size: 80px;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .intro__sub {
+    margin-bottom: 68px;
+  }
+
+  .concept__first-screen {
+    padding-top: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .concept__content p {
+    padding: 0;
+    line-height: 1.4;
+    width: 100%;
+    margin-bottom: 17px;
+  }
+
+  .concept__second-screen p {
+    padding: 0;
+    max-width: 100%;
+    margin-bottom: 19px;
+  }
+
+  .concept__third-screen p {
+    padding: 0;
+    max-width: 100%;
+    margin-bottom: 19px;
+  }
+
+  .package-afterparty h2::after {
+    bottom: -56px;
+    left: 172px;
+  }
+
+  .tickets__timer {
+    display: none;
+  }
+
+  .timer {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .concept .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    background: url("../img/intro-bg-mob.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .header .container {
+    padding: 10px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .header__item {
+    padding-top: 7px;
   }
 
   .intro .container {
@@ -3251,16 +3304,7 @@ h4.tickets__title-s {
     margin: 0 auto;
   }
 
-  .intro__heading .intro__img {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    width: 203px;
-    margin-left: 20px;
-  }
-
   .intro__heading p {
-    text-align: center;
     font-size: 14px;
     margin-bottom: 86px;
     padding-top: 20px;
@@ -3277,10 +3321,6 @@ h4.tickets__title-s {
     margin-bottom: 125px;
   }
 
-  .intro__sub {
-    margin-bottom: 68px;
-  }
-
   .intro__sub span {
     font-size: 12px;
   }
@@ -3290,23 +3330,7 @@ h4.tickets__title-s {
     height: 19px;
   }
 
-  .concept .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0 20px;
-    width: 100%;
-  }
-
   .concept__first-screen {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     margin-bottom: 315px;
   }
 
@@ -3321,31 +3345,12 @@ h4.tickets__title-s {
     font-size: 12px;
   }
 
-  .concept__content p {
-    padding: 0;
-    line-height: 1.4;
-    max-width: 100%;
-    margin-bottom: 17px;
-  }
-
   .concept__content b {
     font-size: 12px;
   }
 
   .concept__second-screen {
     margin-bottom: 321px;
-  }
-
-  .concept__second-screen p {
-    padding: 0;
-    max-width: 100%;
-    margin-bottom: 19px;
-  }
-
-  .concept__third-screen p {
-    padding: 0;
-    max-width: 100%;
-    margin-bottom: 19px;
   }
 
   .info .container {
@@ -3505,16 +3510,6 @@ h4.tickets__title-s {
     padding-bottom: 50px;
   }
 
-  .package-meetup h2 {
-    font-size: 35px;
-    max-width: 100%;
-    word-wrap: break-word;
-    -webkit-hyphens: manual;
-    -ms-hyphens: manual;
-    hyphens: manual;
-    margin-bottom: 64px;
-  }
-
   .package-meetup h2::after {
     width: 140px;
     height: 32px;
@@ -3522,6 +3517,15 @@ h4.tickets__title-s {
     padding-top: 4px;
     bottom: -18px;
     left: 152px;
+  }
+
+  .package-meetup h2 {
+    font-size: 35px;
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+    margin-bottom: 64px;
   }
 
   .package-meetup__list {
@@ -3642,6 +3646,15 @@ h4.tickets__title-s {
     padding: 116px 11px 0;
   }
 
+  .package-afterparty h2::after {
+    width: 188px;
+    height: 32px;
+    font-size: 20px;
+    padding-top: 4px;
+    bottom: -23px;
+    left: 69px;
+  }
+
   .package-afterparty h2 {
     font-size: 35px;
     max-width: 100%;
@@ -3651,15 +3664,6 @@ h4.tickets__title-s {
     hyphens: manual;
     padding-left: 8px;
     margin-bottom: 61px;
-  }
-
-  .package-afterparty h2::after {
-    width: 188px;
-    height: 32px;
-    font-size: 20px;
-    padding-top: 4px;
-    left: 15px;
-    top: 100px;
   }
 
   .package-afterparty__item {
@@ -3737,10 +3741,6 @@ h4.tickets__title-s {
     margin-bottom: 74px;
   }
 
-  .tickets__timer {
-    display: none;
-  }
-
   .tickets h3 {
     position: relative;
     font-size: 35px;
@@ -3779,13 +3779,17 @@ h4.tickets__title-s {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding-left: 2px;
     padding-right: 2px;
   }
 
   .tickets__item {
-    min-width: 100%;
+    width: 279px;
     min-height: 267px;
+    max-height: 100%;
     padding: 18px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3813,10 +3817,6 @@ h4.tickets__title-s {
 
   .tickets__btn {
     width: 100%;
-  }
-
-  .timer {
-    display: none;
   }
 
   .contacts .container {
