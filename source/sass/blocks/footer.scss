@@ -1,5 +1,5 @@
 .footer {
-  min-height: 114px;
+  min-height: 104px;
 
   @include vp-767 {
     min-height: 206px;
@@ -7,7 +7,7 @@
 }
 
 .footer .container {
-  padding: 25px 100px 36px;
+  padding: 25px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,6 +39,7 @@
   &--secondary {
     @include vp-767 {
       margin-bottom: 21px;
+      justify-content: flex-start;
     }
   }
 }
@@ -58,7 +59,7 @@
     &--sigma {
       width: 83px;
       height: 17px;
-      margin: 10px 25px 0 5px;
+      margin: 8px 37px 0 4px;
     }
   }
 }
@@ -74,6 +75,7 @@
     letter-spacing: 0.02em;
     line-height: 0.6;
     margin: 0;
+    padding-top: 4px;
   }
 }
 
@@ -91,5 +93,6 @@
 span.footer__copyright {
   @include vp-767 {
     margin: 0;
+    justify-self: flex-end;
   }
 }

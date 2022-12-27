@@ -71,6 +71,11 @@
   &::after {
     transform: rotate(135deg);
   }
+
+  @include vp-767 {
+    top: 12px;
+    right: 11px;
+  }
 }
 
 // popup content
@@ -84,7 +89,9 @@
   // align-items: center;
 
   @include vp-767 {
-    max-height: 498px;
+    height: 498px;
+    min-width: 298px;
+    border-radius: 20px;
   }
 }
 
@@ -111,11 +118,16 @@
   display: flex;
   flex-direction: column;
 
+  @include vp-767 {
+    padding: 19px;
+    min-height: 498px;
+  }
+
   .popup__list--sponsors & {
     padding: 85px 0 0 87px;
 
     @include vp-767 {
-      padding: 15px;
+      padding: 19px;
     }
   }
 }
@@ -175,14 +187,34 @@
   max-width: 70%;
 
   @include vp-767 {
-    font-size: 30px;
-    padding-top: 30px;
+    font-size: 25px;
+    padding-top: 39px;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+    hyphens: manual;
+  }
+}
+
+.popup__item--ap .popup__content h2 {
+  @include vp-767 {
+    padding-top: 10px;
+  }
+}
+
+.popup__text-list {
+  @include vp-767 {
+    padding-left: 13px;
   }
 }
 
 .popup__text-item {
   @include font-settings ($ff-mont, 400, 16px, 1.5, $color-default-white);
   padding-right: 19%;
+
+  @include vp-767 {
+    padding: 0;
+    font-size: 12px;
+  }
 }
 
 .popup__tables-item h5 {
@@ -255,11 +287,15 @@
   cursor: pointer;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  opacity: 0.9;
   transition: 0.5s all;
-  justify-self: flex-end;
 
   @include vp-767 {
-    width: 90%;
+    width: 100%;
+    height: 53px;
+    margin-top: auto;
+    border-radius: 9px;
+    font-size: 17px;
   }
 }
 
