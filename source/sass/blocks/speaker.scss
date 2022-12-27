@@ -56,6 +56,18 @@
     flex-direction: column;
     margin-bottom: 65px;
   }
+
+  @include vp-767 {
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      content: url("../img/speaker-bg-mob.png");
+      top: -328px;
+      left: -20px;
+    }
+  }
 }
 
 .speaker__image {

@@ -1,15 +1,19 @@
 .concept .container {
   padding: 182px 103px 90px;
-  // background: url("../img/concept-1.png") 0 -214% no-repeat,
-  //   url("../img/concept-2.png") 100% -16.7% no-repeat,
-  //   url("../img/concept-3.png") 100% 56.4% no-repeat,
-  //   url("../img/concept-4.png") 0 138.4% no-repeat;
+  background: url("../img/concept-1.png") 0 -214% no-repeat,
+    url("../img/concept-2.png") 100% -16.7% no-repeat,
+    url("../img/concept-3.png") 100% 56.4% no-repeat,
+    url("../img/concept-4.png") 0 138.4% no-repeat;
 
   @include vp-1023 {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
     width: 100%;
+    background: url("../img/concept-1-mob.png") 97% -4% no-repeat,
+    url("../img/concept-2-mob.png") 0 29% no-repeat,
+    url("../img/concept-3-mob.png") 0 78% no-repeat;
+    background-size: auto;
   }
 }
 

@@ -15,6 +15,12 @@
 
   @include vp-767 {
     padding: 0 20px 34px;
+
+    &::after {
+      content: url("../img/contacts-bg-mob.png");
+      top: -59px;
+      right: 0;
+    }
   }
 }
 
