@@ -4186,6 +4186,8 @@ h4.tickets__title-s {
     width: 100%;
     border-radius: 9px;
     margin-top: auto;
+    height: 53px;
+    font-size: 17px;
   }
 
   .success-popup__wrapper {
