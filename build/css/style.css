@@ -2935,6 +2935,7 @@ h4.tickets__title-s {
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
+  margin: 0 auto;
   margin-top: auto;
 }
 
@@ -3182,6 +3183,11 @@ h4.tickets__title-s {
     grid-template-columns: 1fr 1fr;
     gap: 19px;
     justify-items: center;
+  }
+
+  .popup__text-list {
+    max-height: 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -4100,6 +4106,7 @@ h4.tickets__title-s {
     -webkit-hyphens: manual;
     -ms-hyphens: manual;
     hyphens: manual;
+    max-width: 85%;
   }
 
   .popup__item--ap .popup__content h2 {
@@ -4185,9 +4192,9 @@ h4.tickets__title-s {
   .form__submit-btn {
     width: 100%;
     border-radius: 9px;
-    margin-top: auto;
     height: 53px;
     font-size: 17px;
+    margin-top: auto;
   }
 
   .success-popup__wrapper {

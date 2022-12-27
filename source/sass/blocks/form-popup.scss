@@ -220,13 +220,14 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: 0.5s all;
+  margin: 0 auto;
   margin-top: auto;
 
   @include vp-767 {
     width: 100%;
     border-radius: 9px;
-    margin-top: auto;
     height: 53px;
     font-size: 17px;
+    margin-top: auto;
   }
 }
