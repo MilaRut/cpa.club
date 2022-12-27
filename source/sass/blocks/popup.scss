@@ -131,16 +131,30 @@
   }
 }
 
+.popup__item--tables .popup__content {
+  @include vp-1279 {
+    padding: 50px;
+  }
+}
+
 .popup__tables-list {
   margin: 0;
   padding: 105px 54px 0 4px;
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  @include vp-1279 {
+    padding: 0;
+    margin: auto;
+  }
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
 
   @include vp-767 {
-    padding: 15px;
+    padding: 0;
     flex-direction: column;
   }
 }
@@ -151,6 +165,30 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include vp-1279 {
+    max-width: 250px;
+    min-height: auto;
+  }
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+  }
+}
+
+.popup__tables-item .popup__text-list {
+  @include vp-1279 {
+    max-width: 80%;
+  }
+
+  @include vp-1023 {
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 .popup__text-list {
@@ -228,6 +266,14 @@
   text-transform: uppercase;
   margin: 0 0 5px;
   padding-left: 8px;
+
+  @include vp-1279 {
+    font-size: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 10px;
+  }
 }
 
 .popup__tables-item h2 {
@@ -236,6 +282,22 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 12px;
+
+  @include vp-1279 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    max-width: 50%;
+  }
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding-top: 0;
+  }
 }
 
 .popup__tables-item b {
@@ -244,10 +306,28 @@
   text-transform: uppercase;
   padding-left: 7px;
   margin-bottom: 25px;
+
+  @include vp-1279 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
 }
 
 .popup__tables-list .popup__text-item {
   font-size: 14px;
+
+  @include vp-1279 {
+    font-size: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 10px;
+  }
 }
 
 .popup__list--tickets h2 {
@@ -310,11 +390,21 @@
 
 .popup__tables-item .popup__get-sponsor-btn {
   padding-left: 10px;
-  width: 278px;
-  font-size: 18px;
-  margin-bottom: 110px;
+  max-width: 80%;
+
+  @include vp-1279 {
+    font-size: 16px;
+    margin-top: auto;
+  }
+
+  @include vp-1023 {
+    max-height: 40px;
+  }
 
   @include vp-767 {
-    width: 90%;
+    max-width: 100%;
+    max-height: 25px;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 }
