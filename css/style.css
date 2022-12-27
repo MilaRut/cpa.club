@@ -4100,6 +4100,7 @@ h4.tickets__title-s {
     -webkit-hyphens: manual;
     -ms-hyphens: manual;
     hyphens: manual;
+    max-width: 85%;
   }
 
   .popup__item--ap .popup__content h2 {
