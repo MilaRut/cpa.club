@@ -584,6 +584,11 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -630,6 +635,75 @@ button,
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.parallax {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  z-index: -10;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.parallax-layer--1 {
+  top: 112px;
+  left: 0;
+}
+
+.parallax-layer--2 {
+  top: -101px;
+  right: 0;
+}
+
+.parallax-layer--3 {
+  top: 288px;
+  right: 0;
+}
+
+.parallax-layer--4 {
+  top: 931px;
+  left: 0;
+}
+
+.parallax-layer--5 {
+  top: 242px;
+  right: 354px;
+}
+
+.parallax-layer--6 {
+  top: -18px;
+  right: -525px;
+}
+
+.parallax-layer--7 {
+  top: 27px;
+  right: 500px;
+}
+
+.parallax-layer--8 {
+  top: 517px;
+  right: 422px;
+}
+
+.parallax-layer--9 {
+  top: -189px;
+  right: -99px;
+}
+
+.pagargraph-transition {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .header {
@@ -897,7 +971,6 @@ button,
 
 .concept .container {
   padding: 182px 103px 90px;
-  background: url("../img/concept-1.png") 0 -214% no-repeat, url("../img/concept-2.png") 100% -16.7% no-repeat, url("../img/concept-3.png") 100% 56.4% no-repeat, url("../img/concept-4.png") 0 138.4% no-repeat;
 }
 
 .concept__first-screen {
@@ -976,10 +1049,10 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 74px;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  margin-bottom: 74px;
 }
 
 .concept__third-screen p {
@@ -1071,14 +1144,6 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 100px 100px;
-}
-
-.auditory .container::after {
-  position: absolute;
-  content: url("../img/auditory-bg.png");
-  top: -20px;
-  right: 0;
-  z-index: -10;
 }
 
 .auditory__headings {
@@ -1373,6 +1438,7 @@ button,
   background-color: #fccd03;
   opacity: 0.9;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .package-meetup .container {
@@ -1833,6 +1899,11 @@ h4.package__title-l {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .program__item p {
@@ -1846,6 +1917,11 @@ h4.package__title-l {
   text-transform: uppercase;
   width: 340px;
   margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .program__item span {
@@ -2163,14 +2239,6 @@ h4.tickets__title-s {
   position: relative;
 }
 
-.contacts .container::after {
-  position: absolute;
-  content: url("../img/contacts-bg.png");
-  top: -188px;
-  right: 0;
-  z-index: -10;
-}
-
 .contacts__headings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2389,10 +2457,6 @@ h4.tickets__title-s {
   transition: 0.5s all;
 }
 
-.popup__bg {
-  display: none;
-}
-
 .popup {
   position: absolute;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
@@ -2531,6 +2595,12 @@ h4.tickets__title-s {
   justify-content: space-between;
 }
 
+.popup__tables-item .popup__text-list {
+  padding: 0;
+  padding-left: 20px;
+  margin-bottom: 55px;
+}
+
 .popup__text-list {
   margin: 0 0 67px 0;
   padding: 0 0 0 25px;
@@ -2544,12 +2614,6 @@ h4.tickets__title-s {
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.popup__tables-item .popup__text-list {
-  padding: 0;
-  padding-left: 20px;
-  margin-bottom: 55px;
 }
 
 .popup h2 {
@@ -3362,7 +3426,7 @@ h4.tickets__title-s {
 
   .auditory__list {
     max-width: 100%;
-    margin-bottom: 299px;
+    margin-bottom: 300px;
   }
 
   .auditory p {
@@ -3541,7 +3605,6 @@ h4.tickets__title-s {
     flex-direction: column;
     padding: 0 20px;
     width: 100%;
-    background: url("../img/concept-1-mob.png") -90% -4% no-repeat, url("../img/concept-2-mob.png") 52% 29% no-repeat, url("../img/concept-3-mob.png") 53% 78% no-repeat;
   }
 
   .package-meetup__list {
@@ -3576,6 +3639,10 @@ h4.tickets__title-s {
 }
 
 @media (max-width: 767px) {
+  .parallax-layer {
+    display: none;
+  }
+
   .header {
     background: url("../img/intro-bg-mob.png") center no-repeat;
     background-size: cover;
@@ -3688,8 +3755,10 @@ h4.tickets__title-s {
   }
 
   .auditory .container::after {
+    position: absolute;
     content: url("../img/auditory-bg-mob.png");
     top: 341px;
+    right: 0;
   }
 
   .auditory .container {
@@ -3983,7 +4052,7 @@ h4.tickets__title-s {
 
   .tickets h3 {
     font-size: 35px;
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 40px;
   }
 
@@ -4047,9 +4116,11 @@ h4.tickets__title-s {
   }
 
   .contacts .container::after {
+    position: absolute;
     content: url("../img/contacts-bg-mob.png");
     top: -59px;
     right: -182px;
+    z-index: -1;
   }
 
   .contacts__headings {
@@ -4186,6 +4257,7 @@ h4.tickets__title-s {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     margin: 0;
+    padding-left: 13px;
   }
 
   .popup h2 {
@@ -4201,10 +4273,6 @@ h4.tickets__title-s {
 
   .popup__item--ap .popup__content h2 {
     padding-top: 10px;
-  }
-
-  .popup__text-list {
-    padding-left: 13px;
   }
 
   .popup__text-item {
