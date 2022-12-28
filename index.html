@@ -112,14 +112,14 @@
 
       <section class="intro">
         <div class="container">
-          <div class="intro__heading">
+          <div class="intro__heading heading-scale ">
             <svg class="intro__img" width="451" height="69" fill="currentColor">
               <use xlink:href="./img/sprite.svg#logo"></use>
             </svg>
             <p>12 марта 2023<br>Sky 2.0</p>
           </div>
-          <h1>Connect</h1>
-          <h2>Meetup Dubai</h2>
+          <h1 class="heading-scale">Connect</h1>
+          <h2 class="heading-scale">Meetup Dubai</h2>
           <div class="intro__sub">
             <span>При поддержке:</span>
             <img class="intro__img intro__img--sigma" src="./img/sigma-logo.png" alt="Лого Sigma">
@@ -138,7 +138,7 @@
         </div> -->
         <div class="container">
           <div class="concept__first-screen">
-            <h2>Концепция</h2>
+            <h2 class="heading-scale">Концепция</h2>
             <div class="concept__content">
               <p class="paragraph-transition"><b>CPA Club Connect </b>&mdash;&nbsp;официальный митап международного форума CPA Club при
                 сотрудничестве с&nbsp;SIGMA.
@@ -518,7 +518,7 @@
         <div class="container">
           <div class="tickets__wrapper">
             <h3>Билеты</h3>
-            <div class="tickets__timer timer">
+            <div class="tickets__timer timer timer-shadow">
               <p class="timer__title">Повышение цен<br><b>с 20.01.23</b></p>
               <ul class="timer__list">
                 <li class="timer__item">
@@ -543,7 +543,7 @@
                 <p>посещение митапа+ кофе-брейк</p>
               </div>
               <div class="tickets__right-col">
-                <b>€150</b>
+                <b>€200</b>
                 <button class="tickets__btn open-popup" type="button" data-value="#meetup">Купить билет</button>
               </div>
             </li>
@@ -1024,6 +1024,9 @@
                   <input type="text" name="company" placeholder="название компании" id="company" required>
                   <label for="company"></label>
 
+                  <input type="text" name="telegram" placeholder="ваш telegram" id="sponsor-telegram">
+                  <label for="sponsor-telegram"></label>
+
                 </fieldset>
               </form>
               <button class="form__submit-btn" form="sponsor-form" type="submit">Отправить</button>
@@ -1049,6 +1052,9 @@
                     pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" title="Только цифры"
                     required>
                   <label for="ticket-tel"></label>
+
+                  <input type="text" name="telegram" placeholder="ваш telegram" id="ticket-telegram">
+                  <label for="ticket-telegram"></label>
                 </fieldset>
               </form>
               <button class="form__submit-btn" form="ticket-form" type="submit">Отправить</button>

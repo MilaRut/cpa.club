@@ -640,6 +640,8 @@ button,
 .header {
   background: url("../img/intro-bg.png") 0 0 no-repeat;
   background-size: 100%;
+  z-index: 100;
+  min-height: 100vh;
 }
 
 .header .container {
@@ -1597,7 +1599,7 @@ button,
   width: 50px;
   background: url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
-  z-index: 100;
+  z-index: 50;
 }
 
 .photos__btn--next {
@@ -1886,7 +1888,7 @@ h4.package__title-l {
   border: none;
   background: transparent, url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
-  z-index: 100;
+  z-index: 50;
 }
 
 .program__btn--next {
@@ -2912,7 +2914,7 @@ h4.tickets__title-s {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
-  padding: 19px;
+  padding: 14px;
   margin-bottom: 12px;
 }
 
@@ -3103,11 +3105,29 @@ h4.tickets__title-s {
   margin: 0;
 }
 
+.heading-scale {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.3;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  will-change: transform;
+}
+
+.heading-scale.effect {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
 .paragraph-transition {
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
   transform: translateY(20px);
-  opacity: 0.3;
+  opacity: 0.2;
   -webkit-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
@@ -3121,22 +3141,56 @@ h4.tickets__title-s {
   opacity: 1;
 }
 
-.heading-scale {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  opacity: 0.3;
-  -webkit-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+.timer-shadow {
+  -webkit-animation: none;
+  animation: none;
   will-change: transform;
 }
 
-.heading-scale.effect {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
+.timer-shadow {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.timer-shadow.effect {
+  -webkit-animation: animate_pulse 1.2s;
+  animation: animate_pulse 1.2s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+}
+
+@-webkit-keyframes animate_pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #fdde52;
+    box-shadow: 0 0 0 0 #fdde52;
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 5px 5px #ffe678;
+    box-shadow: 0 0 5px 5px #ffe678;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 #ffea8f;
+    box-shadow: 0 0 0 0 #ffea8f;
+  }
+}
+
+@keyframes animate_pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #fdde52;
+    box-shadow: 0 0 0 0 #fdde52;
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 5px 5px #ffe678;
+    box-shadow: 0 0 5px 5px #ffe678;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 #ffea8f;
+    box-shadow: 0 0 0 0 #ffea8f;
+  }
 }
 
 /* @mixin hover-focus {
@@ -4344,6 +4398,7 @@ h4.tickets__title-s {
     max-height: 55px;
     min-width: 100%;
     margin-bottom: 0;
+    padding: 10px;
   }
 
   .form__submit-btn {
