@@ -150,7 +150,7 @@
   border: none;
   background: transparent, url("../img/svg/slider-arrow.svg") center no-repeat;
   cursor: pointer;
-  z-index: 100;
+  z-index: 50;
 
   &--next {
     transform: scale(-1, 1);
