@@ -75,6 +75,7 @@
   background-color: $color-accent;
   opacity: 0.9;
   cursor: pointer;
+  margin-top: auto;
 
   @include vp-767 {
     font-size: 13px;
