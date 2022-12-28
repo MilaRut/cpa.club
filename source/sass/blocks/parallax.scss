@@ -1,0 +1,64 @@
+// .parallax {
+//   position: relative;
+// }
+
+// .parallax-layer {
+//   overflow: hidden;
+//   position: absolute;
+//   z-index: -10;
+//   -webkit-touch-callout: none;
+// 	-webkit-user-select: none;
+// 	-khtml-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+
+//   &--1 {
+//     top: 112px;
+//     left: 0;
+//   }
+
+//   &--2 {
+//     top: -101px;
+//     right: 0;
+//   }
+
+//   &--3 {
+//     top: 288px;
+//     right: 0;
+//   }
+
+//   &--4 {
+//     top: 931px;
+//     left: 0;
+//   }
+
+//   &--5 {
+//     top: 242px;
+//     right: 354px;
+//   }
+
+//   &--6 {
+//     top: -18px;
+//     right: -525px;
+//   }
+
+//   &--7 {
+//     top: 27px;
+//     right: 500px;
+//   }
+
+//   &--8 {
+//     top: 517px;
+//     right: 422px;
+//   }
+
+//   &--9 {
+//     top: -189px;
+//     right: -99px;
+//   }
+
+//   @include vp-767 {
+//     display: none;
+//   }
+// }
