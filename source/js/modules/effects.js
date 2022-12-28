@@ -1,6 +1,7 @@
 function initEffects() {
   const paragraphs = document.querySelectorAll('.paragraph-transition');
   const headings = document.querySelectorAll('.heading-scale');
+  const timerShadow = document.querySelector('.timer-shadow');
 
   const observer = new IntersectionObserver((entries) => {
 
@@ -13,13 +14,15 @@ function initEffects() {
     });
   });
 
-  paragraphs.forEach((paragraph) => {
-    observer.observe(paragraph);
+  paragraphs.forEach((el) => {
+    observer.observe(el);
   });
 
-  headings.forEach((heading) => {
-    observer.observe(heading);
+  headings.forEach((el) => {
+    observer.observe(el);
   });
+
+  observer.observe(timerShadow);
 }
 
 export {initEffects};
