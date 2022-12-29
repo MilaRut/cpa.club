@@ -5,15 +5,12 @@
   padding: 100px 100px;
 
   &::after {
-    position: absolute;
-    // content: url("../img/auditory-bg.png");
-    // top: -20px;
-    // right: 0;
-    // z-index: -10;
-
-    @include vp-767 {
+    @include vp-1279 {
+      position: absolute;
       content: url("../img/auditory-bg-mob.png");
       top: 341px;
+      right: 0;
+      z-index: -10;
     }
   }
 

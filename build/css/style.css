@@ -1081,10 +1081,6 @@ button,
   padding: 100px 100px;
 }
 
-.auditory .container::after {
-  position: absolute;
-}
-
 .auditory__headings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3508,6 +3504,14 @@ h4.tickets__title-s {
     font-size: 54px;
   }
 
+  .auditory .container::after {
+    position: absolute;
+    content: url("../img/auditory-bg-mob.png");
+    top: 341px;
+    right: 0;
+    z-index: -10;
+  }
+
   .auditory .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3848,11 +3852,6 @@ h4.tickets__title-s {
     font-size: 18px;
     max-width: 95%;
     line-height: 1.2;
-  }
-
-  .auditory .container::after {
-    content: url("../img/auditory-bg-mob.png");
-    top: 341px;
   }
 
   .auditory .container {
