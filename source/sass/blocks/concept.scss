@@ -1,8 +1,7 @@
 .concept .container {
   padding: 182px 103px 90px;
   background: url("../img/concept-bg-1.png") 0 -284% no-repeat,
-    url("../img/concept-bg-2.png") 100% 56.4% no-repeat,
-    url("../img/concept-bg-3.png") 0 138.4% no-repeat;
+    url("../img/concept-bg-2.png") 100% 56.4% no-repeat;
 
   @include vp-1279 {
     background: url("../img/concept-1-mob.png") -90% -4% no-repeat,
@@ -20,7 +19,7 @@
 
 .concept__first-screen {
   display: flex;
-  margin-bottom: 425px;
+  margin-bottom: 335px;
 
   @include vp-1279 {
     padding-top: 40px;
@@ -109,10 +108,19 @@
 }
 
 .concept__third-screen {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 74px;
   align-items: flex-end;
+
+  &::after {
+    position: absolute;
+    content: url("../img/concept-bg-3.png");
+    bottom: -350px;
+    left: -150px;
+    z-index: -10;
+  }
 }
 
 .concept__third-screen p {
