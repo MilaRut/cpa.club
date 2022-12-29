@@ -639,7 +639,7 @@ button,
 
 .header {
   background: url("../img/intro-bg.png") 0 0 no-repeat;
-  background-size: 100%;
+  background-size: cover;
   z-index: 100;
   min-height: 100vh;
 }
@@ -904,7 +904,7 @@ button,
 
 .concept .container {
   padding: 182px 103px 90px;
-  background: url("../img/concept-1.png") 0 -214% no-repeat, url("../img/concept-2.png") 100% -16.7% no-repeat, url("../img/concept-3.png") 100% 56.4% no-repeat, url("../img/concept-4.png") 0 138.4% no-repeat;
+  background: url("../img/concept-bg-1.png") 0 -284% no-repeat, url("../img/concept-bg-2.png") 100% 56.4% no-repeat, url("../img/concept-bg-3.png") 0 138.4% no-repeat;
 }
 
 .concept__first-screen {
@@ -934,10 +934,11 @@ button,
   line-height: 1.3;
   color: #ffffff;
   margin: 0;
+  z-index: 10;
 }
 
 .concept__content {
-  padding-top: 5px;
+  padding-top: 15px;
   padding-left: 7px;
 }
 
@@ -1082,10 +1083,6 @@ button,
 
 .auditory .container::after {
   position: absolute;
-  content: url("../img/auditory-bg.png");
-  top: -20px;
-  right: 0;
-  z-index: -10;
 }
 
 .auditory__headings {
@@ -2166,7 +2163,12 @@ h4.tickets__title-s {
   margin: 0;
 }
 
+.contacts {
+  overflow: hidden;
+}
+
 .contacts .container {
+  background: url("../img/contacts-bg-blur.png") -50% top no-repeat;
   padding: 177px 100px 195px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2179,14 +2181,6 @@ h4.tickets__title-s {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.contacts .container::after {
-  position: absolute;
-  content: url("../img/contacts-bg.png");
-  top: -188px;
-  right: 0;
-  z-index: -10;
 }
 
 .contacts__headings {
@@ -2277,6 +2271,7 @@ h4.tickets__title-s {
 
 .footer {
   min-height: 104px;
+  z-index: 100;
 }
 
 .footer .container {
@@ -2380,6 +2375,7 @@ h4.tickets__title-s {
 
 .socials__link {
   padding: 10px;
+  z-index: 100;
 }
 
 .popup__bg {
@@ -3124,9 +3120,6 @@ h4.tickets__title-s {
 }
 
 .paragraph-transition {
-  -webkit-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  transform: translateY(20px);
   opacity: 0.2;
   -webkit-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
@@ -3147,11 +3140,6 @@ h4.tickets__title-s {
   will-change: transform;
 }
 
-.timer-shadow {
-  -webkit-animation: none;
-  animation: none;
-}
-
 .timer-shadow.effect {
   -webkit-animation: animate_pulse 1.2s;
   animation: animate_pulse 1.2s;
@@ -3165,9 +3153,9 @@ h4.tickets__title-s {
     box-shadow: 0 0 0 0 #fdde52;
   }
 
-  70% {
-    -webkit-box-shadow: 0 0 5px 5px #ffe678;
-    box-shadow: 0 0 5px 5px #ffe678;
+  50% {
+    -webkit-box-shadow: 0 0 7px 7px #ffe678;
+    box-shadow: 0 0 7px 7px #ffe678;
   }
 
   100% {
@@ -3182,15 +3170,77 @@ h4.tickets__title-s {
     box-shadow: 0 0 0 0 #fdde52;
   }
 
-  70% {
-    -webkit-box-shadow: 0 0 5px 5px #ffe678;
-    box-shadow: 0 0 5px 5px #ffe678;
+  50% {
+    -webkit-box-shadow: 0 0 7px 7px #ffe678;
+    box-shadow: 0 0 7px 7px #ffe678;
   }
 
   100% {
     -webkit-box-shadow: 0 0 0 0 #ffea8f;
     box-shadow: 0 0 0 0 #ffea8f;
   }
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  z-index: -1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.parallax-layer--1 {
+  top: 22px;
+  left: 0;
+}
+
+.parallax-layer--2 {
+  top: -189px;
+  right: 0;
+}
+
+.parallax-layer--3 {
+  top: 675px;
+  right: 99px;
+}
+
+.parallax-layer--4 {
+  top: 1231px;
+  left: 0;
+}
+
+.parallax-layer--5 {
+  top: 242px;
+  right: 354px;
+}
+
+.parallax-layer--6 {
+  top: -18px;
+  right: -525px;
+}
+
+.parallax-layer--7 {
+  top: -91px;
+  right: 468px;
+}
+
+.parallax-layer--8 {
+  top: 340px;
+  right: 323px;
+}
+
+.parallax-layer--9 {
+  top: -230px;
+  right: -70px;
 }
 
 /* @mixin hover-focus {
@@ -3418,12 +3468,20 @@ h4.tickets__title-s {
     margin-bottom: 68px;
   }
 
+  .concept .container {
+    background: url("../img/concept-1-mob.png") -90% -4% no-repeat, url("../img/concept-2-mob.png") 52% 29% no-repeat, url("../img/concept-3-mob.png") 53% 78% no-repeat;
+  }
+
   .concept__first-screen {
     padding-top: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .concept h2 {
+    margin-bottom: 36px;
   }
 
   .concept__content p {
@@ -3630,6 +3688,10 @@ h4.tickets__title-s {
     font-size: 16px;
     margin-top: auto;
   }
+
+  .parallax-layer {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -3643,7 +3705,6 @@ h4.tickets__title-s {
     flex-direction: column;
     padding: 0 20px;
     width: 100%;
-    background: url("../img/concept-1-mob.png") -90% -4% no-repeat, url("../img/concept-2-mob.png") 52% 29% no-repeat, url("../img/concept-3-mob.png") 53% 78% no-repeat;
   }
 
   .package-meetup__list {
@@ -3745,8 +3806,8 @@ h4.tickets__title-s {
   .concept h2 {
     font-size: 18px;
     margin: 0 auto;
+    margin-bottom: 36px;
     padding-top: 22px;
-    margin-bottom: 16px;
   }
 
   .concept p {
@@ -4149,6 +4210,7 @@ h4.tickets__title-s {
   }
 
   .contacts .container::after {
+    position: absolute;
     content: url("../img/contacts-bg-mob.png");
     top: -59px;
     right: -182px;
