@@ -11,7 +11,6 @@
 }
 
 .paragraph-transition {
-  transform: translateY(20px);
   opacity: 0.2;
   transition: all 0.5s ease-in;
   will-change: transform;
@@ -27,24 +26,21 @@
   will-change: transform;
 }
 
-.timer-shadow {
-  animation: none;
-}
-
 .timer-shadow.effect {
   animation: animate_pulse 1.2s;
   animation-iteration-count: 2;
 }
 
-
 @keyframes animate_pulse {
-	0% {
-		box-shadow: 0 0 0 0 #fdde52;
-	}
-	70% {
-		box-shadow: 0 0 5px 5px #ffe678;
-	}
-	100% {
-		box-shadow: 0 0 0 0 #ffea8f;
-	}
+  0% {
+    box-shadow: 0 0 0 0 #fdde52;
+  }
+
+  50% {
+    box-shadow: 0 0 7px 7px #ffe678;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 #ffea8f;
+  }
 }

@@ -1,19 +1,20 @@
 .concept .container {
   padding: 182px 103px 90px;
-  background: url("../img/concept-1.png") 0 -214% no-repeat,
-    url("../img/concept-2.png") 100% -16.7% no-repeat,
-    url("../img/concept-3.png") 100% 56.4% no-repeat,
-    url("../img/concept-4.png") 0 138.4% no-repeat;
+  background: url("../img/concept-bg-1.png") 0 -284% no-repeat,
+    url("../img/concept-bg-2.png") 100% 56.4% no-repeat,
+    url("../img/concept-bg-3.png") 0 138.4% no-repeat;
+
+  @include vp-1279 {
+    background: url("../img/concept-1-mob.png") -90% -4% no-repeat,
+      url("../img/concept-2-mob.png") 52% 29% no-repeat,
+      url("../img/concept-3-mob.png") 53% 78% no-repeat;
+  }
 
   @include vp-1023 {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
     width: 100%;
-    background: url("../img/concept-1-mob.png") -90% -4% no-repeat,
-    url("../img/concept-2-mob.png") 52% 29% no-repeat,
-    url("../img/concept-3-mob.png") 53% 78% no-repeat;
-
   }
 }
 
@@ -37,17 +38,22 @@
   letter-spacing: 0.02em;
   margin: 0 88px 0 0;
 
+  @include vp-1279 {
+    margin-bottom: 36px;
+  }
+
   @include vp-767 {
     font-size: 18px;
     margin: 0 auto;
+    margin-bottom: 36px;
     padding-top: 22px;
-    margin-bottom: 16px;
   }
 }
 
 .concept p {
   @include font-settings ($ff-mont, 500, 16px, 1.3, $color-default-white);
   margin: 0;
+  z-index: 10;
 
   @include vp-767 {
     font-size: 12px;
@@ -55,7 +61,7 @@
 }
 
 .concept__content {
-  padding-top: 5px;
+  padding-top: 15px;
   padding-left: 7px;
 }
 

@@ -1,64 +1,66 @@
-// .parallax {
-//   position: relative;
-// }
+.parallax {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-// .parallax-layer {
-//   overflow: hidden;
-//   position: absolute;
-//   z-index: -10;
-//   -webkit-touch-callout: none;
-// 	-webkit-user-select: none;
-// 	-khtml-user-select: none;
-// 	-moz-user-select: none;
-// 	-ms-user-select: none;
-// 	user-select: none;
+.parallax-layer {
+  position: absolute;
+  z-index: -1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-//   &--1 {
-//     top: 112px;
-//     left: 0;
-//   }
+  @include vp-1279 {
+    display: none;
+  }
 
-//   &--2 {
-//     top: -101px;
-//     right: 0;
-//   }
+  &--1 {
+    top: 22px;
+    left: 0;
+  }
 
-//   &--3 {
-//     top: 288px;
-//     right: 0;
-//   }
+  &--2 {
+    top: -189px;
+    right: 0;
+  }
 
-//   &--4 {
-//     top: 931px;
-//     left: 0;
-//   }
+  &--3 {
+    top: 675px;
+    right: 99px;
+  }
 
-//   &--5 {
-//     top: 242px;
-//     right: 354px;
-//   }
+  &--4 {
+    top: 1231px;
+    left: 0;
+  }
 
-//   &--6 {
-//     top: -18px;
-//     right: -525px;
-//   }
+  &--5 {
+    top: 242px;
+    right: 354px;
+  }
 
-//   &--7 {
-//     top: 27px;
-//     right: 500px;
-//   }
+  &--6 {
+    top: -18px;
+    right: -525px;
+  }
 
-//   &--8 {
-//     top: 517px;
-//     right: 422px;
-//   }
+  &--7 {
+    top: -91px;
+    right: 468px;
+  }
 
-//   &--9 {
-//     top: -189px;
-//     right: -99px;
-//   }
+  &--8 {
+    top: 340px;
+    right: 323px;
+  }
 
-//   @include vp-767 {
-//     display: none;
-//   }
-// }
+  &--9 {
+    top: -230px;
+    right: -70px;
+  }
+}

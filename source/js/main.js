@@ -9,8 +9,8 @@ import {initFormPopup} from './modules/form-popup';
 import {initTimer} from './modules/timer';
 import {showSuccessMsg} from './modules/submit-success';
 import {initEffects} from './modules/effects';
-// import {initParallax} from './modules/parallax';
-// import {updateMousemoves} from './modules/parallax';
+import {initParallax} from './modules/parallax';
+import {updateMousemoves} from './modules/parallax';
 
 // ---------------------------------
 
@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormPopup();
     initTimer();
     showSuccessMsg();
-    // initParallax();
-    // updateMousemoves();
+    initParallax();
+    updateMousemoves();
   });
 });
 
