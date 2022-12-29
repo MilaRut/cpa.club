@@ -3140,11 +3140,6 @@ h4.tickets__title-s {
   will-change: transform;
 }
 
-.timer-shadow {
-  -webkit-animation: none;
-  animation: none;
-}
-
 .timer-shadow.effect {
   -webkit-animation: animate_pulse 1.2s;
   animation: animate_pulse 1.2s;
@@ -4219,6 +4214,7 @@ h4.tickets__title-s {
     content: url("../img/contacts-bg-mob.png");
     top: -59px;
     right: -182px;
+    z-index: -1;
   }
 
   .contacts__headings {
