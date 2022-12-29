@@ -584,7 +584,6 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -904,14 +903,14 @@ button,
 
 .concept .container {
   padding: 182px 103px 90px;
-  background: url("../img/concept-bg-1.png") 0 -284% no-repeat, url("../img/concept-bg-2.png") 100% 56.4% no-repeat, url("../img/concept-bg-3.png") 0 138.4% no-repeat;
+  background: url("../img/concept-bg-1.png") 0 -284% no-repeat, url("../img/concept-bg-2.png") 100% 56.4% no-repeat;
 }
 
 .concept__first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 425px;
+  margin-bottom: 335px;
 }
 
 .concept h2 {
@@ -977,6 +976,7 @@ button,
 }
 
 .concept__third-screen {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -988,6 +988,14 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+.concept__third-screen::after {
+  position: absolute;
+  content: url("../img/concept-bg-3.png");
+  bottom: -350px;
+  left: -150px;
+  z-index: -10;
 }
 
 .concept__third-screen p {
@@ -1834,7 +1842,6 @@ h4.package__title-l {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 2px;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1852,7 +1859,6 @@ h4.package__title-l {
   text-transform: uppercase;
   width: 340px;
   margin: 0;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3186,8 +3192,6 @@ h4.tickets__title-s {
 
 .parallax-layer {
   position: absolute;
-  z-index: -1;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3238,47 +3242,6 @@ h4.tickets__title-s {
   top: -230px;
   right: -70px;
 }
-
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
 
 @media (max-width: 1439px) {
   .header {
