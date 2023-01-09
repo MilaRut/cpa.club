@@ -1060,7 +1060,7 @@ button,
 .info__item h4 {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 30px;
   line-height: 1;
   color: #fccd03;
@@ -1288,7 +1288,66 @@ button,
   opacity: 0.9;
 }
 
+.goal .container {
+  padding: 3px 103px 8px;
+}
+
+.goal h2 {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1;
+  color: #fccd03;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 52px;
+}
+
+.goal h2 span {
+  color: #ffffff;
+}
+
+.goal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 67px;
+}
+
+.goal__left-column {
+  max-width: 52%;
+  margin-right: 28px;
+}
+
+.goal__right-column {
+  max-width: 37%;
+}
+
+.goal__left-column p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0 0 20px;
+}
+
+.goal__right-column p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0;
+}
+
 .package {
+  position: relative;
   width: 401px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1382,6 +1441,37 @@ button,
   opacity: 0.9;
   cursor: pointer;
   margin-top: auto;
+}
+
+.package__soldout {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(6.5px);
+  backdrop-filter: blur(6.5px);
+  border-radius: 30px;
+  z-index: 1000;
+}
+
+.package__soldout p {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 1.1;
+  color: #fccd03;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .package-meetup .container {
@@ -1987,6 +2077,7 @@ h4.package__title-l {
 }
 
 .tickets__item {
+  position: relative;
   width: 610px;
   max-height: 187px;
   display: -webkit-box;
@@ -2047,6 +2138,18 @@ h4.tickets__title-s {
   margin: 0;
 }
 
+.tickets__item span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .tickets__item b {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
@@ -2077,6 +2180,43 @@ h4.tickets__title-s {
   border: none;
   border-radius: 55px;
   cursor: pointer;
+}
+
+.tickets__soldout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(6.5px);
+  backdrop-filter: blur(6.5px);
+  border-radius: 30px;
+  z-index: 1000;
+}
+
+.tickets__soldout p {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 1.1;
+  color: #fccd03;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h4.tickets__title-xs {
+  font-size: 29px;
 }
 
 .timer {
@@ -3674,6 +3814,22 @@ h4.tickets__title-s {
     width: 100%;
   }
 
+  .goal__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .goal__left-column {
+    max-width: 90%;
+  }
+
+  .goal__right-column {
+    max-width: 90%;
+  }
+
   .package-meetup__list {
     padding: 0;
     -ms-grid-columns: 1fr;
@@ -3892,6 +4048,27 @@ h4.tickets__title-s {
     line-height: 1.2;
   }
 
+  .goal .container {
+    padding: 0 20px;
+    padding-bottom: 50px;
+  }
+
+  .goal h2 {
+    font-size: 35px;
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+  }
+
+  .goal__left-column p {
+    font-size: 12px;
+  }
+
+  .goal__right-column p {
+    font-size: 16px;
+  }
+
   .package {
     max-width: 279px;
     border-radius: 20px;
@@ -3912,6 +4089,14 @@ h4.tickets__title-s {
     font-size: 13px;
     min-height: 36px;
     border-radius: 0 0 20px 20px;
+  }
+
+  .package__soldout {
+    border-radius: 20px;
+  }
+
+  .package__soldout p {
+    font-size: 30px;
   }
 
   .package-meetup .container {
@@ -4165,6 +4350,10 @@ h4.tickets__title-s {
 
   .tickets__btn {
     width: 100%;
+  }
+
+  .tickets__soldout p {
+    font-size: 30px;
   }
 
   .contacts .container {

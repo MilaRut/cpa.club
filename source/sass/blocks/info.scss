@@ -71,7 +71,7 @@
 }
 
 .info__item h4 {
-  @include font-settings ($ff-ttt, 900, 30px, 1, $color-accent);
+  @include font-settings ($ff-ttt, 800, 30px, 1, $color-accent);
   color: $color-accent;
   margin: 0;
   margin-bottom: 5px;
