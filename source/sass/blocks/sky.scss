@@ -4,8 +4,7 @@
 }
 
 .sky .container {
-  padding-top: 186px;
-  padding-bottom: 171px;
+  padding: 186px 40px 171px;
 
   @include vp-767 {
     padding: 0 14px 38px;
@@ -44,7 +43,8 @@
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
-  max-width: 959px;
+  padding: 0 20px;
+  max-width: 920px;
   opacity: 0.9;
 
   @include vp-767 {

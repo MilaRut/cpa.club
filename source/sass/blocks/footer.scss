@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include vp-767 {
+  @include vp-1279{
     padding: 36px 20px 32px;
     flex-direction: column;
   }
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
 
-  @include vp-767 {
+  @include vp-1279 {
     flex-direction: column;
   }
 }
@@ -33,13 +33,13 @@
   align-items: center;
 
   &--primary {
-    @include vp-767 {
+    @include vp-1279 {
       margin-bottom: 13px;
     }
   }
 
   &--secondary {
-    @include vp-767 {
+    @include vp-1279 {
       margin-bottom: 21px;
       justify-content: flex-start;
     }
@@ -48,6 +48,7 @@
 
 .footer__img {
   margin-right: 15px;
+  object-fit: contain;
 
   &--sigma {
     margin-right: 161px;
