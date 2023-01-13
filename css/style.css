@@ -1557,8 +1557,7 @@ button,
 }
 
 .sky .container {
-  padding-top: 186px;
-  padding-bottom: 171px;
+  padding: 186px 40px 171px;
 }
 
 .sky h2 {
@@ -1598,7 +1597,8 @@ button,
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
-  max-width: 959px;
+  padding: 0 20px;
+  max-width: 920px;
   opacity: 0.9;
 }
 
@@ -2305,6 +2305,81 @@ h4.tickets__title-xs {
   margin: 0;
 }
 
+.partners .container {
+  padding: 80px 134px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.partners__headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 68px;
+}
+
+.partners h2 {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  word-wrap: break-word;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}
+
+.partners h2 span {
+  color: #fccd03;
+}
+
+.partners__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: (auto)[6];
+  grid-template-columns: repeat(6, auto);
+  row-gap: 20px;
+}
+
+.partners__item {
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.partners__item img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
 .contacts {
   overflow: hidden;
 }
@@ -2449,6 +2524,8 @@ h4.tickets__title-xs {
 
 .footer__img {
   margin-right: 15px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .footer__img--sigma {
@@ -3750,8 +3827,48 @@ h4.tickets__title-xs {
     display: none;
   }
 
+  .partners__list {
+    -ms-grid-rows: (auto)[3];
+    grid-template-rows: repeat(3, auto);
+    -ms-grid-columns: (auto)[4];
+    grid-template-columns: repeat(4, auto);
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .partners__item {
+    min-width: 120px;
+  }
+
   .contacts__list {
     gap: 34px 14px;
+  }
+
+  .footer .container {
+    padding: 36px 20px 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__logos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__logos-wrapper--primary {
+    margin-bottom: 13px;
+  }
+
+  .footer__logos-wrapper--secondary {
+    margin-bottom: 21px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .popup__item--tables .popup__content {
@@ -4356,6 +4473,31 @@ h4.tickets__title-xs {
     font-size: 30px;
   }
 
+  .partners .container {
+    padding: 0 20px 34px;
+  }
+
+  .partners__headings {
+    padding-top: 25px;
+    margin-bottom: 37px;
+  }
+
+  .partners h2 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .partners__list {
+    -ms-grid-rows: (auto)[6];
+    grid-template-rows: repeat(6, auto);
+    -ms-grid-columns: (auto)[2];
+    grid-template-columns: repeat(2, auto);
+    row-gap: 15px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+
   .contacts .container {
     padding: 0 20px 34px;
   }
@@ -4406,32 +4548,6 @@ h4.tickets__title-xs {
 
   .footer {
     min-height: 206px;
-  }
-
-  .footer .container {
-    padding: 36px 20px 32px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .footer__logos {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .footer__logos-wrapper--primary {
-    margin-bottom: 13px;
-  }
-
-  .footer__logos-wrapper--secondary {
-    margin-bottom: 21px;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
   }
 
   .footer__img {
