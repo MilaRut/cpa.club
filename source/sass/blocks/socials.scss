@@ -13,10 +13,11 @@
   background-color: #232323;
   display: flex;
   justify-content: center;
-  padding-top: 6px;
+  align-items: center;
+  padding-top: 8px;
 
   &--inst {
-    padding-top: 3px;
+    padding-top: 6px;
   }
 
   &:hover {
@@ -24,11 +25,23 @@
   }
 
   &:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 6px;
   }
 }
 
 .socials__link {
   padding: 10px;
   z-index: 100;
+}
+
+.socials__icon {
+  padding-bottom: 2px;
+}
+
+.socials__icon--lkdn {
+  padding-right: 2px;
+}
+
+.socials__icon--yout {
+  padding-right: 2px;
 }

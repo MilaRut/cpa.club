@@ -749,20 +749,12 @@ button,
 }
 
 .header__socials .socials__list {
-  margin-left: -3px;
+  margin-left: -15px;
 }
 
 .header__socials .socials__item {
-  width: 48px;
-  height: 48px;
-}
-
-.header__socials .socials__icon--lkdn {
-  padding-bottom: 3px;
-}
-
-.header__socials .socials__icon--yout {
-  padding-bottom: 3px;
+  width: 50px;
+  height: 50px;
 }
 
 .header__mobile-sub {
@@ -2577,11 +2569,14 @@ h4.tickets__title-xs {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 6px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 8px;
 }
 
 .socials__item--inst {
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 .socials__item:hover {
@@ -2589,12 +2584,24 @@ h4.tickets__title-xs {
 }
 
 .socials__item:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .socials__link {
   padding: 10px;
   z-index: 100;
+}
+
+.socials__icon {
+  padding-bottom: 2px;
+}
+
+.socials__icon--lkdn {
+  padding-right: 2px;
+}
+
+.socials__icon--yout {
+  padding-right: 2px;
 }
 
 .popup__bg {
