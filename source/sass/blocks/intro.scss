@@ -114,6 +114,8 @@
 }
 
 .intro__img--sigma {
+  object-fit: contain;
+
   @include vp-767 {
     width: 93px;
     height: 19px;
