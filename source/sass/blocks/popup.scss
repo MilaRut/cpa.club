@@ -156,6 +156,7 @@
 }
 
 .popup__tables-item {
+  position: relative;
   max-width: 360px;
   min-height: 410px;
   display: flex;
@@ -254,6 +255,7 @@
   text-transform: uppercase;
   margin: 0 0 5px;
   padding-left: 8px;
+  padding-top: 1px;
 
   @include vp-1279 {
     font-size: 12px;
@@ -394,5 +396,21 @@
     max-height: 25px;
     font-size: 14px;
     margin-bottom: 10px;
+  }
+}
+
+// Soldout
+
+.tables-soldout {
+  justify-content: flex-start;
+  font-size: 38px;
+  border-radius: 12px;
+
+  @include vp-1279 {
+    & p {
+      font-size: 20px;
+      text-align: center;
+      justify-content: center;
+    }
   }
 }

@@ -2781,6 +2781,7 @@ h4.tickets__title-xs {
 }
 
 .popup__tables-item {
+  position: relative;
   max-width: 360px;
   min-height: 410px;
   display: -webkit-box;
@@ -2851,6 +2852,7 @@ h4.tickets__title-xs {
   text-transform: uppercase;
   margin: 0 0 5px;
   padding-left: 8px;
+  padding-top: 1px;
 }
 
 .popup__tables-item h2 {
@@ -2957,6 +2959,14 @@ h4.tickets__title-xs {
 .popup__tables-item .popup__get-sponsor-btn {
   padding-left: 10px;
   max-width: 80%;
+}
+
+.tables-soldout {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 38px;
+  border-radius: 12px;
 }
 
 .form-popup__bg {
@@ -3947,6 +3957,14 @@ h4.tickets__title-xs {
   .popup__tables-item .popup__get-sponsor-btn {
     font-size: 16px;
     margin-top: auto;
+  }
+
+  .tables-soldout p {
+    font-size: 20px;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .parallax-layer {
