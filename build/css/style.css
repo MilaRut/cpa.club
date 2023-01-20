@@ -1480,7 +1480,7 @@ button,
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
   border-radius: 30px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .package__soldout p {
@@ -2221,7 +2221,7 @@ h4.tickets__title-s {
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
   border-radius: 30px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .tickets__soldout p {
