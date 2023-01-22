@@ -1480,7 +1480,7 @@ button,
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
   border-radius: 30px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .package__soldout p {
@@ -2221,7 +2221,7 @@ h4.tickets__title-s {
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
   border-radius: 30px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .tickets__soldout p {
@@ -2380,10 +2380,13 @@ h4.tickets__title-xs {
   -ms-grid-columns: (auto)[6];
   grid-template-columns: repeat(6, auto);
   row-gap: 20px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
 }
 
 .partners__item {
-  min-width: 200px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2395,7 +2398,24 @@ h4.tickets__title-xs {
   align-items: center;
 }
 
-.partners__item img {
+.partners__wrapper {
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.partners__wrapper a {
+  display: block;
+}
+
+.partners__wrapper img {
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -2781,6 +2801,7 @@ h4.tickets__title-xs {
 }
 
 .popup__tables-item {
+  position: relative;
   max-width: 360px;
   min-height: 410px;
   display: -webkit-box;
@@ -2851,6 +2872,7 @@ h4.tickets__title-xs {
   text-transform: uppercase;
   margin: 0 0 5px;
   padding-left: 8px;
+  padding-top: 1px;
 }
 
 .popup__tables-item h2 {
@@ -2957,6 +2979,14 @@ h4.tickets__title-xs {
 .popup__tables-item .popup__get-sponsor-btn {
   padding-left: 10px;
   max-width: 80%;
+}
+
+.tables-soldout {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 38px;
+  border-radius: 12px;
 }
 
 .form-popup__bg {
@@ -3874,7 +3904,11 @@ h4.tickets__title-xs {
   }
 
   .partners__item {
-    min-width: 120px;
+    width: 120px;
+  }
+
+  .partners__wrapper {
+    width: 120px;
   }
 
   .contacts__list {
@@ -3947,6 +3981,14 @@ h4.tickets__title-xs {
   .popup__tables-item .popup__get-sponsor-btn {
     font-size: 16px;
     margin-top: auto;
+  }
+
+  .tables-soldout p {
+    font-size: 20px;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .parallax-layer {
