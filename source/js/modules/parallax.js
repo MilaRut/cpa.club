@@ -1,8 +1,8 @@
 function initParallax() {
 
   const parallaxLayers = document.querySelectorAll('.parallax-layer');
-  const speeds = [0.5, 0.6, 0.6, 0.8, 0.5, 0.6, 0.7, 0.6, 0.2];
-  const diffs = [200, 200, 2500, 3200, 3200, 3200, 10500, 11000, 10000];
+  const speeds = [0.2, 0.2, 0.6, 0.8, 0.3, 0.5, 0.4, 0.3, 0.2];
+  const diffs = [400, 200, 2500, 3200, 4200, 3400, 11800, 13200, 10700];
 
   function updateParallax() {
     for (let i = 0; i < parallaxLayers.length; i++) {

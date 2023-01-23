@@ -46,6 +46,7 @@
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(6, auto);
   row-gap: 20px;
+  column-gap: 10px;
 
   @include vp-1279 {
     grid-template-rows: repeat(3, auto);
@@ -62,16 +63,32 @@
 }
 
 .partners__item {
-  min-width: 200px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @include vp-1279 {
-    min-width: 120px;
+    width: 120px;
   }
 }
 
-.partners__item img {
+.partners__wrapper {
+  width: 180px;
+  // height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-1279 {
+   width: 120px;
+  }
+}
+
+.partners__wrapper a {
+  display: block;
+}
+
+.partners__wrapper img {
   object-fit: contain;
 }
