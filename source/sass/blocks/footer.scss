@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include vp-1279{
+  @include vp-1279 {
     padding: 36px 20px 32px;
     flex-direction: column;
   }

@@ -1308,6 +1308,14 @@ button,
   opacity: 0.9;
 }
 
+.sponsors {
+  background: url("../img/sponsors-bg-1.png") -740px -12% no-repeat, url("../img/sponsors-bg-2.png") 752px 32% no-repeat, url("../img/sponsors-bg-3.png") -421px 78% no-repeat;
+}
+
+.sponsors .container {
+  padding-top: 80px;
+}
+
 .sponsors__list {
   margin: 0;
   padding: 0;
@@ -1409,7 +1417,7 @@ button,
 }
 
 .goal .container {
-  padding: 3px 103px 8px;
+  padding: 80px 103px;
 }
 
 .goal h2 {
@@ -4341,6 +4349,30 @@ h4.tickets__title-xs {
     padding-top: 6px;
     letter-spacing: 0;
     line-height: 1.2;
+  }
+
+  .sponsors .container {
+    padding: 50px 20px 30px;
+  }
+
+  .sponsors__list h3 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 25px;
+  }
+
+  .sponsors__item {
+    margin-bottom: 45px;
+  }
+
+  .sponsors__card--large {
+    width: 90vw;
+    height: 40vw;
+  }
+
+  .sponsors__card--small {
+    width: 60vw;
+    height: 32vw;
   }
 
   .goal .container {
