@@ -1,0 +1,72 @@
+// .sponsors {
+//   background: url("../img/sponsors-bg-1.png") 5% 5% no-repeat,
+//     url("../img/sponsors-bg-2.png") 5% 50% no-repeat,
+//     url("../img/sponsors-bg-3.png") 5% 100% no-repeat;
+// }
+
+.sponsors__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    @include font-settings ($ff-ttt, 800, 40px, 1.2, $color-default-white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+}
+
+.sponsors__item {
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsors__card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &--large {
+    width: 607px;
+    height: 270px;
+    padding: 20px;
+  }
+
+  &--small {
+    width: 401px;
+    height: 218px;
+    padding: 10px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.sponsors__list-inner {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sponsors__item-inner {
+  margin: 0 10px 30px;
+}
