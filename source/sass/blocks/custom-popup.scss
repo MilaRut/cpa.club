@@ -103,5 +103,53 @@
     width: 100% !important;
     height: 100% !important;
     border: none !important;
+    background-color: $color-default-white;
+  }
+}
+
+.popup-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-default-white;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+
+  p {
+    @include font-settings ($ff-mont, 500, 28px, 1.3, $color-default-black);
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+}
+
+.popup-loader.active {
+  p {
+    animation: preloader 3s;
+    animation-iteration-count: 2;
+  }
+}
+
+@keyframes preloader {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

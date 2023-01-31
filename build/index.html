@@ -31,6 +31,18 @@
 </head>
 
 <body id="body">
+
+  <div class="preloader">
+    <div class="preloader__container">
+      <div class="preloader__item">
+        <img src="./img/loader-circle.png" width="400" height="400" alt="">
+      </div>
+      <div class="preloader__item">
+        <img src="./img/loader-logo.png" width="178" height="129" alt="">
+      </div>
+    </div>
+  </div>
+
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
@@ -1550,7 +1562,10 @@
       <button class="custom-popup__close-btn" type="button" aria-label="Закрыть окно."></button>
       <div class="custom-popup__wrapper">
         <div class="custom-popup__content" id="widget-container">
-
+          <!-- generated iframe -->
+        </div>
+        <div class="popup-loader">
+          <p>Loading...</p>
         </div>
       </div>
     </div>

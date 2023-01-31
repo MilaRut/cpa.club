@@ -1,4 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {initPreloader} from './modules/preloader';
 import {openMenu} from './modules/mobile-menu';
 import {closeMenu} from './modules/mobile-menu';
 import {setupVideo} from './modules/video';
@@ -6,11 +7,13 @@ import {initPhotoSlider} from './modules/photo-slider';
 import {initSwiper} from './modules/program-slider';
 import {initPopup} from './modules/popup';
 import {initFormPopup} from './modules/form-popup';
+import {closeMerchantPopup} from './modules/custom-popup';
 import {initTimer} from './modules/timer';
 import {showSuccessMsg} from './modules/submit-success';
 import {initEffects} from './modules/effects';
 import {initParallax} from './modules/parallax';
 import {updateMousemoves} from './modules/parallax';
+import {initPopupLoader} from './modules/popup-loader';
 
 // ---------------------------------
 
@@ -29,15 +32,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   window.addEventListener('load', () => {
+    initPreloader();
     setupVideo();
     initPhotoSlider();
     initSwiper(swiper);
     initPopup();
     initFormPopup();
+    closeMerchantPopup();
     initTimer();
     showSuccessMsg();
     initParallax();
     updateMousemoves();
+    initPopupLoader();
   });
 });
 
