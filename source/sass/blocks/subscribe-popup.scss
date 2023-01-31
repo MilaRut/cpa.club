@@ -1,0 +1,148 @@
+// popup on/off
+
+.subscribe-popup__bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.subscribe-popup__bg.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
+}
+
+.subscribe-popup {
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(52px);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.subscribe-popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s all;
+}
+
+.subscribe-popup__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 13px;
+  margin-left: auto;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 8px;
+    width: 21px;
+    height: 1px;
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+// popup content
+
+.subscribe-popup__wrapper {
+  background: url("../img/subscribe-bg.png") 181% 47% no-repeat;
+  width: min(86vw, 1241px);
+  height: 610px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  @include vp-1279 {
+    background: url("../img/subscribe-bg.png") 150% 47% no-repeat;
+      background-size: 80%;
+  }
+
+  @include vp-767 {
+    background: url("../img/subscribe-bg.png") center 350px no-repeat;
+    background-size: 85%;
+    height: 498px;
+    min-width: 298px;
+    border-radius: 20px;
+  }
+}
+
+.subscribe-popup__content {
+  display: flex;
+  flex-direction: column;
+  padding: 152px 0 0 70px;
+
+  @include vp-767 {
+    padding: 15px;
+  }
+
+  h2 {
+    @include font-settings ($ff-ttt, 800, 45px, 1.1, $color-default-white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    max-width: 575px;
+    margin: 0 0 50px;
+
+    @include vp-767 {
+      font-size: 24px;
+      padding-top: 60px;
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    @include font-settings ($ff-mont, 400, 20px, 1.3, $color-default-white);
+    opacity: 0.9;
+    max-width: 509px;
+    margin: 0 0 65px;
+
+    @include vp-767 {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.subscribe-popup__link {
+  @include font-settings ($ff-mont, 700, 18px, 1, $color-default-black);
+  display: block;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  padding: 24px 10px;
+  max-width: 235px;
+  background-color: $color-accent;
+  border-radius: 12px;
+
+  @include vp-767 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+}

@@ -14,6 +14,7 @@ import {initEffects} from './modules/effects';
 import {initParallax} from './modules/parallax';
 import {updateMousemoves} from './modules/parallax';
 import {initPopupLoader} from './modules/popup-loader';
+import {closeSubscribePopup} from './modules/subscribe-popup';
 
 // ---------------------------------
 
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
     initPreloader();
+    closeSubscribePopup();
     setupVideo();
     initPhotoSlider();
     initSwiper(swiper);

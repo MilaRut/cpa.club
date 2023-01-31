@@ -717,6 +717,161 @@ button,
   }
 }
 
+.subscribe-popup__bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.subscribe-popup__bg.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.subscribe-popup {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), rgba(255, 255, 255, 0.02);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(52px);
+  backdrop-filter: blur(52px);
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1000;
+}
+
+.subscribe-popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.subscribe-popup__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 13px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.subscribe-popup__close-btn::after,
+.subscribe-popup__close-btn::before {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 8px;
+  width: 21px;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.subscribe-popup__close-btn::after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.subscribe-popup__wrapper {
+  background: url("../img/subscribe-bg.png") 181% 47% no-repeat;
+  width: min(86vw, 1241px);
+  height: 610px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.subscribe-popup__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 152px 0 0 70px;
+}
+
+.subscribe-popup__content h2 {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  max-width: 575px;
+  margin: 0 0 50px;
+}
+
+.subscribe-popup__content p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #ffffff;
+  opacity: 0.9;
+  max-width: 509px;
+  margin: 0 0 65px;
+}
+
+.subscribe-popup__link {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: #000000;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  padding: 24px 10px;
+  max-width: 235px;
+  background-color: #fccd03;
+  border-radius: 12px;
+}
+
 .header {
   background: url("../img/intro-bg.png") 0 0 no-repeat;
   background-size: cover;
@@ -3965,6 +4120,11 @@ h4.tickets__title-xs {
     width: 89px;
   }
 
+  .subscribe-popup__wrapper {
+    background: url("../img/subscribe-bg.png") 150% 47% no-repeat;
+    background-size: 80%;
+  }
+
   .header__container {
     background-color: transparent;
   }
@@ -4441,6 +4601,35 @@ h4.tickets__title-xs {
 }
 
 @media (max-width: 767px) {
+  .subscribe-popup__wrapper {
+    background: url("../img/subscribe-bg.png") center 350px no-repeat;
+    background-size: 85%;
+    height: 498px;
+    min-width: 298px;
+    border-radius: 20px;
+  }
+
+  .subscribe-popup__content {
+    padding: 15px;
+  }
+
+  .subscribe-popup__content h2 {
+    font-size: 24px;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .subscribe-popup__content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .subscribe-popup__link {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
   .header {
     background: url("../img/intro-bg-mob.png") center no-repeat;
     background-size: cover;
