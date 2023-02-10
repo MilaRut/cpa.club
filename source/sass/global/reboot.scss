@@ -53,6 +53,22 @@ textarea {
   resize: none;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-bottom: 1px solid #FCCD03;
+    outline: none;
+  }
+
+  &:active::placeholder,
+  &:hover::placeholder {
+    color: #FCCD03;
+  }
+}
+
 
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $color-default-white;
@@ -80,6 +96,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

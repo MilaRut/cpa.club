@@ -421,6 +421,13 @@
                     </a>
                   </div>
                 </li>
+                <li class="sponsors__item-inner">
+                  <div class="sponsors__card sponsors__card--small">
+                    <a href="https://letit.cash/" class="sponsors__link">
+                      <img src="./img/spons-letitcash.png" alt="">
+                    </a>
+                  </div>
+                </li>
               </ul>
             </li>
             <li class="sponsors__item">
@@ -1228,6 +1235,20 @@
                 </a>
               </div>
             </li>
+            <li class="partners__item">
+              <div class="partners__wrapper">
+                <a href="https://www.conversion-conf.com/" target="_blank">
+                  <img src="./img/partners-48.webp" alt="Conversation Club logo.">
+                </a>
+              </div>
+            </li>
+            <li class="partners__item">
+              <div class="partners__wrapper">
+                <a href="https://trafficake.com?tracker=1007" target="_blank">
+                  <img src="./img/partners-49.png" alt="Trafficake  logo.">
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -1715,8 +1736,8 @@
           <li class="form-popup__item" id="ticket-form-item">
             <div class="form-popup__content form-popup__content--ticket">
               <!-- TODO Заменить атрибуты в форме, указанные - только для теста! -->
-              <h2>Купить билет</h2>
-              <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
+              <h2>Покупка билета</h2>
+              <p>Заполните данные и выберите способ оплаты</p>
               <form id="ticket-form" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="form-popup__fieldset">
                   <input type="text" name="username" placeholder="как вас зовут?" id="ticket-username" required>
@@ -1732,11 +1753,26 @@
                     required>
                   <label for="ticket-tel"></label>
 
-                  <input type="text" name="telegram" placeholder="ваш telegram" id="ticket-telegram">
-                  <label for="ticket-telegram"></label>
+                  <input type="text" name="company" placeholder="название компании" id="ticket-company" required>
+                  <label for="ticket-company"></label>
+
                 </fieldset>
               </form>
-              <button class="form__submit-btn" form="ticket-form" type="submit">Отправить</button>
+              <div class="form__buttons">
+                <button class="form__submit-btn form__submit-btn--credit" form="ticket-form" type="submit">
+                  <svg class="form__btn-icon" width="82" height="28" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#credit-card"></use>
+                  </svg>
+                  <span>Card + Crypto</span>
+                 </button>
+                <p>или</p>
+                <button class="form__submit-btn form__submit-btn--binance" form="ticket-form" type="submit">
+                  <svg class="form__btn-icon" width="28" height="28" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#binance"></use>
+                  </svg>
+                  <span>Binance pay</span>
+                  </button>
+              </div>
             </div>
           </li>
         </ul>
