@@ -491,6 +491,64 @@ textarea {
   resize: none;
 }
 
+input[type=text]:hover,
+input[type=text]:active,
+input[type=text]:focus-visible,
+input[type=email]:hover,
+input[type=email]:active,
+input[type=email]:focus-visible,
+input[type=tel]:hover,
+input[type=tel]:active,
+input[type=tel]:focus-visible {
+  border-bottom: 1px solid #FCCD03;
+  outline: none;
+}
+
+input[type=text]:active::-webkit-input-placeholder,
+input[type=text]:hover::-webkit-input-placeholder,
+input[type=email]:active::-webkit-input-placeholder,
+input[type=email]:hover::-webkit-input-placeholder,
+input[type=tel]:active::-webkit-input-placeholder,
+input[type=tel]:hover::-webkit-input-placeholder {
+  color: #FCCD03;
+}
+
+input[type=text]:active::-moz-placeholder,
+input[type=text]:hover::-moz-placeholder,
+input[type=email]:active::-moz-placeholder,
+input[type=email]:hover::-moz-placeholder,
+input[type=tel]:active::-moz-placeholder,
+input[type=tel]:hover::-moz-placeholder {
+  color: #FCCD03;
+}
+
+input[type=text]:active:-ms-input-placeholder,
+input[type=text]:hover:-ms-input-placeholder,
+input[type=email]:active:-ms-input-placeholder,
+input[type=email]:hover:-ms-input-placeholder,
+input[type=tel]:active:-ms-input-placeholder,
+input[type=tel]:hover:-ms-input-placeholder {
+  color: #FCCD03;
+}
+
+input[type=text]:active::-ms-input-placeholder,
+input[type=text]:hover::-ms-input-placeholder,
+input[type=email]:active::-ms-input-placeholder,
+input[type=email]:hover::-ms-input-placeholder,
+input[type=tel]:active::-ms-input-placeholder,
+input[type=tel]:hover::-ms-input-placeholder {
+  color: #FCCD03;
+}
+
+input[type=text]:active::placeholder,
+input[type=text]:hover::placeholder,
+input[type=email]:active::placeholder,
+input[type=email]:hover::placeholder,
+input[type=tel]:active::placeholder,
+input[type=tel]:hover::placeholder {
+  color: #FCCD03;
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
   box-shadow: inset 0 0 0 1000px #ffffff;
@@ -3470,10 +3528,6 @@ h4.tickets__title-xs {
   padding-top: 87px;
 }
 
-.form-popup__content--ticket {
-  padding-top: 148px;
-}
-
 .form-popup__content h2 {
   font-family: "TTTravelsNext", "Arial", sans-serif;
   font-style: normal;
@@ -3574,6 +3628,58 @@ h4.tickets__title-xs {
   transition: 0.5s all;
   margin: 0 auto;
   margin-top: auto;
+}
+
+.form-popup__content--ticket {
+  padding-top: 142px;
+}
+
+.form-popup__content--ticket h2 {
+  margin-bottom: 14px;
+}
+
+.form-popup__content--ticket p {
+  margin-bottom: 34px;
+}
+
+.form-popup__content--ticket input {
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 23px;
+}
+
+.form-popup__content--ticket .form__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form-popup__content--ticket .form__buttons p {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.form-popup__content--ticket .form__submit-btn {
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form-popup__content--ticket .form__submit-btn span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.25;
+  color: #000000;
+  text-transform: none;
+  padding-left: 10px;
 }
 
 .success-popup__bg {
@@ -4601,6 +4707,22 @@ h4.tickets__title-xs {
   .popup__tables-item .popup__get-sponsor-btn {
     max-height: 40px;
   }
+
+  .form-popup__content--ticket {
+    padding-top: 60px;
+  }
+
+  .form-popup__content--ticket p {
+    margin-bottom: 20px;
+  }
+
+  .form-popup__content--ticket .form__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -5415,6 +5537,19 @@ h4.tickets__title-xs {
     height: 53px;
     font-size: 17px;
     margin-top: auto;
+  }
+
+  .form-popup__content--ticket .form__buttons p {
+    font-size: 16px;
+  }
+
+  .form-popup__content--ticket .form__submit-btn {
+    width: 100%;
+    height: 40px;
+  }
+
+  .form-popup__content--ticket .form__submit-btn span {
+    font-size: 16px;
   }
 
   .success-popup__wrapper {
