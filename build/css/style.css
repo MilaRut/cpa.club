@@ -1220,6 +1220,45 @@ button,
   background: url("../img/concept-bg-1.png") 0 -284% no-repeat, url("../img/concept-bg-2.png") 100% 56.4% no-repeat;
 }
 
+.concept__byu-ticket-btn {
+  opacity: 0;
+}
+
+.concept__byu-ticket-btn.active {
+  position: fixed;
+  display: block;
+  bottom: 20px;
+  right: 105px;
+  opacity: 1;
+  padding: 16px 24px;
+  background: #fccd03;
+  border-radius: 80px;
+  z-index: 100;
+}
+
+.concept__byu-ticket-btn.active a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.concept__byu-ticket-btn.active span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #000000;
+  margin-right: 5px;
+}
+
+.concept__byu-ticket-btn.active:hover {
+  background-color: #977B02;
+}
+
 .concept__first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
