@@ -1259,6 +1259,11 @@ button,
   background-color: #977B02;
 }
 
+.concept__byu-ticket-btn.active:focus,
+.concept__byu-ticket-btn.active:active {
+  background: #fccd03;
+}
+
 .concept__first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
