@@ -1255,10 +1255,6 @@ button,
   margin-right: 5px;
 }
 
-.concept__byu-ticket-btn.active:hover {
-  background-color: #977B02;
-}
-
 .concept__first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4195,6 +4191,12 @@ h4.tickets__title-xs {
 .parallax-layer--9 {
   top: -230px;
   right: -70px;
+}
+
+@media (min-width: 1280px) {
+  .concept__byu-ticket-btn.active:hover {
+    background-color: #977B02;
+  }
 }
 
 @media (max-width: 1439px) {

@@ -42,8 +42,10 @@
     margin-right: 5px;
   }
 
-  &:hover {
-    background-color: #977B02;
+  @media (min-width: ($vp-1280)) {
+    &:hover {
+      background-color: #977B02;
+    }
   }
 }
 
