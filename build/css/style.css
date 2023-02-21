@@ -1233,7 +1233,7 @@ button,
   padding: 16px 24px;
   background: #fccd03;
   border-radius: 80px;
-  z-index: 100;
+  z-index: 99;
 }
 
 .concept__byu-ticket-btn.active a {
