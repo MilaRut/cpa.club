@@ -1488,85 +1488,6 @@ button,
   color: #000000;
 }
 
-.globalClass_be5a {
-  position: absolute;
-}
-
-.jivo-btn {
-  position: fixed;
-  display: block;
-  bottom: 20px;
-  right: 20px;
-  opacity: 1;
-  width: 65px;
-  height: 65px;
-  background: #fccd03;
-  border-radius: 50%;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.wrap_b8bd {
-  display: none;
-}
-
-.wrap_b8bd.__show_e999 {
-  position: fixed;
-  background-color: #ffffff;
-  width: 336px;
-  height: 496px;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.wrap_b8bd.__show_e999 p {
-  color: #000000;
-}
-
-.popupBlock_a3a4 {
-  display: none;
-}
-
-.popupBlock_a3a4.__show_be88 {
-  position: fixed;
-  background-color: #ffffff;
-  width: 200px;
-  height: 105px;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.popupBlock_a3a4.__show_be88 p {
-  color: #000000;
-}
-
-.close-chat,
-.close-popup {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-}
-
 .info {
   margin-bottom: 19px;
 }
@@ -4540,13 +4461,6 @@ h4.tickets__title-xs {
     line-height: 1.25;
     color: #000000;
     margin-right: 4px;
-  }
-
-  .wrap_b8bd.__show_e999 {
-    height: 100%;
-    width: 100%;
-    right: 0;
-    bottom: 0;
   }
 
   .info__list {
