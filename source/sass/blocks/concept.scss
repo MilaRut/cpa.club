@@ -17,38 +17,6 @@
   }
 }
 
-.concept__byu-ticket-btn {
-  opacity: 0;
-}
-
-.concept__byu-ticket-btn.active {
-  position: fixed;
-  display: block;
-  bottom: 20px;
-  right: 105px;
-  opacity: 1;
-  padding: 16px 24px;
-  background: $color-accent;
-  border-radius: 80px;
-  z-index: 99;
-
-  a {
-    display: flex;
-    align-items: center
-  }
-
-  span {
-    @include font-settings ($ff-mont, 400, 14px, 1.25, $color-default-black);
-    margin-right: 5px;
-  }
-
-  @media (min-width: ($vp-1280)) {
-    &:hover {
-      background-color: #977B02;
-    }
-  }
-}
-
 .concept__first-screen {
   display: flex;
   margin-bottom: 335px;

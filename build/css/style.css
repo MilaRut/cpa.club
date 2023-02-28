@@ -1220,41 +1220,6 @@ button,
   background: url("../img/concept-bg-1.png") 0 -284% no-repeat, url("../img/concept-bg-2.png") 100% 56.4% no-repeat;
 }
 
-.concept__byu-ticket-btn {
-  opacity: 0;
-}
-
-.concept__byu-ticket-btn.active {
-  position: fixed;
-  display: block;
-  bottom: 20px;
-  right: 105px;
-  opacity: 1;
-  padding: 16px 24px;
-  background: #fccd03;
-  border-radius: 80px;
-  z-index: 99;
-}
-
-.concept__byu-ticket-btn.active a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.concept__byu-ticket-btn.active span {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.25;
-  color: #000000;
-  margin-right: 5px;
-}
-
 .concept__first-screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4193,8 +4158,182 @@ h4.tickets__title-xs {
   right: -70px;
 }
 
+.ticket-banner {
+  display: none;
+}
+
+.ticket-banner.active {
+  position: fixed;
+  display: block;
+  width: 100%;
+  max-width: 1240px;
+  bottom: 19px;
+  right: 105px;
+  background-color: #FCCD03;
+  border: 1px solid #444343;
+  -webkit-backdrop-filter: blur(17px);
+  backdrop-filter: blur(17px);
+  border-radius: 140px;
+  z-index: 98;
+}
+
+.ticket-banner.active.is-hidden {
+  display: none;
+}
+
+.ticket-banner__close-btn {
+  position: absolute;
+  top: -20px;
+  left: -8px;
+  width: 48px;
+  height: 48px;
+  background-color: #1A1D25;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.ticket-banner__close-btn::after,
+.ticket-banner__close-btn::before {
+  position: absolute;
+  content: "";
+  top: 23px;
+  left: 17px;
+  width: 15px;
+  height: 2px;
+  background-color: #D1D2D3;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ticket-banner__close-btn::after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.ticket-banner__close-btn:hover {
+  background-color: #3d3d3d;
+}
+
+.ticket-banner__text {
+  position: relative;
+  max-width: 890px;
+  padding: 14px 10px 11px 58px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ticket-banner__text p {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #000000;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ticket-banner__text img {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.ticket-banner__text span {
+  font-family: "TTTravelsNext", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+  color: #000000;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.ticket-banner__text::after {
+  position: absolute;
+  content: url("../img/giftbox.png");
+  top: -41px;
+  right: -193px;
+}
+
+.buy-ticket-btn {
+  display: none;
+}
+
+.buy-ticket-btn.active {
+  position: fixed;
+  display: block;
+  bottom: 30px;
+  right: 115px;
+  background: #000000;
+  border-radius: 80px;
+  z-index: 99;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  will-change: transform;
+}
+
+.buy-ticket-btn.active a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.buy-ticket-btn.active span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-right: 14px;
+}
+
+.buy-ticket-btn.active svg {
+  fill: #ffffff;
+}
+
+.buy-ticket-btn.active.is-accent {
+  background-color: #fccd03;
+  color: #000000;
+  bottom: 20px;
+}
+
+.buy-ticket-btn.active.is-accent span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.buy-ticket-btn.active.is-accent svg {
+  color: #000000;
+}
+
 @media (min-width: 1280px) {
-  .concept__byu-ticket-btn.active:hover {
+  .buy-ticket-btn.active:hover {
+    background-color: #3d3d3d;
+  }
+
+  .buy-ticket-btn.active.is-accent:hover {
     background-color: #977B02;
   }
 }
@@ -4251,6 +4390,100 @@ h4.tickets__title-xs {
   .popup__text-list {
     max-height: 100%;
     margin-bottom: 40px;
+  }
+
+  .ticket-banner.active {
+    width: 265px;
+    height: 155px;
+    border-radius: 10px;
+    bottom: 135px;
+    right: -110px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .ticket-banner__close-btn {
+    width: 29px;
+    height: 29px;
+    top: -14px;
+    left: -10px;
+  }
+
+  .ticket-banner__close-btn::after,
+  .ticket-banner__close-btn::before {
+    width: 10px;
+    top: 14px;
+    left: 10px;
+  }
+
+  .ticket-banner__text {
+    padding: 24px 10px 10px;
+    text-align: center;
+  }
+
+  .ticket-banner__text p,
+  .ticket-banner__text span {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .ticket-banner__text img {
+    width: 56px;
+    height: 12px;
+    margin: 0;
+  }
+
+  .ticket-banner__text::after {
+    top: 45px;
+    right: -94px;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .buy-ticket-btn.active {
+    width: 132px;
+    height: 44px;
+    bottom: 150px;
+    right: 90px;
+    border-radius: 55px;
+  }
+
+  .buy-ticket-btn.active span {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-right: 4px;
+  }
+
+  .buy-ticket-btn.active a {
+    padding: 11px 14px;
+  }
+
+  .buy-ticket-btn.active svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .buy-ticket-btn.active.is-accent {
+    width: 132px;
+    height: 44px;
+    bottom: 20px;
+    border-radius: 55px;
+  }
+
+  .buy-ticket-btn.active.is-accent span {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #000000;
+    margin-right: 4px;
   }
 }
 

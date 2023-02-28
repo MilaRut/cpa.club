@@ -3,6 +3,7 @@ import {initPreloader} from './modules/preloader';
 import {openMenu} from './modules/mobile-menu';
 import {closeMenu} from './modules/mobile-menu';
 import {showButton} from './modules/show-button';
+import {moveButton} from './modules/show-button';
 import {setupVideo} from './modules/video';
 import {initPhotoSlider} from './modules/photo-slider';
 import {initSwiper} from './modules/program-slider';
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   window.addEventListener('load', () => {
+    moveButton();
     initPreloader();
     closeSubscribePopup();
     setupVideo();

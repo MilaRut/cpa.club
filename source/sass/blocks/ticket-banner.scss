@@ -1,0 +1,231 @@
+
+// ticket banner
+
+.ticket-banner {
+  display: none;
+}
+
+.ticket-banner.active {
+  position: fixed;
+  display: block;
+  width: 100%;
+  max-width: 1240px;
+  bottom: 19px;
+  right: 105px;
+  background-color: #FCCD03;
+  border: 1px solid #444343;
+  backdrop-filter: blur(17px);
+  border-radius: 140px;
+  z-index: 98;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  @include vp-1365 {
+    width: 265px;
+    height: 155px;
+    border-radius: 10px;
+    bottom: 135px;
+    right: -110px;
+    transform: translateX(-50%);
+  }
+}
+
+.ticket-banner__close-btn {
+  position: absolute;
+  top: -20px;
+  left: -8px;
+  width: 48px;
+  height: 48px;
+  background-color: #1A1D25;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 23px;
+    left: 17px;
+    width: 15px;
+    height: 2px;
+    background-color: #D1D2D3;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+
+  &:hover {
+    background-color: #3d3d3d;
+  }
+
+  @include vp-1365 {
+    width: 29px;
+    height: 29px;
+    top: -14px;
+    left: -10px;
+
+    &::after,
+    &::before {
+      width: 10px;
+      top: 14px;
+      left: 10px;
+    }
+  }
+}
+
+.ticket-banner__text {
+  position: relative;
+  max-width: 890px;
+  padding: 14px 10px 11px 58px;
+  user-select: none;
+
+  p {
+    @include font-settings ($ff-ttt, 800, 24px, 1.25, $color-default-black);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  img {
+    display: inline-block;
+    margin: 0 2px;
+  }
+
+  span {
+    @include font-settings ($ff-ttt, 800, 24px, 1, $color-default-black);
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  &::after {
+    position: absolute;
+    content: url('../img/giftbox.png');
+    top: -41px;
+    right: -193px;
+  }
+
+  @include vp-1365 {
+    padding: 24px 10px 10px;
+    text-align: center;
+
+    p,
+    span {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    img {
+      width: 56px;
+      height: 12px;
+      margin: 0;
+    }
+
+    &::after {
+      top: 45px;
+      right: -94px;
+      transform: scale(0.5);
+    }
+  }
+
+}
+
+// buy ticket button
+
+
+.buy-ticket-btn {
+  display: none;
+}
+
+.buy-ticket-btn.active {
+  position: fixed;
+  display: block;
+  bottom: 30px;
+  right: 115px;
+  background: $color-default-black;
+  border-radius: 80px;
+  z-index: 99;
+  user-select: none;
+  transition: all 0.3s linear;
+  will-change: transform;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  span {
+    @include font-settings ($ff-mont, 400, 14px, 1.25, $color-default-white);
+    margin-right: 14px;
+  }
+
+  svg {
+    fill: $color-default-white;
+  }
+
+  @media (min-width: ($vp-1280)) {
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
+
+  @include vp-1365 {
+    width: 132px;
+    height: 44px;
+    bottom: 150px;
+    right: 90px;
+    border-radius: 55px;
+
+    span {
+      @include font-settings ($ff-mont, 400, 11px, 1.25, $color-default-white);
+      margin-right: 4px;
+    }
+
+    a {
+      padding: 11px 14px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.buy-ticket-btn.active.is-accent {
+  background-color: $color-accent;
+  color: $color-default-black;
+  bottom: 20px;
+
+  span {
+    @include font-settings ($ff-mont, 400, 16px, 1.25, $color-default-black);
+  }
+
+  svg {
+    color: $color-default-black;
+  }
+
+  @media (min-width: ($vp-1280)) {
+    &:hover {
+      background-color: #977B02;
+    }
+  }
+
+  @include vp-1365 {
+    width: 132px;
+    height: 44px;
+    bottom: 20px;
+    border-radius: 55px;
+
+    span {
+      @include font-settings ($ff-mont, 400, 11px, 1.25, $color-default-black);
+      margin-right: 4px;
+    }
+  }
+}
