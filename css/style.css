@@ -4220,7 +4220,7 @@ h4.tickets__title-xs {
 
 .ticket-banner__text {
   position: relative;
-  max-width: 890px;
+  max-width: 900px;
   padding: 14px 10px 11px 58px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4260,7 +4260,7 @@ h4.tickets__title-xs {
   position: absolute;
   content: url("../img/giftbox.png");
   top: -41px;
-  right: -193px;
+  right: -183px;
 }
 
 .buy-ticket-btn {
