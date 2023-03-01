@@ -20,25 +20,25 @@ function showButton() {
   });
 }
 
-const jivoContainer = document.querySelector('.globalClass_be5a');
-const jivoPopup = document.querySelector('.popupBlock_a3a4');
-const jivoChat = document.querySelector('.wrap_b8bd');
+const jivoContainer = document.querySelector('jdiv');
+const jivoPopup = document.querySelector('div[class^="popupBlock"]');
+const jivoChat = document.querySelector('#jivo_action');
 const bannerText = document.querySelector('.ticket-banner__text');
 
 function checkNextElement() {
   if (window.innerWidth >= 1366 && jivoContainer) {
-    if (jivoChat && jivoChat.classList.contains('__show_e999')) {
+    if (jivoChat && jivoChat.matches('[class*="show"]')) {
       buyButton.style.transform = 'translateX(-260px)';
       bannerText.style.maxWidth = '760px';
-    } else if (jivoPopup && jivoPopup.classList.contains('__show_be88')) {
+    } else if (jivoPopup && jivoPopup.matches('[class*="show"]')) {
       buyButton.style.transform = 'translateX(-120px)';
-      bannerText.style.maxWidth = '890px';
+      bannerText.style.maxWidth = '900px';
     } else {
       buyButton.style.transform = 'translateX(0)';
-      bannerText.style.maxWidth = '890px';
+      bannerText.style.maxWidth = '900px';
     }
   } else {
-    if (jivoPopup && jivoPopup.classList.contains('__show_be88') && ticketBanner.classList.contains('is-hidden')) {
+    if (jivoPopup && jivoPopup.matches('[class*="show"]') && ticketBanner.classList.contains('is-hidden')) {
       buyButton.style.transform = 'translateY(-120px)';
     } else {
       buyButton.style.transform = 'translateY(0)';
