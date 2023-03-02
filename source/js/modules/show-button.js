@@ -1,6 +1,7 @@
 const buyButton = document.querySelector('.buy-ticket-btn');
 const ticketBanner = document.querySelector('.ticket-banner');
 const bannerCloseBtn = document.querySelector('.ticket-banner__close-btn');
+const bannerText = document.querySelector('.ticket-banner__text');
 
 function showButton() {
 
@@ -20,12 +21,11 @@ function showButton() {
   });
 }
 
-const jivoContainer = document.querySelector('jdiv');
-const jivoPopup = document.querySelector('div[class^="popupBlock"]');
-const jivoChat = document.querySelector('#jivo_action');
-const bannerText = document.querySelector('.ticket-banner__text');
-
 function checkNextElement() {
+  const jivoContainer = document.querySelector('jdiv');
+  const jivoPopup = document.querySelector('div[class^="popupBlock"]');
+  const jivoChat = document.querySelector('#jivo_action');
+
   if (window.innerWidth >= 1366 && jivoContainer) {
     if (jivoChat && jivoChat.matches('[class*="show"]')) {
       buyButton.style.transform = 'translateX(-260px)';
