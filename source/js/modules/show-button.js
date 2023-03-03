@@ -23,7 +23,7 @@ function showButton() {
 
 function checkNextElement() {
   const jivoContainer = document.querySelector('jdiv');
-  const jivoPopup = document.querySelector('div[class^="popupBlock"]');
+  const jivoPopup = document.querySelector('[class^="popupBlock"]');
   const jivoChat = document.querySelector('#jivo_action');
 
   if (window.innerWidth >= 1366 && jivoContainer) {
