@@ -6,7 +6,10 @@ const bannerText = document.querySelector('.ticket-banner__text');
 function showButton() {
 
   window.addEventListener('scroll', function () {
-    if (window.pageYOffset >= 150 && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 100) {
+    if (window.innerWidth < 1280 && window.pageYOffset >= window.innerHeight && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 100) {
+      buyButton.classList.add('active');
+      ticketBanner.classList.add('active');
+    } else if (window.innerWidth >= 1280 && window.pageYOffset >= 150 && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 100) {
       buyButton.classList.add('active');
       ticketBanner.classList.add('active');
     } else {
