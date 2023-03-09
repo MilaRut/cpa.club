@@ -38,11 +38,10 @@
 }
 
 .intro__heading p {
-  @include font-settings ($ff-mont, 700, 20px, 1.1, $color-default-white);
+  @include font-settings ($ff-mont, 500, 19px, 1.1, $color-default-white);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin: 0;
-  padding-top: 15px;
 
   @include vp-1279 {
     text-align: center;
